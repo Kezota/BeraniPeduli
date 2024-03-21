@@ -8,8 +8,10 @@ $PhilippineGray: rgba(144, 144, 144, 1);
 $YellowOrange: rgba(255, 178, 63, 1);
 $DarkGray: rgba(100, 100, 100, 1);
 $LightGreen: rgba(67, 141, 124, 0.75);
+$LightGray: rgba(238, 238, 238, 1);
 
 .navbar-section {
+  position: absolute;
   .logo {
     color: $DeepAquamarine !important;
     cursor: pointer;
@@ -49,14 +51,13 @@ $LightGreen: rgba(67, 141, 124, 0.75);
             cursor: pointer;
 
             .nav-link {
-              color: $DarkGray;
+              color: $PhilippineGray;
               font-size: 0.9rem;
               font-weight: 600;
               cursor: pointer !important;
 
               &:hover {
-                font-weight: 700;
-                color: $Lotion;
+                color: $DeepAquamarine;
               }
             }
           }
@@ -111,6 +112,8 @@ $LightGreen: rgba(67, 141, 124, 0.75);
 
 @media screen and (min-width: 769px) {
   .navbar-section {
+    margin-top: 1rem;
+
     .toggle-navbar,
     .close-navbar {
       display: none;
@@ -128,8 +131,8 @@ $LightGreen: rgba(67, 141, 124, 0.75);
           cursor: pointer;
 
           .nav-link {
-            color: $DarkGray;
-            padding: 0 1rem;
+            color: $AntiFlashWhite;
+            padding: 0 1.5rem;
             cursor: pointer !important;
             font-size: 0.9rem;
             font-weight: 600;

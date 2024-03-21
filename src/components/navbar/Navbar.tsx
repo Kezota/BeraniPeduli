@@ -4,8 +4,6 @@ import { AiFillCloseCircle } from "react-icons/ai";
 import { TbGridDots } from "react-icons/tb";
 // import { useNavigate } from "react-router-dom";
 
-const navItems = ["Home", "About", "Offers", "Reviews"];
-
 const Navbar = () => {
   // const navigate = useNavigate();
 
