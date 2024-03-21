@@ -1,68 +1,174 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+* {
+  padding: 0;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  transition: 0.3s ease;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Colors */
+:root {
+  --AntiFlashWhite: rgba(232, 232, 232, 1);
+  --CharlestonGreen: rgba(43, 39, 53, 1);
+  --DeepAquamarine: rgba(67, 141, 124, 1);
+  --LightGoldenrod: rgba(255, 247, 212, 1);
+  --Lotion: rgba(252, 253, 251, 1);
+  --MellowApricot: rgba(242, 185, 132, 1);
+  --PhilippineGray: rgba(144, 144, 144, 1);
+  --YellowOrange: rgba(255, 178, 63, 1);
+  --DarkGray: rgba(100, 100, 100, 1);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+/* Default Styling */
+a {
+  text-decoration: none;
+  color: var(--CharlestonGreen);
+}
+
+li {
+  list-style: none;
+}
+
+.section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.icon {
+  font-size: 2rem;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+}
+
+.btn {
+  padding: 0.4rem 1.5rem;
+  background-color: var(--YellowOrange);
+  color: var(--CharlestonGreen);
+  border: none;
+  outline: none;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+
+.btn a {
+  color: var(--CharlestonGreen);
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: var(--YellowOrange);
+}
+
+.btn:hover a {
+  color: var(--lotion);
+}
+
+.sec-intro {
+  max-width: 70%;
+  text-align: center;
+  margin: 0 auto 2rem;
+}
+
+.sec-intro .sec-title {
+  color: var(--CharlestonGreen);
+  /* line-height: 1.5rem; */
+  padding-bottom: 0.5rem;
+}
+
+.sec-intro p {
+  font-size: 13px;
+  color: var(--DarkGray);
+  font-weight: 500;
+}
+
+.sec-title {
+  font-size: 2rem;
+}
+
+img,
+video {
+  width: 100%;
+  height: auto;
+}
+
+input {
+  font-size: 100%;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 556px) {
+  .main-content,
+  .single-post {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
+
+@media screen and (min-width: 884px) {
+  .main-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .container {
+    width: 75%;
+    margin: auto !important;
+  }
+
+  .section {
+    padding: 2rem 0 3rem;
+  }
+
+  .sec-intro {
+    margin: 0 auto 3rem;
+  }
+
+  .sec-intro .sec-title {
+    line-height: 2rem;
+    padding-bottom: 1rem;
+    font-size: 2.2rem;
+  }
+
+  .sec-intro p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  body {
+    zoom: 1.7;
+  }
+}
+
+/* Page Design */
+::selection {
+  background: var(--DarkGray);
+  color: var(--AntiFlashWhite);
+}
+
+/* ::-webkit-scrollbar {
+  width: 10px;
+  background: var(--LightGray);
+} */
+/* 
+::-webkit-scrollbar-thumb {
+  background: var(--CloudBurst);
+  border-radius: 10px;
+  cursor: pointer;
+} */

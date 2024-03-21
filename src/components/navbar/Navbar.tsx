@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import "./navbar.css";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { TbGridDots } from "react-icons/tb";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const navItems = ["Home", "About", "Offers", "Reviews"];
 
 const Navbar = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // code to toggle/show navbar;
   const [active, setActive] = useState("navbar");
@@ -38,11 +38,11 @@ const Navbar = () => {
         <div
           className="logo-div"
           onClick={() => {
-            navigate("/home");
+            // navigate("/home");
           }}
         >
-          <h1 className="logo" style={{ color: "#213555", cursor: "pointer" }}>
-            Harmony Manor
+          <h1 className="logo" style={{ color: "#438D7C", cursor: "pointer" }}>
+            BeraniPeduli
           </h1>
         </div>
         <div className={active}>
@@ -63,51 +63,40 @@ const Navbar = () => {
             <li
               className="nav-item active-nav"
               onClick={() => {
-                navigate("/home");
+                // navigate("/home");
               }}
-              style={{ cursor: "pointer" }}
             >
-              <div className="nav-link" style={{ color: "#213555" }}>
+              <div
+                className="nav-link"
+                style={{ color: "#438D7C", fontWeight: 700 }}
+              >
                 Home
               </div>
             </li>
             <li
               className="nav-item"
               onClick={() => {
-                navigate("/about");
+                // navigate("/about");
               }}
-              style={{ cursor: "pointer" }}
             >
               <div className="nav-link">About</div>
             </li>
             <li
               className="nav-item"
               onClick={() => {
-                navigate("/offers");
+                // navigate("/offers");
               }}
-              style={{ cursor: "pointer" }}
             >
-              <div className="nav-link">Offers</div>
+              <div className="nav-link">Donate</div>
             </li>
             <li
               className="nav-item"
               onClick={() => {
-                navigate("/reviews");
+                // navigate("/reviews");
               }}
-              style={{ cursor: "pointer" }}
             >
-              <div className="nav-link">Reviews</div>
+              <div className="nav-link">Membership</div>
             </li>
-            <div className="header-btns flex">
-              <button
-                className="btn book-now"
-                onClick={() => {
-                  navigate("/reservation");
-                }}
-              >
-                Book Now
-              </button>
-            </div>
           </ul>
           <div onClick={removeNav} className="close-navbar">
             <AiFillCloseCircle className="icon" />

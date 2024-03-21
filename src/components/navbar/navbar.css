@@ -39,7 +39,7 @@
     cursor: pointer !important;
   }
   .navbar-section .header .navbar .nav-lists .nav-item .nav-link:hover {
-    color: rgb(33, 53, 85);
+    color: rgba(67, 141, 124, 1);
   }
   .navbar-section .header .navbar .nav-lists .header-btns {
     flex-direction: column;
@@ -55,10 +55,10 @@
     position: absolute;
     top: 1rem;
     right: 1.5rem;
-    color: rgb(79, 112, 156);
+    color: rgba(67, 141, 124, 1);
   }
   .navbar-section .header .navbar .close-navbar:hover .icon {
-    color: rgb(33, 53, 85);
+    color: rgba(67, 141, 124, 0.75);
   }
   .navbar-section .header .active-navbar {
     top: 0;
@@ -66,10 +66,10 @@
 }
 .navbar-section .header .toggle-navbar .icon {
   font-size: 25px;
-  color: rgb(79, 112, 156);
+  color: rgba(67, 141, 124, 1);
 }
 .navbar-section .header .toggle-navbar .icon:hover {
-  color: rgb(33, 53, 85);
+  color: rgba(67, 141, 124, 0.75);
 }
 .navbar-section .active-header {
   background-color: rgb(219, 219, 219);
@@ -118,4 +118,4 @@
   .header {
     padding: 1rem 8.5rem !important;
   }
-}/*# sourceMappingURL=navbar.css.map */
+} /*# sourceMappingURL=navbar.css.map */
