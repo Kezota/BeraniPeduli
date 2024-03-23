@@ -10,7 +10,7 @@ $DarkGray: rgba(100, 100, 100, 1);
 $LightGreen: rgba(67, 141, 124, 0.75);
 
 .hero {
-  height: 90vh;
+  height: 600px;
   background-color: #fffae5;
   background-position: center;
   background-size: cover;
@@ -33,6 +33,10 @@ $LightGreen: rgba(67, 141, 124, 0.75);
     position: absolute;
     top: 0;
     right: 0;
+    height: 85vh;
+    display: flex;
+    justify-content: start;
+    align-items: start;
     // z-index: -1;
   }
 
@@ -89,12 +93,6 @@ $LightGreen: rgba(67, 141, 124, 0.75);
   }
 }
 
-@media screen and (max-width: 1200px) {
-  .hero {
-    padding-top: 20rem;
-  }
-}
-
 @media screen and (min-width: 720px) {
   .hero {
     .container {
@@ -122,25 +120,41 @@ $LightGreen: rgba(67, 141, 124, 0.75);
 
 @media screen and (min-width: 1024px) {
   .hero {
-    height: 90vh;
+    // height: 80vh;
     // margin: 0 4rem;
-    img {
-      display: block;
-    }
+
     .sec-container {
-      margin-left: 4.2rem;
+      margin-left: 7rem;
       .hero-text {
         .title {
-          font-size: 56px;
-          line-height: 5rem;
-          text-shadow: 1px 1px 1px rgba(178, 178, 178, 0.334);
+          font-size: 51px;
+          font-weight: 800;
+          line-height: 140%; /* 71.4px */
+          letter-spacing: 1.02px;
         }
         .sub-title {
           font-size: 20px;
-          line-height: 2.5rem;
-          text-shadow: 1px 1px 1px rgba(178, 178, 178, 0.334);
+          font-style: normal;
+          font-weight: 500;
+          line-height: 37px; /* 185% */
+          letter-spacing: 0.6px;
         }
       }
     }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    height: 82vh;
+    img {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .hero {
+    padding-top: 20rem;
   }
 }

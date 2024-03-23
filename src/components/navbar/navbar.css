@@ -2,6 +2,7 @@
   position: absolute;
 }
 .navbar-section .logo {
+  font-size: 28px;
   color: rgb(67, 141, 124) !important;
   cursor: pointer;
 }
@@ -84,9 +85,6 @@
 }
 
 @media screen and (min-width: 769px) {
-  .navbar-section {
-    margin-top: 1rem;
-  }
   .navbar-section .toggle-navbar,
   .navbar-section .close-navbar {
     display: none;
@@ -120,6 +118,9 @@
   }
 }
 @media screen and (min-width: 960px) {
+  .header .navbar {
+    padding: 0.5rem 0;
+  }
   .header .navbar .nav-list .nav-item {
     padding: 0 0.7rem;
   }

@@ -1,0 +1,85 @@
+$AntiFlashWhite: rgba(232, 232, 232, 1);
+$CharlestonGreen: rgba(43, 39, 53, 1);
+$DeepAquamarine: rgba(67, 141, 124, 1);
+$LightGoldenrod: rgba(255, 247, 212, 1);
+$Lotion: rgba(252, 253, 251, 1);
+$MellowApricot: rgba(242, 185, 132, 1);
+$PhilippineGray: rgba(144, 144, 144, 1);
+$YellowOrange: rgba(255, 178, 63, 1);
+$DarkGray: rgba(100, 100, 100, 1);
+$LightGreen: rgba(67, 141, 124, 0.75);
+
+.goal {
+  margin-top: 2rem;
+
+  img {
+    height: 600px;
+    width: auto;
+  }
+
+  .points {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.3rem;
+
+    .point {
+      p {
+        // width:%;
+        color: #504f53;
+        font-family: Raleway;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 145%; /* 29px */
+        letter-spacing: 0.4px;
+      }
+    }
+  }
+}
+
+// MEDIA QUERIES
+@media screen and (min-width: 480px) {
+}
+
+@media screen and (min-width: 556px) {
+  .hero {
+    .sec-container {
+      .hero-text {
+        .title {
+          font-size: 2.5rem;
+        }
+        .sub-title {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 720px) {
+}
+
+@media screen and (min-width: 1024px) {
+  .goal {
+    margin-top: 4rem;
+
+    .sub {
+      width: 80%;
+    }
+
+    .points {
+      .point {
+        p {
+          width: 60%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+}
+
+@media screen and (max-width: 1200px) {
+}

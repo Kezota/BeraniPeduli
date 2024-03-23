@@ -1,3 +1,5 @@
+import Achievements from "../components/achievements/Achievements";
+import Goal from "../components/goal/Goal";
 import Hero from "../components/hero/Hero";
 import Navbar from "../components/navbar/Navbar";
 import "../styles/homePage.css";
@@ -7,6 +9,8 @@ export const HomePage = () => {
     <div>
       <Navbar />
       <Hero />
+      <Goal />
+      <Achievements />
     </div>
   );
 };

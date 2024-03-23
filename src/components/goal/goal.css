@@ -1,0 +1,42 @@
+.goal {
+  margin-top: 2rem;
+}
+.goal img {
+  height: 600px;
+  width: auto;
+}
+.goal .points {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.3rem;
+}
+.goal .points .point p {
+  color: #504f53;
+  font-family: Raleway;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 145%; /* 29px */
+  letter-spacing: 0.4px;
+}
+
+@media screen and (min-width: 556px) {
+  .hero .sec-container .hero-text .title {
+    font-size: 2.5rem;
+  }
+  .hero .sec-container .hero-text .sub-title {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .goal {
+    margin-top: 4rem;
+  }
+  .goal .sub {
+    width: 80%;
+  }
+  .goal .points .point p {
+    width: 60%;
+  }
+}/*# sourceMappingURL=goal.css.map */

@@ -1,0 +1,12 @@
+.achievements .achievement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.achievements .achievement div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}/*# sourceMappingURL=achievements.css.map */

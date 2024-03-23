@@ -13,6 +13,7 @@ $LightGray: rgba(238, 238, 238, 1);
 .navbar-section {
   position: absolute;
   .logo {
+    font-size: 28px;
     color: $DeepAquamarine !important;
     cursor: pointer;
   }
@@ -112,8 +113,6 @@ $LightGray: rgba(238, 238, 238, 1);
 
 @media screen and (min-width: 769px) {
   .navbar-section {
-    margin-top: 1rem;
-
     .toggle-navbar,
     .close-navbar {
       display: none;
@@ -158,6 +157,7 @@ $LightGray: rgba(238, 238, 238, 1);
 @media screen and (min-width: 960px) {
   .header {
     .navbar {
+      padding: 0.5rem 0;
       .nav-list {
         .nav-item {
           padding: 0 0.7rem;
