@@ -1,11 +1,11 @@
 import DonateGrid from "../components/donateGrid/DonateGrid";
-import Navbar from "../components/navbar/Navbar";
+import NavbarFill from "../components/navbarFill/NavbarFill";
 import "../styles/donatePage.css";
 
 const DonatePage = () => {
   return (
     <div className="donate-page">
-      <Navbar />
+      <NavbarFill />
       <div className="heading">
         <div className="sec-title">
           <div>

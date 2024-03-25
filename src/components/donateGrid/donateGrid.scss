@@ -20,16 +20,16 @@ $LightGray: rgba(238, 238, 238, 1);
       align-items: center;
       img {
         border-radius: 20px;
-        width: 296px;
+        width: 250px;
       }
       button {
         color: rgba(0, 0, 0, 0.82);
-        font-size: 20px;
+        font-size: 18px;
         font-family: Kaushan Script;
         font-weight: 400;
         line-height: 37px;
-        width: 179px;
-        height: 58px;
+        width: 150px;
+        height: 50px;
         background-color: #fcc600;
         border-radius: 33px;
         border: none;
@@ -51,7 +51,7 @@ $LightGray: rgba(238, 238, 238, 1);
       align-items: center;
       flex-direction: column;
       padding-bottom: 20px;
-      max-width: 296px;
+      max-width: 250px;
       h4 {
         color: #438d7c;
         font-size: 22px;
@@ -83,12 +83,12 @@ $LightGray: rgba(238, 238, 238, 1);
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .donate-grid {
-    .donate-card {
-      .card-detail {
-        // margin-left: 0;
-      }
-    }
-  }
-}
+// @media screen and (min-width: 1200px) {
+//   .donate-grid {
+//     .donate-card {
+//       .card-detail {
+//         // margin-left: 0;
+//       }
+//     }
+//   }
+// }

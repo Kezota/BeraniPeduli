@@ -74,14 +74,14 @@ function DonateCard({
   target,
 }: TDonateCard) {
   return (
-    <Grid item xs={12} sm={6} md={6} lg={6} sx={{ my: "10px" }}>
+    <Grid item xs={12} lg={6} sx={{ my: "10px" }}>
       <div className="donate-card">
         <Grid container spacing={2}>
-          <Grid item xs={12} md={6} className="card-image">
+          <Grid item xs={12} md={6} lg={6} xl={6} className="card-image">
             <img src={image} alt="Donate image" />
             <button>Donate now</button>
           </Grid>
-          <Grid item xs={12} md={12} xl={6} className="card-detail">
+          <Grid item xs={12} md={6} lg={6} xl={6} className="card-detail">
             <div>
               <h4>{category}</h4>
               <h3>{title}</h3>

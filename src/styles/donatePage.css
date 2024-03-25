@@ -1,3 +1,6 @@
+.donate-page {
+  margin-top: 4rem;
+}
 .donate-page .heading {
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("../assets/donate-header.png") center center/cover no-repeat;
   height: 20rem;

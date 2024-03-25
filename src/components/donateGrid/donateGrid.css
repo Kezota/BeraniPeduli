@@ -9,16 +9,16 @@
 }
 .donate-grid .donate-card .card-image img {
   border-radius: 20px;
-  width: 296px;
+  width: 250px;
 }
 .donate-grid .donate-card .card-image button {
   color: rgba(0, 0, 0, 0.82);
-  font-size: 20px;
+  font-size: 18px;
   font-family: Kaushan Script;
   font-weight: 400;
   line-height: 37px;
-  width: 179px;
-  height: 58px;
+  width: 150px;
+  height: 50px;
   background-color: #fcc600;
   border-radius: 33px;
   border: none;
@@ -37,7 +37,7 @@
   align-items: center;
   flex-direction: column;
   padding-bottom: 20px;
-  max-width: 296px;
+  max-width: 250px;
 }
 .donate-grid .donate-card .card-detail h4 {
   color: #438d7c;
