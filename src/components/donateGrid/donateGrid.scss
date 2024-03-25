@@ -1,0 +1,94 @@
+$AntiFlashWhite: rgba(232, 232, 232, 1);
+$CharlestonGreen: rgba(43, 39, 53, 1);
+$DeepAquamarine: rgba(67, 141, 124, 1);
+$LightGoldenrod: rgba(255, 247, 212, 1);
+$Lotion: rgba(252, 253, 251, 1);
+$MellowApricot: rgba(242, 185, 132, 1);
+$PhilippineGray: rgba(144, 144, 144, 1);
+$YellowOrange: rgba(255, 178, 63, 1);
+$DarkGray: rgba(100, 100, 100, 1);
+$LightGreen: rgba(67, 141, 124, 0.75);
+$LightGray: rgba(238, 238, 238, 1);
+
+.donate-grid {
+  margin-top: 4rem;
+  .donate-card {
+    .card-image {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        border-radius: 20px;
+        width: 296px;
+      }
+      button {
+        color: rgba(0, 0, 0, 0.82);
+        font-size: 20px;
+        font-family: Kaushan Script;
+        font-weight: 400;
+        line-height: 37px;
+        width: 179px;
+        height: 58px;
+        background-color: #fcc600;
+        border-radius: 33px;
+        border: none;
+        position: absolute;
+
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .card-detail {
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding-bottom: 20px;
+      max-width: 296px;
+      h4 {
+        color: #438d7c;
+        font-size: 22px;
+        font-family: Kaushan Script;
+        font-weight: 400;
+        line-height: 37px;
+        letter-spacing: 0.44px;
+      }
+      h3 {
+        color: black;
+        font-size: 28px;
+        font-family: Raleway;
+        font-weight: 600;
+        width: 100%;
+        // width: 700px;
+      }
+      p {
+        color: rgba(0, 0, 0, 0.4);
+        font-size: 16px;
+        font-family: Raleway;
+        font-weight: 600;
+        word-wrap: break-word;
+        width: 90%;
+      }
+      .money-raised {
+        color: $DeepAquamarine;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .donate-grid {
+    .donate-card {
+      .card-detail {
+        // margin-left: 0;
+      }
+    }
+  }
+}

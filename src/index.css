@@ -28,6 +28,11 @@ a {
   color: var(--CharlestonGreen);
 }
 
+ul {
+  padding-left: 0 !important;
+  margin-bottom: 0 !important ;
+}
+
 li {
   list-style: none;
 }
@@ -35,11 +40,6 @@ li {
 .section {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.container {
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .icon {
@@ -171,11 +171,6 @@ input {
 }
 
 @media screen and (min-width: 1240px) {
-  .container {
-    /* width: 75%; */
-    margin: auto;
-  }
-
   .section {
     padding: 2rem 0 3rem;
   }

@@ -39,9 +39,9 @@ const Navbar = () => {
             // navigate("/home");
           }}
         >
-          <h1 className="logo" style={{ color: "#438D7C", cursor: "pointer" }}>
+          <div className="logo" style={{ color: "#438D7C", cursor: "pointer" }}>
             BeraniPeduli
-          </h1>
+          </div>
         </div>
         <div className={active}>
           {/* <ul className="nav-lists flex">

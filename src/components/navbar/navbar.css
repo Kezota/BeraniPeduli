@@ -5,6 +5,7 @@
   font-size: 28px;
   color: rgb(67, 141, 124) !important;
   cursor: pointer;
+  font-weight: 700;
 }
 .navbar-section .header {
   position: fixed;
@@ -30,11 +31,15 @@
     transition: 0.5s ease;
     z-index: 1000;
   }
+  .navbar-section .header .navbar ul {
+    margin-bottom: 1px !important;
+  }
   .navbar-section .header .navbar .nav-lists {
     flex-direction: column;
     justify-content: center;
     width: 100%;
     margin: auto;
+    margin-bottom: 0 !important;
   }
   .navbar-section .header .navbar .nav-lists .nav-item {
     padding: 1rem 0;
@@ -83,6 +88,9 @@
   background-color: rgb(238, 238, 238);
   box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);
 }
+.navbar-section .active-header .navbar .nav-link {
+  color: rgb(43, 39, 53) !important;
+}
 
 @media screen and (min-width: 769px) {
   .navbar-section .toggle-navbar,
@@ -108,13 +116,6 @@
   }
   .navbar-section .header .navbar .nav-lists .nav-link:hover {
     color: rgb(67, 141, 124);
-  }
-  .navbar-section .header .navbar .nav-lists .btn {
-    margin-left: 1rem;
-    padding: 10px 30px;
-    font-size: 13px;
-    color: rgb(252, 253, 251);
-    font-weight: 500;
   }
 }
 @media screen and (min-width: 960px) {

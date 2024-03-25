@@ -16,6 +16,7 @@ $LightGray: rgba(238, 238, 238, 1);
     font-size: 28px;
     color: $DeepAquamarine !important;
     cursor: pointer;
+    font-weight: 700;
   }
 
   .header {
@@ -41,11 +42,16 @@ $LightGray: rgba(238, 238, 238, 1);
         transition: 0.5s ease;
         z-index: 1000;
 
+        ul {
+          margin-bottom: 1px !important;
+        }
+
         .nav-lists {
           flex-direction: column;
           justify-content: center;
           width: 100%;
           margin: auto;
+          margin-bottom: 0 !important;
 
           .nav-item {
             padding: 1rem 0;
@@ -108,6 +114,12 @@ $LightGray: rgba(238, 238, 238, 1);
   .active-header {
     background-color: $LightGray;
     box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);
+
+    .navbar {
+      .nav-link {
+        color: $CharlestonGreen !important;
+      }
+    }
   }
 }
 
@@ -139,14 +151,6 @@ $LightGray: rgba(238, 238, 238, 1);
             &:hover {
               color: $DeepAquamarine;
             }
-          }
-
-          .btn {
-            margin-left: 1rem;
-            padding: 10px 30px;
-            font-size: 13px;
-            color: $Lotion;
-            font-weight: 500;
           }
         }
       }
