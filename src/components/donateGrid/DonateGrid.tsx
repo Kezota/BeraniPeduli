@@ -52,6 +52,16 @@ const DonateGrid = () => {
           <DonateCard key={index} {...donate} />
         ))}
       </Grid>
+      <div className="load-more">
+        <button
+          className="btn flex"
+          onClick={() => {
+            // navigate("/offers");
+          }}
+        >
+          Load More
+        </button>
+      </div>
     </div>
   );
 };

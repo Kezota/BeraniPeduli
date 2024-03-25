@@ -1,4 +1,5 @@
 import DonateGrid from "../components/donateGrid/DonateGrid";
+import Footer from "../components/footer/Footer";
 import NavbarFill from "../components/navbarFill/NavbarFill";
 import "../styles/donatePage.css";
 
@@ -18,6 +19,7 @@ const DonatePage = () => {
         </div>
       </div>
       <DonateGrid />
+      <Footer />
     </div>
   );
 };
