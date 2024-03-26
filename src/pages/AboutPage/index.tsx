@@ -4,6 +4,8 @@ import headerImage from "../../assets/about-header.png";
 import "./aboutPage.css";
 import Vision from "./components/vision/Vision";
 import Mission from "./components/mission/Mission";
+import Achievements from "../../components/achievements/Achievements";
+import Footer from "../../components/footer/Footer";
 
 export default function AboutPage() {
   return (
@@ -14,6 +16,8 @@ export default function AboutPage() {
         <Vision />
         <Mission />
       </div>
+      <Achievements />
+      <Footer />
     </div>
   );
 }

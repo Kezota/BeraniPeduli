@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
+.achivements {
+  width: 100vw;
+  background-color: rgba(67, 141, 124, 0.75);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 13%;
+  padding: 3rem 1rem;
+  margin-bottom: 4rem;
+}
+.achivements .achievement {
+  text-align: center;
+}
+.achivements .achievement h1 {
+  color: var(--Light-Goldenrod, #fff7d4);
+  font-family: "EB Garamond", serif;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 86px */
+  letter-spacing: 1.72px;
+}
+.achivements .achievement h5 {
+  color: var(--Light-Goldenrod, #fff7d4);
+  font-family: Raleway;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 145%; /* 37.7px */
+  letter-spacing: 0.52px;
+}
+
+@media screen and (max-width: 720px) {
+  .achivements {
+    flex-direction: column !important;
+    gap: 2.5rem;
+  }
+  .achivements .achievement h1 {
+    font-size: 56px;
+  }
+  .achivements .achievement h5 {
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=achivements.css.map */

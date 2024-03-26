@@ -1,7 +1,8 @@
-import Achievements from "./components/achievements/Achievements";
-import Goal from "./components/goal/Goal";
-import Hero from "./components/hero/Hero";
 import Navbar from "../../components/navbar/Navbar";
+import Hero from "./components/hero/Hero";
+import Goal from "./components/goal/Goal";
+import Achievements from "../../components/achievements/Achievements";
+import Footer from "../../components/footer/Footer";
 import "./homePage.css";
 
 const HomePage = () => {
@@ -9,8 +10,11 @@ const HomePage = () => {
     <div>
       <Navbar />
       <Hero />
-      <Goal />
+      <div className="container">
+        <Goal />
+      </div>
       <Achievements />
+      <Footer />
     </div>
   );
 };

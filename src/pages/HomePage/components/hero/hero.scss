@@ -33,11 +33,12 @@ $LightGreen: rgba(67, 141, 124, 0.75);
     position: absolute;
     top: 0;
     right: 0;
-    height: 85vh;
+    height: 500px;
     display: flex;
     justify-content: start;
     align-items: start;
     // z-index: -1;
+    display: none;
   }
 
   .sec-container {
@@ -47,7 +48,7 @@ $LightGreen: rgba(67, 141, 124, 0.75);
       z-index: 1;
 
       .title {
-        font-size: 30px;
+        font-size: 32px;
         color: $CharlestonGreen;
         font-weight: 700;
         line-height: 2.5rem;
@@ -58,9 +59,9 @@ $LightGreen: rgba(67, 141, 124, 0.75);
 
       .sub-title {
         color: $CharlestonGreen;
-        font-size: 16px;
+        font-size: 18px;
         opacity: 0.9;
-        font-weight: 400;
+        font-weight: 500;
         padding: 1rem 0;
         // max-width: 70%;
         letter-spacing: 1px;
@@ -72,21 +73,20 @@ $LightGreen: rgba(67, 141, 124, 0.75);
 }
 
 // MEDIA QUERIES
-@media screen and (min-width: 480px) {
-  .hero {
-    // margin: 0 2rem;
-  }
-}
-
 @media screen and (min-width: 556px) {
   .hero {
+    .blobs {
+      display: block;
+    }
     .sec-container {
       .hero-text {
         .title {
           font-size: 2.5rem;
+          color: $CharlestonGreen;
         }
         .sub-title {
           font-size: 18px;
+          color: $CharlestonGreen;
         }
       }
     }
@@ -111,7 +111,7 @@ $LightGreen: rgba(67, 141, 124, 0.75);
 
         .sub-title {
           max-width: 80%;
-          font-size: 16px;
+          font-size: 20px;
         }
       }
     }

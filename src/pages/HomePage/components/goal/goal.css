@@ -1,42 +1,86 @@
 .goal {
-  margin-top: 2rem;
-}
-.goal img {
-  height: 600px;
-  width: auto;
-}
-.goal .points {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0;
+  margin-bottom: 6rem;
+  gap: 2rem;
+}
+.goal .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+}
+.goal .goal-detail h3 {
+  color: rgb(43, 39, 53);
+  font-family: Raleway;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 155%; /* 55.8px */
+  letter-spacing: 0.72px;
+  margin-top: 1rem 0;
+}
+.goal .goal-detail p {
+  color: #232223;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 37px; /* 185% */
+  letter-spacing: 0.4px;
+  margin-bottom: 1.5rem;
+}
+.goal .goal-detail .points {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
   gap: 1.5rem;
   margin-top: 1.3rem;
+  width: 95%;
 }
-.goal .points .point p {
+.goal .goal-detail .points .point {
+  display: flex;
+  align-items: center;
+}
+.goal .goal-detail .points .point p {
   color: #504f53;
   font-family: Raleway;
-  font-size: 18px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 500;
   line-height: 145%; /* 29px */
   letter-spacing: 0.4px;
+  margin-bottom: 0;
+  margin-left: 0.7rem;
 }
 
-@media screen and (min-width: 556px) {
-  .hero .sec-container .hero-text .title {
-    font-size: 2.5rem;
-  }
-  .hero .sec-container .hero-text .sub-title {
-    font-size: 18px;
-  }
-}
 @media screen and (min-width: 1024px) {
   .goal {
-    margin-top: 4rem;
+    justify-content: center;
+    flex-direction: row;
+    gap: 8;
+    margin-bottom: 8rem;
   }
-  .goal .sub {
+  .goal .goal-detail {
+    width: 50%;
+    margin-left: 2rem;
+  }
+  .goal .goal-detail h3 {
+    font-size: 38px;
+  }
+  .goal .goal-detail p {
+    font-size: 20px;
+  }
+  .goal .goal-detail .points {
     width: 80%;
   }
-  .goal .points .point p {
-    width: 60%;
+  .goal .goal-detail .points .point p {
+    font-size: 20px;
+  }
+  .goal .image {
+    max-width: 450px !important;
   }
 }/*# sourceMappingURL=goal.css.map */

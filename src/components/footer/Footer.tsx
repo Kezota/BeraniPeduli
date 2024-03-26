@@ -10,7 +10,7 @@ const Footer = () => {
 
   return (
     <div className="footer">
-      <div className="sec-container container grid">
+      <div className="sec-container  grid">
         <div className="logo-div">
           <div className="footer-logo">
             <a href="#" className="logo flex">
