@@ -1,0 +1,50 @@
+.vision {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 4rem 0;
+}
+.vision .image {
+  max-width: 500px;
+}
+.vision .vision-detail {
+  width: 95%;
+}
+.vision .vision-detail h3 {
+  color: rgb(43, 39, 53);
+  font-family: Raleway;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 155%; /* 55.8px */
+  letter-spacing: 0.72px;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+.vision .vision-detail p {
+  color: #232223;
+  font-family: Raleway;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px; /* 185% */
+  letter-spacing: 0.4px;
+}
+
+@media screen and (min-width: 1024px) {
+  .vision {
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .vision .vision-detail {
+    width: 50%;
+  }
+  .vision .vision-detail h3 {
+    font-size: 38px;
+  }
+  .vision .vision-detail p {
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=vision.css.map */

@@ -71,7 +71,7 @@ export default function Header() {
         </div>
       </div>
       <div className="search">
-        <input type="text" class="form-control" placeholder="Cari donasi" />
+        <input type="text" className="form-control" placeholder="Cari donasi" />
       </div>
     </div>
   );

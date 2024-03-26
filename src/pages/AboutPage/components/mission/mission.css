@@ -1,0 +1,77 @@
+.mission {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0;
+  gap: 4rem;
+}
+.mission .mission-detail {
+  order: 2;
+}
+.mission .mission-detail h3 {
+  color: rgb(43, 39, 53);
+  font-family: Raleway;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 155%; /* 55.8px */
+  letter-spacing: 0.72px;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+.mission .mission-detail .points {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.3rem;
+  width: 95%;
+}
+.mission .mission-detail .points .point {
+  display: flex;
+  align-items: center;
+}
+.mission .mission-detail .points .point p {
+  color: #504f53;
+  font-family: Raleway;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 145%; /* 29px */
+  letter-spacing: 0.4px;
+  margin-bottom: 0;
+}
+.mission .image {
+  order: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 350px;
+}
+
+@media screen and (min-width: 1024px) {
+  .mission {
+    justify-content: center;
+    flex-direction: row;
+    gap: 0;
+  }
+  .mission .mission-detail {
+    width: 50%;
+    order: 1;
+  }
+  .mission .mission-detail h3 {
+    font-size: 38px;
+  }
+  .mission .mission-detail .points {
+    width: 80%;
+  }
+  .mission .mission-detail .points .point p {
+    font-size: 20px;
+  }
+  .mission .image {
+    max-width: 450px !important;
+    order: 2;
+  }
+}/*# sourceMappingURL=mission.css.map */
