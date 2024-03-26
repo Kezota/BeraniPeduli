@@ -1,3 +1,48 @@
-.header h1 {
-  color: blue;
+.header-form {
+  margin-top: 3rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.header-form .dropdown-sort {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.header-form .dropdown button {
+  background-color: rgb(67, 141, 124);
+  padding: 0.7rem 2rem;
+  color: rgb(252, 253, 251);
+}
+.header-form .dropdown button:hover {
+  background-color: rgba(67, 141, 124, 0.75);
+  color: rgb(232, 232, 232);
+}
+.header-form .dropdown .dropdown-menu a {
+  cursor: pointer !important;
+}
+.header-form .sorting button {
+  background: none;
+  color: rgb(67, 141, 124);
+  border: 1px solid rgb(67, 141, 124);
+}
+.header-form .sorting button:hover {
+  background-color: rgb(67, 141, 124);
+  color: rgb(232, 232, 232);
+}
+.header-form .search input {
+  width: 80vw;
+  border: 1px solid rgb(67, 141, 124);
+}
+
+@media screen and (min-width: 900px) {
+  .header-form {
+    flex-direction: row;
+  }
+  .header-form .search input {
+    width: 50vw;
+  }
 }/*# sourceMappingURL=header.css.map */

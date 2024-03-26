@@ -11,8 +11,10 @@ const DonatePage = () => {
     <div className="donate-page">
       <NavbarFill />
       <Heading image={headerImage} title="Donation Page" />
-      <Header />
-      <DonateGrid />
+      <div className="container">
+        <Header />
+        <DonateGrid />
+      </div>
       <Footer />
     </div>
   );
