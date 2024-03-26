@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./navbar.css";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { TbGridDots } from "react-icons/tb";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   // code to toggle/show navbar;
   const [active, setActive] = useState("navbar");
@@ -36,7 +36,7 @@ const Navbar = () => {
         <div
           className="logo-div"
           onClick={() => {
-            // navigate("/home");
+            navigate("/");
           }}
         >
           <div className="logo" style={{ color: "#438D7C", cursor: "pointer" }}>
@@ -44,28 +44,15 @@ const Navbar = () => {
           </div>
         </div>
         <div className={active}>
-          {/* <ul className="nav-lists flex">
-            {navItems.map((item) => {
-              return <NavItem route={item} />;
-            })}
-            <button
-              className="btn book-now"
-              onClick={() => {
-                navigate("/reservation");
-              }}
-            >
-              Book Now
-            </button>
-          </ul> */}
           <ul className="nav-lists flex">
             <li
-              className="nav-item active-nav"
+              className="nav-item "
               onClick={() => {
-                // navigate("/home");
+                navigate("/");
               }}
             >
               <div
-                className="nav-link"
+                className="nav-link active-nav"
                 style={{ color: "#438D7C", fontWeight: 700 }}
               >
                 Home
@@ -74,7 +61,7 @@ const Navbar = () => {
             <li
               className="nav-item"
               onClick={() => {
-                // navigate("/about");
+                navigate("/about");
               }}
             >
               <div className="nav-link">About</div>
@@ -82,7 +69,7 @@ const Navbar = () => {
             <li
               className="nav-item"
               onClick={() => {
-                // navigate("/offers");
+                navigate("/donate");
               }}
             >
               <div className="nav-link">Donate</div>
@@ -90,7 +77,7 @@ const Navbar = () => {
             <li
               className="nav-item"
               onClick={() => {
-                // navigate("/reviews");
+                navigate("/membership");
               }}
             >
               <div className="nav-link">Membership</div>
@@ -107,20 +94,5 @@ const Navbar = () => {
     </section>
   );
 };
-
-function NavItem({ route }) {
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate(`/${route.toLowerCase()}`);
-  };
-  return (
-    <li onClick={handleClick} className="nav-item">
-      <span className="nav-link" style={{ cursor: "pointer" }}>
-        {route}
-      </span>
-    </li>
-  );
-}
 
 export default Navbar;

@@ -50,6 +50,7 @@ $LightGray: rgba(238, 238, 238, 1);
       background: none;
       color: $DeepAquamarine;
       border: 1px solid $DeepAquamarine;
+      padding: 0.7rem 2rem;
 
       &:hover {
         background-color: $DeepAquamarine;
@@ -62,6 +63,8 @@ $LightGray: rgba(238, 238, 238, 1);
     input {
       width: 80vw;
       border: 1px solid $DeepAquamarine;
+      padding: 0.7rem 2rem;
+      color: $PhilippineGray;
     }
   }
 }

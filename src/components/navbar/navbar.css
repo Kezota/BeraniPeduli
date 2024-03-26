@@ -88,14 +88,17 @@
   background-color: rgb(238, 238, 238);
   box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);
 }
-.navbar-section .active-header .navbar .nav-link {
-  color: rgb(43, 39, 53) !important;
-}
 
 @media screen and (min-width: 769px) {
   .navbar-section .toggle-navbar,
   .navbar-section .close-navbar {
     display: none;
+  }
+  .navbar-section .active-header .navbar .nav-lists .nav-link {
+    color: rgb(144, 144, 144) !important;
+  }
+  .navbar-section .active-header .navbar .nav-lists .active-nav {
+    color: rgb(67, 141, 124) !important;
   }
   .navbar-section .header .navbar .nav-lists {
     display: flex;

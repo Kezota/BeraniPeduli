@@ -1,25 +1,29 @@
-.navbar-section {
+.navbar-fill-section {
   position: absolute;
 }
-.navbar-section .logo {
+.navbar-fill-section .logo {
   font-size: 28px;
   color: rgb(67, 141, 124) !important;
   cursor: pointer;
   font-weight: 700;
 }
-.navbar-section .header {
+.navbar-fill-section .header {
   position: fixed;
   top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgb(238, 238, 238);
+  background: rgb(232, 232, 232);
   width: 100%;
   padding: 1rem;
   z-index: 1000;
 }
+.navbar-fill-section .header .navbar-fill .nav-lists .active-nav {
+  color: rgb(67, 141, 124) !important;
+  font-weight: 700 !important;
+}
 @media screen and (max-width: 768px) {
-  .navbar-section .header .navbar {
+  .navbar-fill-section .header .navbar-fill {
     background: rgb(238, 238, 238);
     position: absolute;
     height: -moz-max-content;
@@ -32,95 +36,95 @@
     transition: 0.5s ease;
     z-index: 1000;
   }
-  .navbar-section .header .navbar ul {
+  .navbar-fill-section .header .navbar-fill ul {
     margin-bottom: 1px !important;
   }
-  .navbar-section .header .navbar .nav-lists {
+  .navbar-fill-section .header .navbar-fill .nav-lists {
     flex-direction: column;
     justify-content: center;
     width: 100%;
     margin: auto;
     margin-bottom: 0 !important;
   }
-  .navbar-section .header .navbar .nav-lists .nav-item {
+  .navbar-fill-section .header .navbar-fill .nav-lists .nav-item {
     padding: 1rem 0;
     cursor: pointer;
   }
-  .navbar-section .header .navbar .nav-lists .nav-item .nav-link {
+  .navbar-fill-section .header .navbar-fill .nav-lists .nav-item .nav-link {
     color: rgb(144, 144, 144);
     font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer !important;
   }
-  .navbar-section .header .navbar .nav-lists .nav-item .nav-link:hover {
+  .navbar-fill-section .header .navbar-fill .nav-lists .nav-item .nav-link:hover {
     color: rgb(67, 141, 124);
   }
-  .navbar-section .header .navbar .nav-lists .header-btns {
+  .navbar-fill-section .header .navbar-fill .nav-lists .header-btns {
     flex-direction: column;
     font-weight: 500;
   }
-  .navbar-section .header .navbar .nav-lists .header-btns .btn {
+  .navbar-fill-section .header .navbar-fill .nav-lists .header-btns .btn {
     margin-top: 1rem;
   }
-  .navbar-section .header .navbar .nav-lists .header-btns .btn:hover {
+  .navbar-fill-section .header .navbar-fill .nav-lists .header-btns .btn:hover {
     color: var(rgb(252, 253, 251));
   }
-  .navbar-section .header .navbar .close-navbar {
+  .navbar-fill-section .header .navbar-fill .close-navbar-fill {
     position: absolute;
     top: 1rem;
     right: 1.5rem;
     color: rgb(67, 141, 124);
   }
-  .navbar-section .header .navbar .close-navbar:hover .icon {
+  .navbar-fill-section .header .navbar-fill .close-navbar-fill:hover .icon {
     color: rgb(43, 39, 53);
   }
-  .navbar-section .header .active-navbar {
+  .navbar-fill-section .header .active-navbar-fill {
     top: 0;
   }
 }
-.navbar-section .header .toggle-navbar .icon {
+.navbar-fill-section .header .toggle-navbar-fill .icon {
   font-size: 25px;
   color: rgb(67, 141, 124);
 }
-.navbar-section .header .toggle-navbar .icon:hover {
+.navbar-fill-section .header .toggle-navbar-fill .icon:hover {
   color: rgb(67, 141, 124);
 }
-.navbar-section .active-header {
+.navbar-fill-section .active-header {
   background-color: rgb(238, 238, 238);
   box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);
 }
-.navbar-section .active-header .navbar .nav-link {
+.navbar-fill-section .active-header .navbar-fill .nav-link {
   color: rgb(43, 39, 53) !important;
 }
 
 @media screen and (min-width: 769px) {
-  .navbar-section .toggle-navbar,
-  .navbar-section .close-navbar {
+  .navbar-fill-section .toggle-navbar-fill,
+  .navbar-fill-section .close-navbar-fill {
     display: none;
   }
-  .navbar-section .header .navbar .nav-lists {
+  .navbar-fill-section .header .navbar-fill .nav-lists {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
     cursor: pointer;
   }
-  .navbar-section .header .navbar .nav-lists .nav-link {
+  .navbar-fill-section .header .navbar-fill .nav-lists .nav-link {
     color: rgb(144, 144, 144);
     padding: 0 1.5rem;
     cursor: pointer !important;
     font-size: 0.9rem;
     font-weight: 600;
   }
-  .navbar-section .header .navbar .nav-lists .nav-link:hover {
+  .navbar-fill-section .header .navbar-fill .nav-lists .nav-link:hover {
     color: rgb(67, 141, 124);
   }
 }
 @media screen and (min-width: 960px) {
-  .header .navbar {
+  .header .navbar-fill {
     padding: 0.5rem 0;
   }
-  .header .navbar .nav-list .nav-item {
+  .header .navbar-fill .nav-list .nav-item {
     padding: 0 0.7rem;
   }
 }

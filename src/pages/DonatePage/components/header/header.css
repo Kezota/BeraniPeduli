@@ -28,6 +28,7 @@
   background: none;
   color: rgb(67, 141, 124);
   border: 1px solid rgb(67, 141, 124);
+  padding: 0.7rem 2rem;
 }
 .header-form .sorting button:hover {
   background-color: rgb(67, 141, 124);
@@ -36,6 +37,8 @@
 .header-form .search input {
   width: 80vw;
   border: 1px solid rgb(67, 141, 124);
+  padding: 0.7rem 2rem;
+  color: rgb(144, 144, 144);
 }
 
 @media screen and (min-width: 900px) {

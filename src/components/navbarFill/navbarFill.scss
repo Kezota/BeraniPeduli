@@ -10,7 +10,7 @@ $DarkGray: rgba(100, 100, 100, 1);
 $LightGreen: rgba(67, 141, 124, 0.75);
 $LightGray: rgba(238, 238, 238, 1);
 
-.navbar-section {
+.navbar-fill-section {
   position: absolute;
   .logo {
     font-size: 28px;
@@ -25,13 +25,22 @@ $LightGray: rgba(238, 238, 238, 1);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: $LightGray;
+    background: $AntiFlashWhite;
     width: 100%;
     padding: 1rem;
     z-index: 1000;
 
+    .navbar-fill {
+      .nav-lists {
+        .active-nav {
+          color: $DeepAquamarine !important;
+          font-weight: 700 !important;
+        }
+      }
+    }
+
     @media screen and (max-width: 768px) {
-      .navbar {
+      .navbar-fill {
         background: $LightGray;
         position: absolute;
         height: max-content;
@@ -83,7 +92,7 @@ $LightGray: rgba(238, 238, 238, 1);
           }
         }
 
-        .close-navbar {
+        .close-navbar-fill {
           position: absolute;
           top: 1rem;
           right: 1.5rem;
@@ -95,13 +104,13 @@ $LightGray: rgba(238, 238, 238, 1);
         }
       }
 
-      .active-navbar {
+      .active-navbar-fill {
         // left: 0;
         top: 0;
       }
     }
 
-    .toggle-navbar {
+    .toggle-navbar-fill {
       .icon {
         font-size: 25px;
         color: $DeepAquamarine;
@@ -116,7 +125,7 @@ $LightGray: rgba(238, 238, 238, 1);
     background-color: $LightGray;
     box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);
 
-    .navbar {
+    .navbar-fill {
       .nav-link {
         color: $CharlestonGreen !important;
       }
@@ -125,16 +134,16 @@ $LightGray: rgba(238, 238, 238, 1);
 }
 
 @media screen and (min-width: 769px) {
-  .navbar-section {
-    .toggle-navbar,
-    .close-navbar {
+  .navbar-fill-section {
+    .toggle-navbar-fill,
+    .close-navbar-fill {
       display: none;
     }
 
     .header {
       // padding: 1.5rem 2rem;
 
-      .navbar {
+      .navbar-fill {
         .nav-lists {
           display: flex;
           align-items: center;
@@ -161,7 +170,7 @@ $LightGray: rgba(238, 238, 238, 1);
 
 @media screen and (min-width: 960px) {
   .header {
-    .navbar {
+    .navbar-fill {
       padding: 0.5rem 0;
       .nav-list {
         .nav-item {
