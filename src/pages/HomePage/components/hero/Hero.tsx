@@ -2,7 +2,7 @@ import { Grid } from "@mui/material";
 import "./hero.css";
 
 import heroImage from "../../assets/hero.png";
-import Button from "../Button";
+import Button from "../../../../components/Button";
 
 const Hero = () => {
   return (
