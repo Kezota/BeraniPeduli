@@ -1,11 +1,14 @@
-$KashmirBlue: rgba(79, 112, 156, 1);
-$CloudBurst: rgba(33, 53, 85, 1);
-$SafronMango: rgba(255, 194, 111, 1);
-$WhiteLilac: rgba(248, 248, 248, 1);
+$AntiFlashWhite: rgba(232, 232, 232, 1);
+$CharlestonGreen: rgba(43, 39, 53, 1);
+$DeepAquamarine: rgba(67, 141, 124, 1);
+$LightGoldenrod: rgba(255, 247, 212, 1);
+$Lotion: rgba(252, 253, 251, 1);
+$MellowApricot: rgba(242, 185, 132, 1);
+$PhilippineGray: rgba(144, 144, 144, 1);
+$YellowOrange: rgba(255, 178, 63, 1);
+$DarkGray: rgba(100, 100, 100, 1);
+$LightGreen: rgba(67, 141, 124, 0.75);
 $LightGray: rgba(238, 238, 238, 1);
-$DarkGray: rgba(54, 54, 54, 1);
-$SmokeyGray: rgba(180, 180, 180, 1);
-// box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);
 
 .footer {
   // position: sticky;
@@ -15,12 +18,15 @@ $SmokeyGray: rgba(180, 180, 180, 1);
 
   .sec-container {
     gap: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    flex-direction: column;
 
     .footer-logo {
       padding-bottom: 0.5rem;
       .logo {
-        color: $DarkGray;
         font-weight: 500;
         cursor: pointer;
         text-align: center;
@@ -28,9 +34,19 @@ $SmokeyGray: rgba(180, 180, 180, 1);
         justify-content: center;
         padding-bottom: 0.5rem;
 
+        h1 {
+          // font-family: R;
+          color: $DeepAquamarine !important;
+          font-size: 34px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          letter-spacing: 0.68px;
+        }
+
         .icon {
           font-size: 25px;
-          color: $CloudBurst;
+          color: $DeepAquamarine;
           margin-right: 0.5rem;
         }
       }
@@ -40,13 +56,14 @@ $SmokeyGray: rgba(180, 180, 180, 1);
       gap: 0.5rem;
       margin: auto;
       justify-content: center;
+      margin-bottom: 2rem;
 
       .icon {
         font-size: 30px;
-        background: $KashmirBlue;
+        background-color: $DeepAquamarine !important;
         border-radius: 50%;
         padding: 8px;
-        color: $WhiteLilac;
+        color: $AntiFlashWhite;
 
         &:hover {
           background: $DarkGray;
@@ -54,32 +71,41 @@ $SmokeyGray: rgba(180, 180, 180, 1);
       }
     }
 
-    .footer-links {
-      display: grid;
-      row-gap: 0.2rem;
+    .links {
+      display: flex;
+      flex-direction: column;
 
-      .link-title {
-        padding-bottom: 0.5rem;
-        color: $DarkGray;
-        font-weight: 700;
-      }
+      .footer-links {
+        display: grid;
+        row-gap: 0.2rem;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 1.5rem;
 
-      li {
-        &:hover {
-          transform: translateX(10px);
+        .link-title {
+          padding-bottom: 0.5rem;
+          color: $DarkGray;
+          font-weight: 700;
+        }
 
-          a {
-            color: $KashmirBlue;
+        li {
+          &:hover {
+            transform: translateX(10px);
+
+            a {
+              color: $DeepAquamarine;
+              cursor: pointer;
+            }
           }
         }
-      }
 
-      a,
-      .phone,
-      .email {
-        color: $DarkGray;
-        font-size: 13px;
-        font-weight: 500;
+        a,
+        .phone,
+        .email {
+          color: $DarkGray;
+          font-size: 13px;
+          font-weight: 500;
+        }
       }
     }
   }
@@ -88,24 +114,61 @@ $SmokeyGray: rgba(180, 180, 180, 1);
 /* MEDIA QUERIES */
 @media screen and (min-width: 448px) {
   .sec-container {
-    grid-template-columns: repeat(2, 1fr);
+    // grid-template-columns: repeat(2, 1fr);
     text-align: start !important;
     align-items: flex-start;
 
-    .footer-links {
-      justify-content: center;
+    .links {
+      .footer-links {
+        justify-content: center;
+      }
     }
   }
 }
 
 @media screen and (min-width: 640px) {
   .sec-container {
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    justify-content: space-between;
+    // grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media screen and (min-width: 900px) {
   .sec-container {
     padding: 2rem;
+
+    .footer-logo {
+      .socials {
+        display: flex;
+        align-items: end;
+        gap: 1rem;
+      }
+    }
+
+    .links {
+      justify-content: space-around;
+      align-items: start;
+      flex-direction: row !important;
+      width: 70vw;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sec-container {
+    flex-direction: row !important;
+
+    .links {
+      margin-left: 8rem;
+      width: 50vw;
+      align-items: start;
+
+      .footer-links {
+        text-align: start !important;
+        align-items: start;
+        justify-content: start;
+      }
+    }
   }
 }

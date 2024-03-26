@@ -14,8 +14,11 @@ const Footer = () => {
         <div className="logo-div">
           <div className="footer-logo">
             <a href="#" className="logo flex">
-              <h1 className="flex" style={{ color: "#213555" }}>
-                Harmony Manor
+              <h1
+                className="flex"
+                style={{ color: "rgba(67, 141, 124, 1)", fontWeight: "700" }}
+              >
+                BeraniPeduli
               </h1>
             </a>
           </div>
@@ -44,64 +47,71 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="footer-links">
-          <span className="link-title">About</span>
-          <li>
-            <a
+        <div className="links">
+          <div className="footer-links">
+            <span className="link-title">About</span>
+            <li>
+              <a
               // onClick={() => navigate("/home")}
-              style={{ cursor: "pointer" }}
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
               // onClick={() => navigate("/offers")}
-              style={{ cursor: "pointer" }}
-            >
-              Room Types
-            </a>
-          </li>
-          <li>
-            <a
+              >
+                Tentang Kami
+              </a>
+            </li>
+            <li>
+              <a
               // onClick={() => navigate("/reservation")}
-              style={{ cursor: "pointer" }}
-            >
-              Book
-            </a>
-          </li>
-          <li>
-            <a
-              // onClick={() => navigate("/about")}
-              style={{ cursor: "pointer" }}
-            >
-              About Us
-            </a>
-          </li>
-        </div>
+              >
+                Visi & Misi
+              </a>
+            </li>
+          </div>
 
-        <div className="footer-links">
-          <span className="link-title">Hotel</span>
-          <li>
-            <a
+          <div className="footer-links">
+            <span className="link-title">Services</span>
+            <li>
+              <a
               // onClick={() => navigate("/reviews")}
-              style={{ cursor: "pointer" }}
-            >
-              Why HM?
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/afif_syaiff/">Partner With Us</a>
-          </li>
-          <li>
-            <a href="">FAQ</a>
-          </li>
-        </div>
+              >
+                Donasi
+              </a>
+            </li>
+            <li>
+              <a>Membership</a>
+            </li>
+            <li>
+              <a href="">Volunteer</a>
+            </li>
+          </div>
 
-        <div className="footer-links">
-          <span className="link-title">Contact Us</span>
-          <span className="phone">+62 823 1151 1720</span>
-          <span className="email">harmonymanor.contact@gmail.com</span>
+          <div className="footer-links">
+            <span className="link-title">Support</span>
+            <li>
+              <a
+              // onClick={() => navigate("/reviews")}
+              >
+                Blog
+              </a>
+            </li>
+            <li>
+              <a>Feedback</a>
+            </li>
+            <li>
+              <a>Contact Us</a>
+            </li>
+          </div>
+
+          <div className="footer-links">
+            <span className="link-title">Contact Us</span>
+            <span className="phone">+62 823 1151 1720</span>
+            <span className="email">beranipeduli.contact@gmail.com</span>
+          </div>
         </div>
       </div>
     </div>
