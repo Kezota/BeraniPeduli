@@ -4,6 +4,7 @@ import DonatePage from "./pages/DonatePage";
 export default function App() {
   return (
     <div className="app">
+      {/* <HomePage /> */}
       <DonatePage />
     </div>
   );

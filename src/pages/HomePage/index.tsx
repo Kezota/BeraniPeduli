@@ -2,7 +2,7 @@ import Achievements from "./components/achievements/Achievements";
 import Goal from "./components/goal/Goal";
 import Hero from "./components/hero/Hero";
 import Navbar from "../../components/navbar/Navbar";
-import "../styles/homePage.css";
+import "./homePage.css";
 
 const HomePage = () => {
   return (
