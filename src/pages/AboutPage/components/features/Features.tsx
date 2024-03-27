@@ -1,4 +1,3 @@
-import { Card } from "@mui/material";
 import "./features.css";
 
 const Features = () => {
