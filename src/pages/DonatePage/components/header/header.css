@@ -37,7 +37,7 @@
 .header-form .search input {
   width: 80vw;
   border: 1px solid rgb(67, 141, 124);
-  padding: 0.7rem 2rem;
+  padding: 0.7rem 1rem;
   color: rgb(43, 39, 53);
   font-weight: 500;
 }

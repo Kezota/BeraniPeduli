@@ -5,6 +5,7 @@ import "./aboutPage.css";
 import Vision from "./components/vision/Vision";
 import Mission from "./components/mission/Mission";
 import Achievements from "../../components/achievements/Achievements";
+import Features from "./components/features/Features";
 import Footer from "../../components/footer/Footer";
 
 export default function AboutPage() {
@@ -17,6 +18,9 @@ export default function AboutPage() {
         <Mission />
       </div>
       <Achievements />
+      <div className="container">
+        <Features />
+      </div>
       <Footer />
     </div>
   );

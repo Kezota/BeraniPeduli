@@ -1,0 +1,129 @@
+$AntiFlashWhite: rgba(232, 232, 232, 1);
+$CharlestonGreen: rgba(43, 39, 53, 1);
+$DeepAquamarine: rgba(67, 141, 124, 1);
+$LightGoldenrod: rgba(255, 247, 212, 1);
+$Lotion: rgba(252, 253, 251, 1);
+$MellowApricot: rgba(242, 185, 132, 1);
+$PhilippineGray: rgba(144, 144, 144, 1);
+$YellowOrange: rgba(255, 178, 63, 1);
+$DarkGray: rgba(100, 100, 100, 1);
+$LightGreen: rgba(67, 141, 124, 0.75);
+$LightGray: rgba(238, 238, 238, 1);
+
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+
+    h2 {
+      margin-bottom: 25px;
+    }
+    p {
+      color: #646464;
+      text-align: center;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 37px; /* 185% */
+      letter-spacing: 0.4px;
+      margin-bottom: 35px;
+    }
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 6rem;
+    margin-bottom: 4rem;
+
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 50%;
+      max-width: 458px;
+      height: 480px;
+      padding: 1.5rem;
+      // margin: 1rem;
+      border: none;
+
+      svg {
+        margin-bottom: 25px;
+      }
+      h3 {
+        text-align: center;
+        font-family: Raleway;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 40px;
+        margin-bottom: 21px;
+      }
+      p {
+        text-align: center;
+        font-family: Raleway;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px;
+        width: 80%;
+      }
+    }
+    .card-1 {
+      background: var(--Deep-Aquamarine, #438d7c);
+      box-shadow: 0px 10px 25px 0px rgba(37, 42, 52, 0.07);
+
+      h3,
+      p {
+        color: var(--Lotion, #fcfdfb);
+      }
+    }
+    .card-2 {
+      background: #edf7f5;
+      box-shadow: 0px 10px 25px 0px rgba(37, 42, 52, 0.07);
+
+      h3,
+      p {
+        color: var(--Charleston-Green, #2b2735);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .features {
+    .title {
+      width: 90%;
+      h2 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 16px;
+        width: 100%;
+      }
+    }
+    .cards {
+      flex-direction: column;
+      gap: 2rem;
+
+      .card {
+        // width: ;
+        width: 100%;
+        h3 {
+          font-size: 24px;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
