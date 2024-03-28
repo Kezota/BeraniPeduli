@@ -1,8 +1,15 @@
 import { Grid } from "@mui/material";
+import { formatCurrency } from "../../../../utils/utils";
+
 import donateImg1 from "../../assets/donate1.png";
 import donateImg2 from "../../assets/donate2.png";
 import donateImg3 from "../../assets/donate3.png";
 import donateImg4 from "../../assets/donate4.png";
+import donateImg5 from "../../assets/donate5.png";
+import donateImg6 from "../../assets/donate6.png";
+import donateImg7 from "../../assets/donate7.png";
+import donateImg8 from "../../assets/donate8.png";
+import bmw from "../../assets/bmw.jpg";
 import "./donateGrid.css";
 
 const donates = [
@@ -11,32 +18,73 @@ const donates = [
     category: "Kesehatan",
     title: "Biaya operasi katarak",
     description: "Biaya oprasi katarak bagi orang lansia",
-    raised: "Rp12.000.000",
-    target: "Rp30.000.000",
+    raised: 12000000,
+    target: 30000000,
+  },
+  {
+    image: bmw,
+    category: "Sembako",
+    title: "Mobil bmw untuk Kezia",
+    description: "Bantuan biaya mobil bmw untuk masyarakat yang membutuhkan",
+    raised: 1000,
+    target: 999000000,
   },
   {
     image: donateImg2,
-    category: "Kesehatan",
-    title: "Biaya berobat kanker",
-    description: "Biaya upaya penyembuhan kanker paru-paru",
-    raised: "Rp68.540.000",
-    target: "Rp130.000.000",
-  },
-  {
-    image: donateImg3,
-    category: "Sembako",
-    title: "Makan siang gratis",
-    description: "Berbagi makan siang gratis bagi masyarakat membutuhkan",
-    raised: "Rp1.200.000",
-    target: "Rp4.500.000",
-  },
-  {
-    image: donateImg4,
     category: "Pendidikan",
     title: "Buku dan alat tulis siswa",
     description: "Keperluan peralatan tulis siswa untuk belajar",
-    raised: "Rp39.500.000",
-    target: "Rp54.000.000",
+    raised: 39500000,
+    target: 54000000,
+  },
+  {
+    image: donateImg3,
+    category: "Hunian Layak",
+    title: "Tempat tinggal anak yatim",
+    description: "Tempat tinggal yang layak bagi anak sebatang kara",
+    raised: 98450000,
+    target: 280000000,
+  },
+  {
+    image: donateImg4,
+    category: "Sembako",
+    title: "Makan siang gratis",
+    description: "Berbagi makan siang gratis bagi masyarakat membutuhkan",
+    raised: 1200000,
+    target: 4500000,
+  },
+  {
+    image: donateImg5,
+    category: "Sembako",
+    title: "Berbagi beras untuk desa",
+    description: "Sumber makan pokok bagi masyarakat desa",
+    raised: 7800000,
+    target: 12000000,
+  },
+  {
+    image: donateImg6,
+    category: "Kesehatan",
+    title: "Biaya berobat kanker",
+    description: "Biaya upaya penyembuhan kanker paru-paru",
+    raised: 68540000,
+    target: 130000000,
+  },
+  {
+    image: donateImg7,
+    category: "Pendidikan",
+    title: "Pembelian Kursi dan meja",
+    description:
+      "Membeli peralatan meja kursi untuk sekolah yang layak bagi siswa",
+    raised: 74500000,
+    target: 89000000,
+  },
+  {
+    image: donateImg8,
+    category: "Hunian Layak",
+    title: "Renovasi panti asuhan",
+    description: "Perbaikan atap dan tembok untuk panti asuhan",
+    raised: 110500000,
+    target: 180000000,
   },
 ];
 
@@ -71,8 +119,8 @@ type TDonateCard = {
   category: string;
   title: string;
   description: string;
-  raised: string;
-  target: string;
+  raised: number;
+  target: number;
 };
 
 function DonateCard({
@@ -107,18 +155,18 @@ function DonateCard({
                   className="progress-bar"
                   style={{
                     backgroundColor: "#FFC701",
-                    width: "35%",
+                    width: `${(raised / target) * 100}%`,
                   }}
                 ></div>
               </div>
               <Grid container spacing={2} sx={{ width: "300px", mt: "10px" }}>
                 <Grid item xs={6}>
                   <h6>Terkumpul:</h6>
-                  <p className="money-raised">{raised}</p>
+                  <p className="money-raised">{formatCurrency(raised)}</p>
                 </Grid>
                 <Grid item xs={6}>
                   <h6>Target:</h6>
-                  <p className="money-raised">{target}</p>
+                  <p className="money-raised">{formatCurrency(target)}</p>
                 </Grid>
               </Grid>
             </div>

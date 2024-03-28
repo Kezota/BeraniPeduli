@@ -1,0 +1,32 @@
+.our-events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem 1rem;
+}
+.our-events p {
+  max-width: 728px;
+  color: #646464;
+  text-align: center;
+  font-family: Raleway;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 37px; /* 185% */
+  letter-spacing: 0.4px;
+}
+
+@media screen and (max-width: 769px) {
+  .our-events h2 {
+    font-size: 26px;
+  }
+  .our-events p {
+    line-height: 27px; /* 185% */
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .our-events h2 {
+    font-size: 30px;
+  }
+}/*# sourceMappingURL=ourEvents.css.map */

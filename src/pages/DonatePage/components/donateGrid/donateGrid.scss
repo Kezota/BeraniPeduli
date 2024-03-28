@@ -43,6 +43,11 @@ $LightGray: rgba(238, 238, 238, 1);
         right: 0;
         margin-left: auto;
         margin-right: auto;
+
+        &:hover {
+          background-color: #f9b400;
+          transition: 0.2s ease;
+        }
       }
     }
 

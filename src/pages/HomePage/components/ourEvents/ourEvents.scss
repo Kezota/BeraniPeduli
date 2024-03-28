@@ -1,0 +1,55 @@
+$AntiFlashWhite: rgba(232, 232, 232, 1);
+$CharlestonGreen: rgba(43, 39, 53, 1);
+$DeepAquamarine: rgba(67, 141, 124, 1);
+$LightGoldenrod: rgba(255, 247, 212, 1);
+$Lotion: rgba(252, 253, 251, 1);
+$MellowApricot: rgba(242, 185, 132, 1);
+$PhilippineGray: rgba(144, 144, 144, 1);
+$YellowOrange: rgba(255, 178, 63, 1);
+$DarkGray: rgba(100, 100, 100, 1);
+$LightGreen: rgba(67, 141, 124, 0.75);
+$LightGray: rgba(238, 238, 238, 1);
+
+.our-events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem 1rem;
+
+  h2 {
+    // font-size: 36px;
+  }
+  p {
+    max-width: 728px;
+    color: #646464;
+
+    text-align: center;
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 37px; /* 185% */
+    letter-spacing: 0.4px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .our-events {
+    h2 {
+      font-size: 26px;
+      // margin-bottom: 1rem;
+    }
+    p {
+      line-height: 27px; /* 185% */
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .our-events {
+    h2 {
+      font-size: 30px;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import NavbarFill from "../../components/navbarFill/NavbarFill";
 import Heading from "../../components/heading/Heading";
-import headerImage from "../../assets/membership-header.png";
+import headerImage from "./assets/membership-header.png";
 import "./membershipPage.css";
 
 export default function MembershipPage() {
