@@ -1,5 +1,5 @@
 import "./mission.css";
-import missionImage from "../../../../assets/misi.png";
+import missionImage from "../../assets/misi.png";
 
 const Mission = () => {
   return (

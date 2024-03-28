@@ -9,8 +9,11 @@
   align-items: center;
 }
 .donate-grid .donate-card .card-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 20px;
   width: 250px;
+  height: 321.783px;
 }
 .donate-grid .donate-card .card-image button {
   color: rgba(0, 0, 0, 0.82);

@@ -1,5 +1,5 @@
 import "./vision.css";
-import visionImage from "../../../../assets/visi.png";
+import visionImage from "../../assets/visi.png";
 
 const Vision = () => {
   return (

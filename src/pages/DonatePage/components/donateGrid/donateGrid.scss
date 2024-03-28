@@ -20,8 +20,10 @@ $LightGray: rgba(238, 238, 238, 1);
       justify-content: center;
       align-items: center;
       img {
+        object-fit: cover;
         border-radius: 20px;
         width: 250px;
+        height: 321.783px;
       }
       button {
         color: rgba(0, 0, 0, 0.82);

@@ -1,5 +1,5 @@
 import "./goal.css";
-import goalImage from "../../../../assets/goal.png";
+import goalImage from "../../assets/goal.png";
 
 const Goal = () => {
   return (

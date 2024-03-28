@@ -1,8 +1,8 @@
 import { Grid } from "@mui/material";
-import donateImg1 from "../../../../assets/donate1.png";
-import donateImg2 from "../../../../assets/donate2.png";
-import donateImg3 from "../../../../assets/donate3.png";
-import donateImg4 from "../../../../assets/donate4.png";
+import donateImg1 from "../../assets/donate1.png";
+import donateImg2 from "../../assets/donate2.png";
+import donateImg3 from "../../assets/donate3.png";
+import donateImg4 from "../../assets/donate4.png";
 import "./donateGrid.css";
 
 const donates = [

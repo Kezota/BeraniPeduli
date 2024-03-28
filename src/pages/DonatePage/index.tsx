@@ -3,7 +3,7 @@ import Footer from "../../components/footer/Footer";
 import Header from "./components/header/Header";
 import DonateGrid from "./components/donateGrid/DonateGrid";
 import NavbarFill from "../../components/navbarFill/NavbarFill";
-import headerImage from "../../assets/donate-header.png";
+import headerImage from "./assets/donate-header.png";
 import "./donatePage.css";
 
 const DonatePage = () => {
