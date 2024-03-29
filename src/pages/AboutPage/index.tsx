@@ -4,6 +4,7 @@ import Vision from "./components/vision/Vision";
 import Mission from "./components/mission/Mission";
 import Achievements from "../../components/achievements/Achievements";
 import Features from "./components/features/Features";
+import Testimonial from "./components/testimonial/Testimonial";
 import Footer from "../../components/footer/Footer";
 
 import headerImage from "./assets/about-header.png";
@@ -21,6 +22,7 @@ export default function AboutPage() {
       <Achievements />
       <div className="container">
         <Features />
+        <Testimonial />
       </div>
       <Footer />
     </div>
