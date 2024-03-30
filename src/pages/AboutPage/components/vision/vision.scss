@@ -32,6 +32,7 @@ $LightGray: rgba(238, 238, 238, 1);
       font-weight: 700;
       line-height: 155%; /* 55.8px */
       letter-spacing: 0.72px;
+      letter-spacing: normal;
       margin-top: 1rem;
       margin-bottom: 1.5rem;
     }
@@ -41,7 +42,7 @@ $LightGray: rgba(238, 238, 238, 1);
       font-size: 16px;
       font-style: normal;
       font-weight: 500;
-      line-height: 40px; /* 185% */
+      line-height: 35px; /* 185% */
       letter-spacing: 0.4px;
     }
   }
@@ -57,9 +58,12 @@ $LightGray: rgba(238, 238, 238, 1);
 
       h3 {
         font-size: 38px;
+        letter-spacing: 0.72px;
       }
       p {
         font-size: 20px;
+        letter-spacing: 0.4px;
+        line-height: 40px;
       }
     }
   }

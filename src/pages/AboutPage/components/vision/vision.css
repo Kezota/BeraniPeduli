@@ -21,6 +21,7 @@
   font-weight: 700;
   line-height: 155%; /* 55.8px */
   letter-spacing: 0.72px;
+  letter-spacing: normal;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
 }
@@ -30,7 +31,7 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 40px; /* 185% */
+  line-height: 35px; /* 185% */
   letter-spacing: 0.4px;
 }
 
@@ -44,8 +45,11 @@
   }
   .vision .vision-detail h3 {
     font-size: 38px;
+    letter-spacing: 0.72px;
   }
   .vision .vision-detail p {
     font-size: 20px;
+    letter-spacing: 0.4px;
+    line-height: 40px;
   }
 }/*# sourceMappingURL=vision.css.map */
