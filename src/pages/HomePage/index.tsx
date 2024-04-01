@@ -5,6 +5,7 @@ import Achievements from "../../components/achievements/Achievements";
 import Donations from "./components/DonationCategory/DonationCategory";
 import OurEvents from "./components/ourEvents/OurEvents";
 import Choose from "./components/choose/Choose";
+import Contact from "./components/contact/Contact";
 import Footer from "../../components/footer/Footer";
 import "./homePage.css";
 
@@ -23,6 +24,7 @@ const HomePage = () => {
       <Choose />
       <div className="container">
         <OurEvents />
+        <Contact />
       </div>
       <Footer />
     </div>
