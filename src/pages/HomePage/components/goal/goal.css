@@ -20,7 +20,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: 155%; /* 55.8px */
-  letter-spacing: 0.72px;
+  letter-spacing: normal;
   margin-top: 1rem 0;
 }
 .goal .goal-detail p {
@@ -29,7 +29,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 37px; /* 185% */
-  letter-spacing: 0.4px;
+  letter-spacing: normal;
   margin-bottom: 1.5rem;
 }
 .goal .goal-detail .points {
@@ -52,7 +52,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 145%; /* 29px */
-  letter-spacing: 0.4px;
+  letter-spacing: normal;
   margin-bottom: 0;
   margin-left: 0.7rem;
 }
@@ -70,15 +70,18 @@
   }
   .goal .goal-detail h3 {
     font-size: 38px;
+    letter-spacing: 0.72px;
   }
   .goal .goal-detail p {
     font-size: 20px;
+    letter-spacing: 0.4px;
   }
   .goal .goal-detail .points {
     width: 80%;
   }
   .goal .goal-detail .points .point p {
     font-size: 20px;
+    letter-spacing: 0.4px;
   }
   .goal .image {
     max-width: 450px !important;

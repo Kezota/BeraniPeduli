@@ -156,10 +156,12 @@ $LightGray: rgba(238, 238, 238, 1);
     h2 {
       font-size: 26px;
       // margin-bottom: 1rem;
+      letter-spacing: normal;
     }
     p {
       line-height: 27px; /* 185% */
       font-size: 16px;
+      letter-spacing: normal;
     }
 
     .event-card {
@@ -184,10 +186,12 @@ $LightGray: rgba(238, 238, 238, 1);
         h5 {
           font-size: 16px !important;
           line-height: 20px; /* 125% */
+          letter-spacing: normal;
         }
         h4 {
           font-size: 14px !important;
           line-height: 20px; /* 142.857% */
+          letter-spacing: normal;
         }
       }
     }

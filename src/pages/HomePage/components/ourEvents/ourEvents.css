@@ -129,10 +129,12 @@
 @media screen and (max-width: 769px) {
   .our-events h2 {
     font-size: 26px;
+    letter-spacing: normal;
   }
   .our-events p {
     line-height: 27px; /* 185% */
     font-size: 16px;
+    letter-spacing: normal;
   }
   .our-events .event-card {
     max-width: 400px;
@@ -157,10 +159,12 @@
   .our-events .event-card .card-detail h5 {
     font-size: 16px !important;
     line-height: 20px; /* 125% */
+    letter-spacing: normal;
   }
   .our-events .event-card .card-detail h4 {
     font-size: 14px !important;
     line-height: 20px; /* 142.857% */
+    letter-spacing: normal;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {

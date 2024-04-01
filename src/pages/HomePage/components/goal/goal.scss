@@ -33,7 +33,7 @@ $LightGreen: rgba(67, 141, 124, 0.75);
       font-style: normal;
       font-weight: 700;
       line-height: 155%; /* 55.8px */
-      letter-spacing: 0.72px;
+      letter-spacing: normal;
       margin-top: 1rem 0;
     }
 
@@ -43,7 +43,7 @@ $LightGreen: rgba(67, 141, 124, 0.75);
       font-style: normal;
       font-weight: 500;
       line-height: 37px; /* 185% */
-      letter-spacing: 0.4px;
+      letter-spacing: normal;
       margin-bottom: 1.5rem;
     }
 
@@ -67,7 +67,7 @@ $LightGreen: rgba(67, 141, 124, 0.75);
           font-style: normal;
           font-weight: 500;
           line-height: 145%; /* 29px */
-          letter-spacing: 0.4px;
+          letter-spacing: normal;
           margin-bottom: 0;
           margin-left: 0.7rem;
         }
@@ -89,9 +89,11 @@ $LightGreen: rgba(67, 141, 124, 0.75);
 
       h3 {
         font-size: 38px;
+        letter-spacing: 0.72px;
       }
       p {
         font-size: 20px;
+        letter-spacing: 0.4px;
       }
       .points {
         width: 80%;
@@ -99,6 +101,7 @@ $LightGreen: rgba(67, 141, 124, 0.75);
         .point {
           p {
             font-size: 20px;
+            letter-spacing: 0.4px;
           }
         }
       }
