@@ -37,9 +37,9 @@
   font-size: 32px;
   color: rgb(43, 39, 53);
   font-weight: 700;
-  line-height: 2.5rem;
+  line-height: 2.7rem;
   text-transform: capitalize;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-shadow: 1px 1px 1px rgba(178, 178, 178, 0.334);
 }
 .hero .sec-container .hero-text .sub-title {
@@ -48,9 +48,24 @@
   opacity: 0.9;
   font-weight: 500;
   padding: 1rem 0;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   line-height: 37px;
   text-shadow: 1px 1px 1px rgba(178, 178, 178, 0.334);
+}
+.hero .sec-container .hero-text button {
+  padding: 17px 32px;
+  border-radius: 15px;
+  margin-top: 30px;
+  background: rgb(255, 178, 63);
+  border: none;
+  color: rgb(43, 39, 53);
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.17px;
+}
+.hero .sec-container .hero-text button:hover {
+  background: rgba(255, 178, 63, 0.8);
 }
 
 @media screen and (min-width: 556px) {
@@ -88,14 +103,14 @@
     font-size: 51px;
     font-weight: 800;
     line-height: 140%; /* 71.4px */
-    letter-spacing: 1.02px;
+    letter-spacing: 2px;
   }
   .hero .sec-container .hero-text .sub-title {
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: 37px; /* 185% */
-    letter-spacing: 0.6px;
+    letter-spacing: 1px;
   }
 }
 @media screen and (min-width: 1200px) {

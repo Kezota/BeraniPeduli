@@ -18,48 +18,49 @@ const Contact = () => {
             </div>
           </Grid>
           <Grid item xs={12} md={7}>
-            <div className="form-group">
-              <div className="first-last">
-                <TextField
-                  label="First Name"
-                  placeholder="Enter first name"
-                  variant="standard"
-                  fullWidth
-                  sx={{ fontFamily: "Raleway !important" }}
-                ></TextField>
-                <TextField
-                  label="Last Name"
-                  placeholder="Enter last name"
-                  variant="standard"
-                  fullWidth
-                ></TextField>
+            <form noValidate autoComplete="off">
+              <div className="form-group">
+                <div className="first-last">
+                  <TextField
+                    label="First Name"
+                    placeholder="Enter first name"
+                    variant="standard"
+                    fullWidth
+                  ></TextField>
+                  <TextField
+                    label="Last Name"
+                    placeholder="Enter last name"
+                    variant="standard"
+                    fullWidth
+                  ></TextField>
+                </div>
+                <div className="phone-email">
+                  <TextField
+                    label="Phone"
+                    placeholder="Enter phone number"
+                    variant="standard"
+                    fullWidth
+                  ></TextField>
+                  <TextField
+                    label="Email"
+                    placeholder="Enter email address"
+                    variant="standard"
+                    fullWidth
+                  ></TextField>
+                </div>
+                <div className="message">
+                  <TextField
+                    id="outlined-multiline-flexible"
+                    label="Message"
+                    multiline
+                    maxRows={4}
+                    fullWidth
+                    variant="standard"
+                  />
+                </div>
+                <button>Kirim Sekarang</button>
               </div>
-              <div className="phone-email">
-                <TextField
-                  label="Phone"
-                  placeholder="Enter phone number"
-                  variant="standard"
-                  fullWidth
-                ></TextField>
-                <TextField
-                  label="Email"
-                  placeholder="Enter email address"
-                  variant="standard"
-                  fullWidth
-                ></TextField>
-              </div>
-              <div className="message">
-                <TextField
-                  id="outlined-multiline-flexible"
-                  label="Message"
-                  multiline
-                  maxRows={4}
-                  fullWidth
-                  variant="standard"
-                />
-              </div>
-              <button>Kirim Sekarang</button>
-            </div>
+            </form>
           </Grid>
         </div>
       </Grid>

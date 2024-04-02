@@ -51,9 +51,9 @@ $LightGreen: rgba(67, 141, 124, 0.75);
         font-size: 32px;
         color: $CharlestonGreen;
         font-weight: 700;
-        line-height: 2.5rem;
+        line-height: 2.7rem;
         text-transform: capitalize;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         text-shadow: 1px 1px 1px rgba(178, 178, 178, 0.334);
       }
 
@@ -63,10 +63,25 @@ $LightGreen: rgba(67, 141, 124, 0.75);
         opacity: 0.9;
         font-weight: 500;
         padding: 1rem 0;
-        // max-width: 70%;
-        letter-spacing: 1px;
+        letter-spacing: 0.5px;
         line-height: 37px;
         text-shadow: 1px 1px 1px rgba(178, 178, 178, 0.334);
+      }
+      button {
+        padding: 17px 32px;
+        border-radius: 15px;
+        margin-top: 30px;
+        background: rgba(255, 178, 63, 1);
+        border: none;
+        color: $CharlestonGreen;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: 0.17px;
+
+        &:hover {
+          background: rgba(255, 178, 63, 0.8);
+        }
       }
     }
   }
@@ -130,14 +145,14 @@ $LightGreen: rgba(67, 141, 124, 0.75);
           font-size: 51px;
           font-weight: 800;
           line-height: 140%; /* 71.4px */
-          letter-spacing: 1.02px;
+          letter-spacing: 2px;
         }
         .sub-title {
           font-size: 20px;
           font-style: normal;
           font-weight: 500;
           line-height: 37px; /* 185% */
-          letter-spacing: 0.6px;
+          letter-spacing: 1px;
         }
       }
     }

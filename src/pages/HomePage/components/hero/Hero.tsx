@@ -1,10 +1,11 @@
 import { Grid } from "@mui/material";
-import Button from "../../../../components/Button";
-
+import { useNavigate } from "react-router-dom";
 import heroImage from "../../assets/hero.png";
 import "./hero.css";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="hero">
       <Grid container spacing={1} sx={{ height: "82vh" }}>
@@ -28,7 +29,9 @@ const Hero = () => {
                 Bersama BeraniPeduli, mari kita memberikan bantuan kepada mereka
                 yang membutuhkan!
               </p>
-              <Button>Donasi Sekarang</Button>
+              <button onClick={() => navigate("/donate")}>
+                Donasi Sekarang
+              </button>
             </div>
           </div>
         </Grid>
