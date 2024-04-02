@@ -82,6 +82,14 @@ const Navbar = () => {
             >
               <div className="nav-link">Membership</div>
             </li>
+            <li
+              className="nav-item"
+              onClick={() => {
+                navigate("/volunteer");
+              }}
+            >
+              <div className="nav-link">Volunteer</div>
+            </li>
           </ul>
           <div onClick={removeNav} className="close-navbar">
             <AiFillCloseCircle className="icon" />

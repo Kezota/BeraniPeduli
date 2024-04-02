@@ -103,6 +103,25 @@ const NavbarFill = ({ activeNav }: { activeNav: string }) => {
                 Membership
               </div>
             </li>
+            <li
+              className={`nav-item ${
+                activeNav === "volunteer" && "active-nav"
+              }`}
+              onClick={() => {
+                navigate("/volunteer");
+              }}
+            >
+              <div
+                className="nav-link"
+                style={
+                  activeNav === "volunteer"
+                    ? { color: "#438D7C", fontWeight: 700 }
+                    : {}
+                }
+              >
+                Volunteer
+              </div>
+            </li>
           </ul>
           <div onClick={removeNav} className="close-navbar-fill">
             <AiFillCloseCircle className="icon" />
