@@ -1,12 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import "./footer.css";
 import { ImFacebook } from "react-icons/im";
 import { BsTwitter } from "react-icons/bs";
 import { AiFillInstagram } from "react-icons/ai";
-// import { SiYourtraveldottv } from "react-icons/si";
-// import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <div className="footer">
@@ -51,42 +50,26 @@ const Footer = () => {
           <div className="footer-links">
             <span className="link-title">About</span>
             <li>
-              <a
-              // onClick={() => navigate("/home")}
-              >
-                Home
-              </a>
+              <a onClick={() => navigate("/")}>Home</a>
             </li>
             <li>
-              <a
-              // onClick={() => navigate("/offers")}
-              >
-                Tentang Kami
-              </a>
+              <a onClick={() => navigate("/about")}>Tentang Kami</a>
             </li>
             <li>
-              <a
-              // onClick={() => navigate("/reservation")}
-              >
-                Visi & Misi
-              </a>
+              <a onClick={() => navigate("/about")}>Visi & Misi</a>
             </li>
           </div>
 
           <div className="footer-links">
             <span className="link-title">Services</span>
             <li>
-              <a
-              // onClick={() => navigate("/reviews")}
-              >
-                Donasi
-              </a>
+              <a onClick={() => navigate("/donate")}>Donasi</a>
             </li>
             <li>
-              <a>Membership</a>
+              <a onClick={() => navigate("/membership")}>Membership</a>
             </li>
             <li>
-              <a href="">Volunteer</a>
+              <a onClick={() => navigate("/volunteer")}>Volunteer</a>
             </li>
           </div>
 

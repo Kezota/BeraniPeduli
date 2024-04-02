@@ -2,7 +2,7 @@ import Navbar from "../../components/navbar/Navbar";
 import Hero from "./components/hero/Hero";
 import Goal from "./components/goal/Goal";
 import Achievements from "../../components/achievements/Achievements";
-import Donations from "./components/DonationCategory/DonationCategory";
+import Donations from "./components/donationCategory/DonationCategory";
 import OurEvents from "./components/ourEvents/OurEvents";
 import Choose from "./components/choose/Choose";
 import Contact from "./components/contact/Contact";

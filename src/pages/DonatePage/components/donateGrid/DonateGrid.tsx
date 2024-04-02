@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import { formatCurrency } from "../../../../utils/utils";
+import { formatCurrency } from "../../../../utils";
 
 import donateImg1 from "../../assets/donate1.png";
 import donateImg2 from "../../assets/donate2.png";
