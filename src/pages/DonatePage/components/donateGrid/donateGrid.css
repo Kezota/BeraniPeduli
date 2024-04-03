@@ -2,6 +2,10 @@
   margin-top: 2rem;
   margin-bottom: 4rem;
 }
+.donate-grid .not-found {
+  margin-top: 4rem;
+  font-weight: 600;
+}
 .donate-grid .donate-card .card-image {
   position: relative;
   display: flex;

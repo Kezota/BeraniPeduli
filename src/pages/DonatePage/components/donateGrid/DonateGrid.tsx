@@ -1,5 +1,6 @@
 import { Grid } from "@mui/material";
 import { formatCurrency } from "../../../../utils";
+import { TCategory } from "../..";
 
 import donateImg1 from "../../assets/donate1.png";
 import donateImg2 from "../../assets/donate2.png";
@@ -13,7 +14,7 @@ import bmw from "../../assets/bmw.jpg";
 import pengungsi from "../../assets/pengungsi.jpg";
 import "./donateGrid.css";
 
-const donates = [
+const donations = [
   {
     image: bmw,
     category: "Sembako",
@@ -97,7 +98,30 @@ const donates = [
   },
 ];
 
-const DonateGrid = () => {
+type TDonateGrid = {
+  category: TCategory | null;
+  sort: boolean;
+  search: string;
+};
+
+const DonateGrid = ({ category, sort, search }: TDonateGrid) => {
+  let filteredDonations = donations.filter((donation) => {
+    if (category === null || category === "None") return true;
+    else return donation.category === category;
+  });
+
+  if (search) {
+    filteredDonations = [...filteredDonations].filter(
+      (donation) =>
+        donation.title.toLowerCase().includes(search.toLowerCase()) ||
+        donation.description.toLowerCase().includes(search.toLowerCase())
+    );
+  }
+
+  const sortedDonations = sort
+    ? filteredDonations.reverse()
+    : filteredDonations;
+
   return (
     <div className="donate-grid container">
       <Grid
@@ -105,20 +129,14 @@ const DonateGrid = () => {
         spacing={4}
         sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
-        {donates.map((donate, index) => (
-          <DonateCard key={index} {...donate} />
-        ))}
+        {sortedDonations.length > 0 ? (
+          sortedDonations.map((donate, index) => (
+            <DonateCard key={index} {...donate} />
+          ))
+        ) : (
+          <h3 className="not-found">No donations found</h3>
+        )}
       </Grid>
-      <div className="load-more">
-        <button
-          className="btn flex"
-          onClick={() => {
-            // navigate("/offers");
-          }}
-        >
-          Load More
-        </button>
-      </div>
     </div>
   );
 };

@@ -1,17 +1,23 @@
-import { useState } from "react";
+import { TCategory } from "../..";
 import "./header.css";
 
-type TCategory =
-  | "Pendidikan"
-  | "Kesehatan"
-  | "Hunian Layak"
-  | "Sembako"
-  | "None";
+type THeader = {
+  category: TCategory | null;
+  setCategory: (category: TCategory) => void;
+  sort: boolean;
+  setSort: (sort: boolean) => void;
+  search: string;
+  setSearch: (search: string) => void;
+};
 
-export default function Header() {
-  const [category, setCategory] = useState<TCategory | null>(null);
-  const [sort, setSort] = useState(false);
-
+export default function Header({
+  category,
+  setCategory,
+  sort,
+  setSort,
+  search,
+  setSearch,
+}: THeader) {
   return (
     <div className="header-form">
       <div className="dropdown-sort">
@@ -71,7 +77,13 @@ export default function Header() {
         </div>
       </div>
       <div className="search">
-        <input type="text" className="form-control" placeholder="Cari donasi" />
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Cari donasi"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
       </div>
     </div>
   );
