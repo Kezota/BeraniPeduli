@@ -10,17 +10,10 @@ import donateImg6 from "../../assets/donate6.png";
 import donateImg7 from "../../assets/donate7.png";
 import donateImg8 from "../../assets/donate8.png";
 import bmw from "../../assets/bmw.jpg";
+import pengungsi from "../../assets/pengungsi.jpg";
 import "./donateGrid.css";
 
 const donates = [
-  {
-    image: donateImg1,
-    category: "Kesehatan",
-    title: "Biaya operasi katarak",
-    description: "Biaya oprasi katarak bagi orang lansia",
-    raised: 12000000,
-    target: 30000000,
-  },
   {
     image: bmw,
     category: "Sembako",
@@ -28,6 +21,22 @@ const donates = [
     description: "Bantuan biaya mobil bmw untuk masyarakat yang membutuhkan",
     raised: 1000,
     target: 999000000,
+  },
+  {
+    image: pengungsi,
+    category: "Hunian Layak",
+    title: "Rumah bagi pengungsi",
+    description: "Biaya pembangunan rumah bagi pengungsi rohingya",
+    raised: 5000000,
+    target: 100000000,
+  },
+  {
+    image: donateImg1,
+    category: "Kesehatan",
+    title: "Biaya operasi katarak",
+    description: "Biaya oprasi katarak bagi orang lansia",
+    raised: 12000000,
+    target: 30000000,
   },
   {
     image: donateImg2,

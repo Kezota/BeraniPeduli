@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import Navbar from "../../components/navbar/Navbar";
 import Hero from "./components/hero/Hero";
 import Goal from "./components/goal/Goal";
@@ -7,9 +9,15 @@ import OurEvents from "./components/ourEvents/OurEvents";
 import Choose from "./components/choose/Choose";
 import Contact from "./components/contact/Contact";
 import Footer from "../../components/footer/Footer";
+
 import "./homePage.css";
 
 const HomePage = () => {
+  // scroll to top on page load
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <div>
       <Navbar />

@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import NavbarFill from "../../components/navbarFill/NavbarFill";
 import Heading from "../../components/heading/Heading";
 import Vision from "./components/vision/Vision";
@@ -11,6 +13,11 @@ import headerImage from "./assets/about-header.png";
 import "./aboutPage.css";
 
 export default function AboutPage() {
+  // scroll to top on page load
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <div className="about-page">
       <NavbarFill activeNav="about" />
