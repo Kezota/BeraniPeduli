@@ -59,7 +59,7 @@ function EventCard({
         <span className="day">{day}</span>
         <span className="month">{month}</span>
       </div>
-      <p className="card-detail">
+      <div className="card-detail">
         <div className="location">
           <svg
             width="24"
@@ -90,7 +90,7 @@ function EventCard({
         </div>
         <h5 className="title">{title}</h5>
         <h4>Lihat Acara →</h4>
-      </p>
+      </div>
     </div>
   );
 }

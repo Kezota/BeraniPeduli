@@ -58,8 +58,8 @@ const Hero = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M44.36 0C-27.1116 148.592 -12.3058 330.131 99.0814 471.222C259.841 674.852 560.902 717.119 771.519 565.629L795 548.739V0H44.36Z"
                 fill="url(#paint0_linear_109_21)"
               />
@@ -72,8 +72,8 @@ const Hero = () => {
                   y2="-60.3188"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#438D7C" />
-                  <stop offset="1" stop-color="#7FC5B5" />
+                  <stop stopColor="#438D7C" />
+                  <stop offset="1" stopColor="#7FC5B5" />
                 </linearGradient>
               </defs>
             </svg>
