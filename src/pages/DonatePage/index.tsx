@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 
-import Heading from "../../components/heading/Heading";
-import Footer from "../../components/footer/Footer";
-import Header from "./components/header/Header";
-import DonateGrid from "./components/donateGrid/DonateGrid";
-import NavbarFill from "../../components/navbarFill/NavbarFill";
+import Heading from "../../components/Heading";
+import Footer from "../../components/Footer";
+import Header from "./components/Header";
+import DonateGrid from "./components/DonateGrid";
+import NavbarFill from "../../components/NavbarFill";
 
-import headerImage from "./assets/donate-header.png";
-import "./donatePage.css";
+import headerImage from "../../assets/donate-header.png";
+import "../../styles/donatePage.css";
 
 export type TCategory =
   | "Pendidikan"

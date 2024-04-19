@@ -1,16 +1,16 @@
 import { useEffect } from "react";
 
-import NavbarFill from "../../components/navbarFill/NavbarFill";
-import Heading from "../../components/heading/Heading";
-import Vision from "./components/vision/Vision";
-import Mission from "./components/mission/Mission";
-import Achievements from "../../components/achievements/Achievements";
-import Features from "./components/features/Features";
-import Testimonial from "./components/testimonial/Testimonial";
-import Footer from "../../components/footer/Footer";
+import NavbarFill from "../../components/NavbarFill";
+import Heading from "../../components/Heading";
+import Vision from "./components/Vision";
+import Mission from "./components/Mission";
+import Achievements from "../../components/Achievements";
+import Features from "./components/Features";
+import Testimonial from "./components/Testimonial";
+import Footer from "../../components/Footer";
 
-import headerImage from "./assets/about-header.png";
-import "./aboutPage.css";
+import headerImage from "../../assets/about-header.png";
+import "../../styles/aboutPage.css";
 
 export default function AboutPage() {
   // scroll to top on page load

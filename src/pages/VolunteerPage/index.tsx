@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 
-import NavbarFill from "../../components/navbarFill/NavbarFill";
-import Heading from "../../components/heading/Heading";
+import NavbarFill from "../../components/NavbarFill";
+import Heading from "../../components/Heading";
 
-import headerImage from "./assets/volunteer-header.png";
-import "./volunteerPage.css";
+import headerImage from "../../assets/volunteer-header.png";
+import "../../styles/volunteerPage.css";
 
 export default function VolunteerPage() {
   // scroll to top on page load

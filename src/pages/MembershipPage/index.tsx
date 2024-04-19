@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 
-import NavbarFill from "../../components/navbarFill/NavbarFill";
-import Heading from "../../components/heading/Heading";
+import NavbarFill from "../../components/NavbarFill";
+import Heading from "../../components/Heading";
 
-import headerImage from "./assets/membership-header.png";
-import "./membershipPage.css";
+import headerImage from "../../assets/membership-header.png";
+import "../../styles/membershipPage.css";
 
 export default function MembershipPage() {
   // scroll to top on page load
