@@ -8,6 +8,7 @@ import NavbarFill from "../../components/NavbarFill";
 
 import headerImage from "../../assets/donate-header.png";
 import "../../styles/donatePage.css";
+import DonatePopup from "./components/DonatePopup";
 
 export type TCategory =
   | "Pendidikan"
@@ -18,6 +19,7 @@ export type TCategory =
 
 const DonatePage = () => {
   const [category, setCategory] = useState<TCategory | null>(null);
+  const [openPopup, setOpenPopup] = useState(false);
   const [sort, setSort] = useState(false);
   const [search, setSearch] = useState("");
 
@@ -31,6 +33,10 @@ const DonatePage = () => {
       <NavbarFill activeNav="donate" />
       <Heading image={headerImage} title="Donation Page" />
       <div className="container">
+        <DonatePopup
+          open={openPopup}
+          onClosePopup={() => setOpenPopup(false)}
+        />
         <Header
           category={category}
           setCategory={setCategory}
@@ -39,7 +45,12 @@ const DonatePage = () => {
           search={search}
           setSearch={setSearch}
         />
-        <DonateGrid category={category} sort={sort} search={search} />
+        <DonateGrid
+          category={category}
+          sort={sort}
+          search={search}
+          onOpenPopup={() => setOpenPopup(true)}
+        />
       </div>
       <Footer />
     </div>

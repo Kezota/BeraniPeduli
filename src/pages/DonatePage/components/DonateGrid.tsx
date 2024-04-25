@@ -102,9 +102,10 @@ type TDonateGrid = {
   category: TCategory | null;
   sort: boolean;
   search: string;
+  onOpenPopup: () => void;
 };
 
-const DonateGrid = ({ category, sort, search }: TDonateGrid) => {
+const DonateGrid = ({ category, sort, search, onOpenPopup }: TDonateGrid) => {
   let filteredDonations = donations.filter((donation) => {
     if (category === null || category === "None") return true;
     else return donation.category === category;
@@ -131,7 +132,7 @@ const DonateGrid = ({ category, sort, search }: TDonateGrid) => {
       >
         {sortedDonations.length > 0 ? (
           sortedDonations.map((donate, index) => (
-            <DonateCard key={index} {...donate} />
+            <DonateCard key={index} {...donate} onOpenPopup={onOpenPopup} />
           ))
         ) : (
           <h3 className="not-found">No donations found</h3>
@@ -148,6 +149,7 @@ type TDonateCard = {
   description: string;
   raised: number;
   target: number;
+  onOpenPopup: () => void;
 };
 
 function DonateCard({
@@ -157,6 +159,7 @@ function DonateCard({
   description,
   raised,
   target,
+  onOpenPopup,
 }: TDonateCard) {
   return (
     <Grid item xs={12} lg={6} sx={{ my: "10px" }}>
@@ -164,7 +167,7 @@ function DonateCard({
         <Grid container spacing={2}>
           <Grid item xs={12} md={6} lg={6} xl={6} className="card-image">
             <img src={image} alt="Donate image" />
-            <button>Donate now</button>
+            <button onClick={onOpenPopup}>Donate now</button>
           </Grid>
           <Grid item xs={12} md={6} lg={6} xl={6} className="card-detail">
             <div>
