@@ -69,10 +69,10 @@ const Navbar = () => {
             <li
               className="nav-item"
               onClick={() => {
-                navigate("/donate");
+                navigate("/donation");
               }}
             >
-              <div className="nav-link">Donate</div>
+              <div className="nav-link">Donation</div>
             </li>
             <li
               className="nav-item"

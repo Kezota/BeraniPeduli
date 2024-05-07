@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
-import { formatCurrency } from "../../../utils";
-import { TCategory } from "..";
+import { useDonationContext } from "../../../context/DonationContext";
+import DonationCard from "./DonationCard";
 
 import donateImg1 from "../../../assets/donate1.png";
 import donateImg2 from "../../../assets/donate2.png";
@@ -98,14 +98,9 @@ const donations = [
   },
 ];
 
-type TDonateGrid = {
-  category: TCategory | null;
-  sort: boolean;
-  search: string;
-  onOpenPopup: () => void;
-};
+export default function DonationGrid() {
+  const { category, sort, search, onTogglePopup } = useDonationContext();
 
-const DonateGrid = ({ category, sort, search, onOpenPopup }: TDonateGrid) => {
   let filteredDonations = donations.filter((donation) => {
     if (category === null || category === "None") return true;
     else return donation.category === category;
@@ -130,9 +125,14 @@ const DonateGrid = ({ category, sort, search, onOpenPopup }: TDonateGrid) => {
         spacing={4}
         sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
+        <img src="../../../assets/donate2.png" alt="" />
         {sortedDonations.length > 0 ? (
           sortedDonations.map((donate, index) => (
-            <DonateCard key={index} {...donate} onOpenPopup={onOpenPopup} />
+            <DonationCard
+              key={index}
+              donate={donate}
+              onOpenPopup={onTogglePopup}
+            />
           ))
         ) : (
           <h3 className="not-found">No donations found</h3>
@@ -140,71 +140,4 @@ const DonateGrid = ({ category, sort, search, onOpenPopup }: TDonateGrid) => {
       </Grid>
     </div>
   );
-};
-
-type TDonateCard = {
-  image: string;
-  category: string;
-  title: string;
-  description: string;
-  raised: number;
-  target: number;
-  onOpenPopup: () => void;
-};
-
-function DonateCard({
-  image,
-  category,
-  title,
-  description,
-  raised,
-  target,
-  onOpenPopup,
-}: TDonateCard) {
-  return (
-    <Grid item xs={12} lg={6} sx={{ my: "10px" }}>
-      <div className="donate-card">
-        <Grid container spacing={2}>
-          <Grid item xs={12} md={6} lg={6} xl={6} className="card-image">
-            <img src={image} alt="Donate image" />
-            <button onClick={onOpenPopup}>Donate now</button>
-          </Grid>
-          <Grid item xs={12} md={6} lg={6} xl={6} className="card-detail">
-            <div>
-              <h4>{category}</h4>
-              <h3>{title}</h3>
-              <p>{description}</p>
-              <div
-                className="progress"
-                role="progressbar"
-                aria-valuemin={0}
-                aria-valuemax={100}
-                style={{ width: "270px", marginTop: "10px" }}
-              >
-                <div
-                  className="progress-bar"
-                  style={{
-                    backgroundColor: "#FFC701",
-                    width: `${(raised / target) * 100}%`,
-                  }}
-                ></div>
-              </div>
-              <Grid container spacing={2} sx={{ width: "300px", mt: "10px" }}>
-                <Grid item xs={6}>
-                  <h6>Terkumpul:</h6>
-                  <p className="money-raised">{formatCurrency(raised)}</p>
-                </Grid>
-                <Grid item xs={6}>
-                  <h6>Target:</h6>
-                  <p className="money-raised">{formatCurrency(target)}</p>
-                </Grid>
-              </Grid>
-            </div>
-          </Grid>
-        </Grid>
-      </div>
-    </Grid>
-  );
 }
-
-export default DonateGrid;

@@ -70,18 +70,18 @@ const NavbarFill = ({ activeNav }: { activeNav: string }) => {
             <li
               className="nav-item"
               onClick={() => {
-                navigate("/donate");
+                navigate("/donation");
               }}
             >
               <div
                 className="nav-link"
                 style={
-                  activeNav === "donate"
+                  activeNav === "donation"
                     ? { color: "#438D7C", fontWeight: 700 }
                     : {}
                 }
               >
-                Donate
+                Donation
               </div>
             </li>
             <li

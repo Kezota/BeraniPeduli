@@ -1,23 +1,10 @@
-import { TCategory } from "..";
+import { useDonationContext } from "../../../context/DonationContext";
 import "../../../styles/header.css";
 
-type THeader = {
-  category: TCategory | null;
-  setCategory: (category: TCategory) => void;
-  sort: boolean;
-  setSort: (sort: boolean) => void;
-  search: string;
-  setSearch: (search: string) => void;
-};
+export default function Header() {
+  const { category, setCategory, sort, setSort, search, setSearch } =
+    useDonationContext();
 
-export default function Header({
-  category,
-  setCategory,
-  sort,
-  setSort,
-  search,
-  setSearch,
-}: THeader) {
   return (
     <div className="header-form">
       <div className="dropdown-sort">
