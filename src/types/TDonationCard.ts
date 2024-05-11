@@ -1,6 +1,7 @@
 import { TDonation } from "./TDonation";
 
 export type TDonationCard = {
-  donate: TDonation;
+  donation: TDonation;
   onOpenPopup: () => void;
+  setSelectedDonation: (donation: TDonation | null) => void;
 };
