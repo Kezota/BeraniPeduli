@@ -3,12 +3,33 @@ import "../../../styles/donatePopup.css";
 import { useDonationContext } from "../../../context/DonationContext";
 
 export default function DonationPopup() {
-  const { openPopup, onTogglePopup, amount, setAmount } = useDonationContext();
+  const {
+    openPopup,
+    onTogglePopup,
+    amount,
+    setAmount,
+    selectedDonation,
+    setDonations,
+  } = useDonationContext();
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
-    console.log(amount);
+    setDonations((prev) => {
+      const updatedDonations = prev.map((donation) => {
+        if (donation.title === selectedDonation!.title) {
+          return {
+            ...donation,
+            raised: donation.raised + amount,
+          };
+        } else return donation;
+      });
+
+      return updatedDonations;
+    });
+
+    setAmount(0);
+    onTogglePopup();
   }
 
   return (

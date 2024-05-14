@@ -2,20 +2,30 @@ import { Grid } from "@mui/material";
 import { TDonationCard } from "../../../types/TDonationCard";
 import { formatCurrency } from "../../../utils";
 
-export default function DonationCard({ donate, onOpenPopup }: TDonationCard) {
+export default function DonationCard({
+  donation,
+  onOpenPopup,
+  setSelectedDonation,
+}: TDonationCard) {
+  function handleDonate() {
+    onOpenPopup();
+
+    setSelectedDonation(donation);
+  }
+
   return (
     <Grid item xs={12} lg={6} sx={{ my: "10px" }}>
       <div className="donate-card">
         <Grid container spacing={2}>
           <Grid item xs={12} md={6} lg={6} xl={6} className="card-image">
-            <img src={donate.image} alt="Donate image" />
-            <button onClick={onOpenPopup}>Donate now</button>
+            <img src={donation.image} alt="Donate image" />
+            <button onClick={handleDonate}>Donate now</button>
           </Grid>
           <Grid item xs={12} md={6} lg={6} xl={6} className="card-detail">
             <div>
-              <h4>{donate.category}</h4>
-              <h3>{donate.title}</h3>
-              <p>{donate.description}</p>
+              <h4>{donation.category}</h4>
+              <h3>{donation.title}</h3>
+              <p>{donation.description}</p>
               <div
                 className="progress"
                 role="progressbar"
@@ -27,7 +37,7 @@ export default function DonationCard({ donate, onOpenPopup }: TDonationCard) {
                   className="progress-bar"
                   style={{
                     backgroundColor: "#FFC701",
-                    width: `${(donate.raised / donate.target) * 100}%`,
+                    width: `${(donation.raised / donation.target) * 100}%`,
                   }}
                 ></div>
               </div>
@@ -35,13 +45,13 @@ export default function DonationCard({ donate, onOpenPopup }: TDonationCard) {
                 <Grid item xs={6}>
                   <h6>Terkumpul:</h6>
                   <p className="money-raised">
-                    {formatCurrency(donate.raised)}
+                    {formatCurrency(donation.raised)}
                   </p>
                 </Grid>
                 <Grid item xs={6}>
                   <h6>Target:</h6>
                   <p className="money-raised">
-                    {formatCurrency(donate.target)}
+                    {formatCurrency(donation.target)}
                   </p>
                 </Grid>
               </Grid>
