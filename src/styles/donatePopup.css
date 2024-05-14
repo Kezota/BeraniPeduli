@@ -1,21 +1,140 @@
-.donate-popup input::-webkit-outer-spin-button,
-.donate-popup input::-webkit-inner-spin-button {
+.donate-popup h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.donate-popup .amount {
+  margin-bottom: 0.5rem;
+}
+.donate-popup .amount input::-webkit-outer-spin-button,
+.donate-popup .amount input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.donate-popup .amount-label {
-  font-size: 1.5rem;
+.donate-popup .amount .amount-label {
+  font-size: 1rem;
   font-weight: 500;
   margin-bottom: 1rem;
-  padding: 20px 26px;
+  padding: 16px 20px;
   background-color: rgb(67, 141, 124);
   color: rgb(252, 253, 251);
 }
-.donate-popup #amount {
-  padding: 20px 26px;
-  font-size: 1.5rem;
+.donate-popup .amount #amount {
+  padding: 16px 20px;
+  font-size: 1rem;
   border-radius: 0;
   margin-bottom: 1rem;
   outline: none;
   border: none;
+  background-color: white;
+}
+.donate-popup .amount .custom-amount {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  background-color: rgb(67, 141, 124);
+  padding: 16px 20px;
+  color: rgb(252, 253, 251);
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.donate-popup .radio-amount {
+  display: inline;
+  margin-bottom: 1rem;
+}
+.donate-popup .radio-amount span {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 0rem;
+}
+.donate-popup .radio-amount input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.donate-popup .radio-amount label {
+  display: inline-block;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  border: 1.2px solid rgb(67, 141, 124);
+  background-color: #fff;
+  margin-right: 10px;
+  color: rgb(67, 141, 124);
+  cursor: pointer;
+}
+.donate-popup .radio-amount label:hover {
+  color: rgb(252, 253, 251);
+  background-color: rgb(67, 141, 124);
+}
+.donate-popup .radio-amount input[type=radio]:checked + label {
+  color: rgb(252, 253, 251);
+  background-color: rgb(67, 141, 124);
+}
+.donate-popup .payment-method {
+  margin-bottom: 1rem;
+}
+.donate-popup .payment-method span {
+  margin-right: 1rem;
+}
+.donate-popup .payment-method label {
+  font-weight: 500;
+  color: rgb(43, 39, 53);
+}
+.donate-popup .payment-method input {
+  margin-right: 0.3rem;
+  border: 1px solid rgb(67, 141, 124);
+  background-color: rgb(67, 141, 124);
+}
+.donate-popup .personal-info {
+  margin-top: 1.2rem;
+}
+.donate-popup .personal-info label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  display: block;
+  color: rgb(43, 39, 53);
+}
+.donate-popup .personal-info input {
+  padding: 14px 18px;
+  font-size: 0.9rem;
+  border-radius: 0;
+  margin-bottom: 0.2rem;
+  outline: none;
+  border: 1px solid rgb(232, 232, 232);
+  background-color: white;
+  width: 100%;
+}
+.donate-popup .personal-info textarea {
+  padding: 14px 18px;
+  font-size: 1rem;
+  border-radius: 0;
+  margin-bottom: 1rem;
+  outline: none;
+  border: 1px solid rgb(232, 232, 232);
+  background-color: white;
+  width: 100%;
+}
+.donate-popup .donation-total {
+  margin: 1.2rem 0;
+  margin-bottom: 1.5rem;
+}
+.donate-popup .donate-now {
+  width: 100%;
+  display: block;
+  background-color: white;
+  color: rgb(67, 141, 124);
+  border: 1.4px solid rgb(67, 141, 124) !important;
+  padding: 10px 26px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.donate-popup .donate-now:hover {
+  background-color: rgb(67, 141, 124);
+  color: rgb(252, 253, 251);
 }/*# sourceMappingURL=donatePopup.css.map */

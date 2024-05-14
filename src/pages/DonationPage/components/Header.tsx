@@ -1,5 +1,7 @@
 import { useDonationContext } from "../../../context/DonationContext";
 import "../../../styles/header.css";
+import AddIcon from "@mui/icons-material/Add";
+import SwapVertIcon from "@mui/icons-material/SwapVert";
 
 export default function Header() {
   const { category, setCategory, sort, setSort, search, setSearch } =
@@ -15,7 +17,7 @@ export default function Header() {
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            {!category ? "Filter Kategori" : category}
+            {!category ? "Filter" : category}
           </button>
           <ul className="dropdown-menu">
             <li>
@@ -59,7 +61,7 @@ export default function Header() {
         </div>
         <div className="sorting">
           <button className="btn" onClick={() => setSort(!sort)}>
-            Urutkan {sort ? "Terlama" : "Terbaru"}
+            Urutkan <SwapVertIcon />
           </button>
         </div>
       </div>
@@ -71,6 +73,12 @@ export default function Header() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
+      </div>
+      <div className="add">
+        <button className="btn">
+          <AddIcon />
+          Tambah
+        </button>
       </div>
     </div>
   );

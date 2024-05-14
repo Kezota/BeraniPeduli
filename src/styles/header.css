@@ -6,6 +6,11 @@
   justify-content: center;
   flex-direction: column;
 }
+.header-form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .header-form .dropdown-sort {
   display: flex;
   gap: 1rem;
@@ -40,6 +45,15 @@
   padding: 0.7rem 1rem;
   color: rgb(43, 39, 53);
   font-weight: 500;
+}
+.header-form .add button {
+  background-color: rgb(67, 141, 124);
+  color: rgb(252, 253, 251);
+  padding: 0.7rem 2rem;
+}
+.header-form .add button:hover {
+  background-color: rgba(67, 141, 124, 0.75);
+  color: rgb(232, 232, 232);
 }
 
 @media screen and (min-width: 900px) {

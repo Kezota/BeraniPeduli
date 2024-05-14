@@ -1,15 +1,17 @@
 import { Box, Modal } from "@mui/material";
+import "../styles/popup.css";
 
 const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  // transform: "translate(-50%, -50%)",
   width: 800,
-  bgcolor: "#EDF7F5",
+  bgcolor: "#F6F6F6",
   borderRadius: "5px",
   boxShadow: 24,
   p: 4,
+  maxWidth: "90%",
 };
 
 type TPopup = {
@@ -26,6 +28,13 @@ export default function Popup({ open, onClosePopup, children }: TPopup) {
         onClose={onClosePopup}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
+        sx={{
+          height: "100vh",
+          overflowY: "auto",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
       >
         <Box sx={style}>{children}</Box>
       </Modal>
