@@ -79,7 +79,7 @@ export default function DonationPopup() {
   }, [openPopup]);
 
   return (
-    <Popup open={openPopup} onClosePopup={onTogglePopup}>
+    <Popup>
       <div className="donate-popup">
         <h3>{selectedDonation?.title}</h3>
         {/* <hr /> */}
@@ -104,7 +104,7 @@ export default function DonationPopup() {
           </div>
           <div className="radio-amount">
             {radioAmount.map((radio) => (
-              <span>
+              <span key={radio.id}>
                 <input
                   type="radio"
                   name="radioAmount"
@@ -117,32 +117,11 @@ export default function DonationPopup() {
               </span>
             ))}
           </div>
-
-          {/* <h3>Metode Pembayaran</h3>
-          <div className="payment-method">
-            <span>
-              <input type="radio" name="paymentMethod" id="paymentMethod1" />
-              <label htmlFor="paymentMethod1">Bank</label>
-            </span>
-            <span>
-              <input type="radio" name="paymentMethod" id="paymentMethod2" />
-              <label htmlFor="paymentMethod2">OVO</label>
-            </span>
-            <span>
-              <input type="radio" name="paymentMethod" id="paymentMethod3" />
-              <label htmlFor="paymentMethod3">Gopay</label>
-            </span>
-            <span>
-              <input type="radio" name="paymentMethod" id="paymentMethod4" />
-              <label htmlFor="paymentMethod4">DANA</label>
-            </span>
-          </div> */}
-
           <div className="personal-info">
             <h3>Informasi pribadi</h3>
             <hr />
             <Grid container spacing={2}>
-              <Grid item xs={6}>
+              <Grid item xs={12} md={6}>
                 <label htmlFor="name">Nama</label>
                 <input
                   id="name"
@@ -152,7 +131,7 @@ export default function DonationPopup() {
                   onChange={(e) => setName(e.target.value)}
                 />
               </Grid>
-              <Grid item xs={6}>
+              <Grid item xs={12} md={6}>
                 <label htmlFor="phone">Nomor Telepon</label>
                 <input
                   id="phone"

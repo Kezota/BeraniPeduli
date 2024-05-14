@@ -1,5 +1,6 @@
 import { Box, Modal } from "@mui/material";
 import "../styles/popup.css";
+import { useDonationContext } from "../context/DonationContext";
 
 const style = {
   display: "flex",
@@ -14,18 +15,13 @@ const style = {
   maxWidth: "90%",
 };
 
-type TPopup = {
-  open: boolean;
-  onClosePopup: () => void;
-  children: React.ReactNode;
-};
-
-export default function Popup({ open, onClosePopup, children }: TPopup) {
+export default function Popup({ children }: { children: React.ReactNode }) {
+  const { openPopup, onTogglePopup } = useDonationContext();
   return (
     <section className="popup">
       <Modal
-        open={open}
-        onClose={onClosePopup}
+        open={openPopup}
+        onClose={onTogglePopup}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
         sx={{

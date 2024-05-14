@@ -24,7 +24,7 @@
 }
 .header-form .dropdown button:hover {
   background-color: rgba(67, 141, 124, 0.75);
-  color: rgb(232, 232, 232);
+  color: rgb(252, 253, 251);
 }
 .header-form .dropdown .dropdown-menu a {
   cursor: pointer !important;
@@ -37,7 +37,7 @@
 }
 .header-form .sorting button:hover {
   background-color: rgb(67, 141, 124);
-  color: rgb(232, 232, 232);
+  color: rgb(252, 253, 251);
 }
 .header-form .search input {
   width: 80vw;
@@ -53,7 +53,7 @@
 }
 .header-form .add button:hover {
   background-color: rgba(67, 141, 124, 0.75);
-  color: rgb(232, 232, 232);
+  color: rgb(252, 253, 251);
 }
 
 @media screen and (min-width: 900px) {

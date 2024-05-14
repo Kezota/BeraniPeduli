@@ -49,6 +49,7 @@ $LightGreen: rgba(67, 141, 124, 0.75);
       outline: none;
       border: none;
       background-color: white;
+      margin-right: 1rem;
     }
     .custom-amount {
       font-size: 1rem;
@@ -57,7 +58,6 @@ $LightGreen: rgba(67, 141, 124, 0.75);
       background-color: $DeepAquamarine;
       padding: 16px 20px;
       color: $Lotion;
-      margin-left: 1rem;
       cursor: pointer;
     }
   }
@@ -185,4 +185,56 @@ $LightGreen: rgba(67, 141, 124, 0.75);
 .MuiModal-root:has(.donate-popup) {
   padding-block: 2rem;
   height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+  .donate-popup {
+    padding: 1.5rem 1rem;
+    .amount {
+      .amount-label {
+        padding: 10px 14px;
+      }
+      #amount {
+        padding: 10px 14px;
+      }
+      .custom-amount {
+        padding: 10px 14px;
+        font-size: 0.9rem;
+      }
+    }
+    .radio-amount {
+      label {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+      }
+    }
+    .payment-method {
+      label {
+        font-size: 0.8rem;
+      }
+      input {
+        margin-right: 0.2rem;
+      }
+    }
+    .personal-info {
+      label {
+        font-size: 0.8rem;
+      }
+      input {
+        padding: 10px 12px;
+        font-size: 0.8rem;
+      }
+      textarea {
+        padding: 10px 12px;
+        font-size: 0.8rem;
+      }
+    }
+    .donation-total {
+      margin: 1rem 0;
+    }
+    .donate-now {
+      padding: 8px 22px;
+      font-size: 0.9rem;
+    }
+  }
 }

@@ -4,8 +4,15 @@ import AddIcon from "@mui/icons-material/Add";
 import SwapVertIcon from "@mui/icons-material/SwapVert";
 
 export default function Header() {
-  const { category, setCategory, sort, setSort, search, setSearch } =
-    useDonationContext();
+  const {
+    category,
+    setCategory,
+    sort,
+    setSort,
+    search,
+    setSearch,
+    onTogglePopup,
+  } = useDonationContext();
 
   return (
     <div className="header-form">
@@ -75,7 +82,7 @@ export default function Header() {
         />
       </div>
       <div className="add">
-        <button className="btn">
+        <button className="btn" onClick={onTogglePopup}>
           <AddIcon />
           Tambah
         </button>

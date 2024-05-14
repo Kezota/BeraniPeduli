@@ -38,6 +38,7 @@
   outline: none;
   border: none;
   background-color: white;
+  margin-right: 1rem;
 }
 .donate-popup .amount .custom-amount {
   font-size: 1rem;
@@ -46,7 +47,6 @@
   background-color: rgb(67, 141, 124);
   padding: 16px 20px;
   color: rgb(252, 253, 251);
-  margin-left: 1rem;
   cursor: pointer;
 }
 .donate-popup .radio-amount {
@@ -165,4 +165,48 @@
 .MuiModal-root:has(.donate-popup) {
   padding-block: 2rem;
   height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+  .donate-popup {
+    padding: 1.5rem 1rem;
+  }
+  .donate-popup .amount .amount-label {
+    padding: 10px 14px;
+  }
+  .donate-popup .amount #amount {
+    padding: 10px 14px;
+  }
+  .donate-popup .amount .custom-amount {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+  .donate-popup .radio-amount label {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+  .donate-popup .payment-method label {
+    font-size: 0.8rem;
+  }
+  .donate-popup .payment-method input {
+    margin-right: 0.2rem;
+  }
+  .donate-popup .personal-info label {
+    font-size: 0.8rem;
+  }
+  .donate-popup .personal-info input {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+  }
+  .donate-popup .personal-info textarea {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+  }
+  .donate-popup .donation-total {
+    margin: 1rem 0;
+  }
+  .donate-popup .donate-now {
+    padding: 8px 22px;
+    font-size: 0.9rem;
+  }
 }/*# sourceMappingURL=donatePopup.css.map */
