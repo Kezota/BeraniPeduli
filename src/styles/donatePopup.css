@@ -1,3 +1,14 @@
+.donate-popup {
+  height: 100%;
+  padding: 2rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.donate-popup form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 .donate-popup h3 {
   font-size: 1.4rem;
   font-weight: 600;
@@ -121,6 +132,13 @@
   margin: 1.2rem 0;
   margin-bottom: 1.5rem;
 }
+.donate-popup .donate-now-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 2rem;
+}
 .donate-popup .donate-now {
   width: 100%;
   display: block;
@@ -132,9 +150,19 @@
   font-weight: 500;
   border: none;
   cursor: pointer;
-  margin-top: 1rem;
 }
 .donate-popup .donate-now:hover {
   background-color: rgb(67, 141, 124);
   color: rgb(252, 253, 251);
+}
+
+.MuiBox-root:has(> .donate-popup) {
+  height: 100%;
+  overflow-y: auto;
+  padding: 0;
+}
+
+.MuiModal-root:has(.donate-popup) {
+  padding-block: 2rem;
+  height: 100vh;
 }/*# sourceMappingURL=donatePopup.css.map */
