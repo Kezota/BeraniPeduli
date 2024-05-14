@@ -1,2 +1,36 @@
+$AntiFlashWhite: rgba(232, 232, 232, 1);
+$CharlestonGreen: rgba(43, 39, 53, 1);
+$DeepAquamarine: rgba(67, 141, 124, 1);
+$LightGoldenrod: rgba(255, 247, 212, 1);
+$Lotion: rgba(252, 253, 251, 1);
+$MellowApricot: rgba(242, 185, 132, 1);
+$PhilippineGray: rgba(144, 144, 144, 1);
+$YellowOrange: rgba(255, 178, 63, 1);
+$DarkGray: rgba(100, 100, 100, 1);
+$LightGreen: rgba(67, 141, 124, 0.75);
+
 .donate-popup {
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .amount-label {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    padding: 20px 26px;
+    background-color: $DeepAquamarine;
+    color: $Lotion;
+  }
+
+  #amount {
+    padding: 20px 26px;
+    font-size: 1.5rem;
+    border-radius: 0;
+    margin-bottom: 1rem;
+    outline: none;
+    border: none;
+  }
 }

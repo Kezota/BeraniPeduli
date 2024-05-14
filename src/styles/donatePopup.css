@@ -1,1 +1,21 @@
-/*# sourceMappingURL=donatePopup.css.map */
+.donate-popup input::-webkit-outer-spin-button,
+.donate-popup input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.donate-popup .amount-label {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  padding: 20px 26px;
+  background-color: rgb(67, 141, 124);
+  color: rgb(252, 253, 251);
+}
+.donate-popup #amount {
+  padding: 20px 26px;
+  font-size: 1.5rem;
+  border-radius: 0;
+  margin-bottom: 1rem;
+  outline: none;
+  border: none;
+}/*# sourceMappingURL=donatePopup.css.map */

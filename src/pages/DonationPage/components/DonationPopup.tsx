@@ -1,6 +1,5 @@
 import Popup from "../../../components/Popup";
 import "../../../styles/donatePopup.css";
-import { TextField } from "@mui/material";
 import { useDonationContext } from "../../../context/DonationContext";
 
 export default function DonationPopup() {
@@ -15,16 +14,16 @@ export default function DonationPopup() {
   return (
     <Popup open={openPopup} onClosePopup={onTogglePopup}>
       <div className="donate-popup">
-        <h2>Donasi Kamu</h2>
+        <h3>Donasi Kamu</h3>
+        <hr />
         <form noValidate autoComplete="off" onSubmit={handleSubmit}>
-          <TextField
-            id="outlined-number"
-            label="Number"
+          <label htmlFor="amount" className="amount-label">
+            Rp
+          </label>
+          <input
+            id="amount"
             type="number"
-            InputLabelProps={{
-              shrink: true,
-            }}
-            value={amount == 0 ? "" : amount}
+            value={amount || ""}
             onChange={(e) => setAmount(Number(e.target.value))}
           />
         </form>
