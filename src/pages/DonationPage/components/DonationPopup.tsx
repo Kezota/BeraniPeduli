@@ -82,7 +82,7 @@ export default function DonationPopup() {
     <Popup open={openPopup} onClosePopup={onTogglePopup}>
       <div className="donate-popup">
         <h3>{selectedDonation?.title}</h3>
-        <hr />
+        {/* <hr /> */}
         <form noValidate autoComplete="off" onSubmit={handleSubmit}>
           <div className="amount">
             <label htmlFor="amount" className="amount-label">
@@ -188,7 +188,9 @@ export default function DonationPopup() {
             Total Donasi: <span>{formatCurrency(amount)}</span>
           </h3>
 
-          <button className="donate-now">Donasi sekarang</button>
+          <div className="donate-now-container">
+            <button className="donate-now">Donasi sekarang</button>
+          </div>
         </form>
       </div>
     </Popup>
