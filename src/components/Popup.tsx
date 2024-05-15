@@ -1,31 +1,36 @@
 import { Box, Modal } from "@mui/material";
+import "../styles/popup.css";
+import { useDonationContext } from "../context/DonationContext";
 
 const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  borderRadius: "20px",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  // transform: "translate(-50%, -50%)",
+  width: 800,
+  bgcolor: "#F6F6F6",
+  borderRadius: "5px",
   boxShadow: 24,
   p: 4,
+  maxWidth: "90%",
 };
 
-type TPopup = {
-  open: boolean;
-  onClosePopup: () => void;
-  children: React.ReactNode;
-};
-
-export default function Popup({ open, onClosePopup, children }: TPopup) {
+export default function Popup({ children }: { children: React.ReactNode }) {
+  const { openPopup, onTogglePopup } = useDonationContext();
   return (
     <section className="popup">
       <Modal
-        open={open}
-        onClose={onClosePopup}
+        open={openPopup}
+        onClose={onTogglePopup}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
+        sx={{
+          height: "100vh",
+          overflowY: "auto",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
       >
         <Box sx={style}>{children}</Box>
       </Modal>

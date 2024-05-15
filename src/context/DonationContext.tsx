@@ -25,8 +25,6 @@ interface IDonationContext {
   setSort: (sort: boolean) => void;
   search: string;
   setSearch: (search: string) => void;
-  amount: number;
-  setAmount: (amount: number) => void;
   donations: TDonation[];
   setDonations: TSetStateLocalStorage<TDonation[]>;
   selectedDonation: TDonation | null;
@@ -40,7 +38,6 @@ function DonationProvider({ children }: { children: React.ReactNode }) {
   const [openPopup, setOpenPopup] = useState(false);
   const [sort, setSort] = useState(false);
   const [search, setSearch] = useState("");
-  const [amount, setAmount] = useState(0);
   const [selectedDonation, setSelectedDonation] = useState<TDonation | null>(
     null
   );
@@ -169,8 +166,6 @@ function DonationProvider({ children }: { children: React.ReactNode }) {
         setSort,
         search,
         setSearch,
-        amount,
-        setAmount,
         donations,
         setDonations,
         selectedDonation,
