@@ -14,7 +14,7 @@ import donateImg6 from "../assets/donate6.png";
 import donateImg7 from "../assets/donate7.png";
 import donateImg8 from "../assets/donate8.png";
 import bmw from "../assets/bmw.jpg";
-import pengungsi from "../assets/pengungsi.jpg";
+import rumah from "../assets/rumah.jpg";
 
 interface IDonationContext {
   category: string | null;
@@ -65,12 +65,13 @@ function DonationProvider({ children }: { children: React.ReactNode }) {
           target: 999000000,
         },
         {
-          image: pengungsi,
+          image: rumah,
           category: "Hunian Layak",
-          title: "Rumah bagi pengungsi",
-          description: "Biaya pembangunan rumah bagi pengungsi rohingya",
-          raised: 5000000,
-          target: 100000000,
+          title: "Rumah layak untuk Rachel",
+          description:
+            "Biaya pembangunan rumah layak bagi orang yang membutuhkan",
+          raised: 634000000,
+          target: 850000000,
         },
         {
           image: donateImg1,
