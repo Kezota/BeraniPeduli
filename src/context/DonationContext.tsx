@@ -50,24 +50,25 @@ function DonationProvider({ children }: { children: React.ReactNode }) {
     const storedDonations = localStorage.getItem("donations");
 
     if (storedDonations) {
-      donations.map((donation: TDonation) => {
-        if (donation.title === "Rumah bagi pengungsi") {
-          return {
-            image: rumah,
-            category: "Hunian Layak",
-            title: "Rumah layak untuk Rachel",
-            description:
-              "Biaya pembangunan rumah layak bagi orang yang membutuhkan",
-            raised: 634000000,
-            target: 850000000,
-          };
-        } else return donation;
-      });
+      setDonations((donations) =>
+        donations.map((donation: TDonation) => {
+          if (donation.title === "Rumah bagi pengungsi") {
+            return {
+              image: rumah,
+              category: "Hunian Layak",
+              title: "Rumah layak untuk Rachel",
+              description:
+                "Biaya pembangunan rumah layak bagi orang yang membutuhkan",
+              raised: 634000000,
+              target: 850000000,
+            };
+          } else return donation;
+        })
+      );
     }
 
     if (!storedDonations) {
-      setDonations((prevDonations) => [
-        ...prevDonations,
+      setDonations(() => [
         {
           image: bmw,
           category: "Sembako",
