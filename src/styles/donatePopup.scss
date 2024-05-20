@@ -14,6 +14,7 @@ $LightGreen: rgba(67, 141, 124, 0.75);
   padding: 2rem;
   display: grid;
   grid-template-rows: auto 1fr;
+
   form {
     height: 100%;
     display: flex;
@@ -23,6 +24,10 @@ $LightGreen: rgba(67, 141, 124, 0.75);
   h3 {
     font-size: 1.4rem;
     font-weight: 600;
+  }
+
+  p {
+    font-size: 1rem;
     margin-bottom: 1rem;
   }
 
@@ -132,6 +137,11 @@ $LightGreen: rgba(67, 141, 124, 0.75);
       border: 1px solid $AntiFlashWhite;
       background-color: white;
       width: 100%;
+
+      &:focus,
+      &:hover {
+        border: 1px solid $DeepAquamarine;
+      }
     }
     textarea {
       padding: 14px 18px;
@@ -142,6 +152,11 @@ $LightGreen: rgba(67, 141, 124, 0.75);
       border: 1px solid $AntiFlashWhite;
       background-color: white;
       width: 100%;
+
+      &:focus,
+      &:hover {
+        border: 1px solid $DeepAquamarine;
+      }
     }
   }
 
@@ -178,18 +193,21 @@ $LightGreen: rgba(67, 141, 124, 0.75);
 }
 
 .MuiBox-root:has(> .donate-popup) {
-  height: 100%;
-  overflow-y: auto;
   padding: 0;
 }
 .MuiModal-root:has(.donate-popup) {
-  padding-block: 2rem;
   height: 100vh;
 }
 
 @media screen and (max-width: 768px) {
   .donate-popup {
     padding: 1.5rem 1rem;
+    h3 {
+      font-size: 1.4rem;
+    }
+    p {
+      font-size: 0.9rem;
+    }
     .amount {
       .amount-label {
         padding: 10px 14px;
@@ -236,5 +254,15 @@ $LightGreen: rgba(67, 141, 124, 0.75);
       padding: 8px 22px;
       font-size: 0.9rem;
     }
+  }
+
+  .MuiBox-root:has(> .donate-popup) {
+    height: 100%;
+    overflow-y: auto;
+    padding: 0;
+  }
+  .MuiModal-root:has(.donate-popup) {
+    padding-block: 2rem;
+    height: 100vh;
   }
 }

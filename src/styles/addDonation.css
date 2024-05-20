@@ -1,0 +1,161 @@
+.add-donation {
+  height: 100%;
+  padding: 2rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.add-donation form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.add-donation h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.add-donation label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  display: block;
+  color: rgb(43, 39, 53);
+}
+.add-donation #title,
+.add-donation #description,
+.add-donation #target,
+.add-donation #image {
+  padding: 14px 18px;
+  font-size: 0.9rem;
+  border-radius: 0;
+  margin-bottom: 0.2rem;
+  outline: none;
+  border: 1px solid rgb(232, 232, 232);
+  background-color: white;
+  width: 100%;
+}
+.add-donation #title:focus, .add-donation #title:hover,
+.add-donation #description:focus,
+.add-donation #description:hover,
+.add-donation #target:focus,
+.add-donation #target:hover,
+.add-donation #image:focus,
+.add-donation #image:hover {
+  border: 1px solid rgb(67, 141, 124);
+}
+.add-donation .category-radio {
+  display: inline;
+  margin-bottom: 1rem;
+}
+.add-donation .category-radio span {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 0rem;
+}
+.add-donation .category-radio input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.add-donation .category-radio label {
+  display: inline-block;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  border: 1.2px solid rgb(67, 141, 124);
+  background-color: #fff;
+  margin-right: 10px;
+  color: rgb(67, 141, 124);
+  cursor: pointer;
+}
+.add-donation .category-radio label:hover {
+  color: rgb(252, 253, 251);
+  background-color: rgb(67, 141, 124);
+}
+.add-donation .category-radio input[type=radio]:checked + label {
+  color: rgb(252, 253, 251);
+  background-color: rgb(67, 141, 124);
+}
+.add-donation select {
+  padding: 14px 18px;
+  font-size: 0.9rem;
+  border-radius: 0;
+  margin-bottom: 0.2rem;
+  outline: none;
+  border: 1px solid rgb(232, 232, 232);
+  background-color: white;
+  width: 100%;
+}
+.add-donation select:focus, .add-donation select:hover {
+  border: 1px solid rgb(67, 141, 124);
+}
+.add-donation .target-div {
+  width: 100%;
+}
+.add-donation .target-div #target {
+  padding: 14px 18px;
+  font-size: 0.9rem;
+  border-radius: 0;
+  margin-bottom: 0.2rem;
+  outline: none;
+  border: 1px solid rgb(232, 232, 232);
+  background-color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.add-donation .target-div #target:focus, .add-donation .target-div #target:hover {
+  border: 1px solid rgb(67, 141, 124);
+}
+.add-donation .target-div h3 {
+  width: 50%;
+}
+.add-donation .add-donation-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 2rem;
+}
+.add-donation .donation-target {
+  margin: 1rem 0;
+}
+.add-donation button {
+  margin-top: 1.5rem;
+  width: 100%;
+  background-color: white;
+  color: rgb(67, 141, 124);
+  border: 1.4px solid rgb(67, 141, 124) !important;
+  padding: 10px 26px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+.add-donation button:hover {
+  background-color: rgb(67, 141, 124);
+  color: rgb(252, 253, 251);
+}
+
+.MuiBox-root:has(> .add-donation) {
+  padding: 0;
+}
+
+.MuiModal-root:has(.add-donation) {
+  padding-block: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .add-donation {
+    padding: 1.5rem 1rem;
+  }
+  .add-donation h3 {
+    font-size: 1.4rem;
+  }
+  .add-donation label {
+    font-size: 0.8rem;
+  }
+  .add-donation input {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+  }
+}/*# sourceMappingURL=addDonation.css.map */

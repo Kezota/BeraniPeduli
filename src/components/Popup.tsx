@@ -13,10 +13,17 @@ const style = {
   boxShadow: 24,
   p: 4,
   maxWidth: "90%",
+  height: "fit-content",
 };
 
-export default function Popup({ children }: { children: React.ReactNode }) {
-  const { openPopup, onTogglePopup } = useDonationContext();
+export default function Popup({
+  children,
+  onTogglePopup,
+}: {
+  children: React.ReactNode;
+  onTogglePopup: () => void;
+}) {
+  const { openPopup } = useDonationContext();
   return (
     <section className="popup">
       <Modal
@@ -25,7 +32,7 @@ export default function Popup({ children }: { children: React.ReactNode }) {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
         sx={{
-          height: "100vh",
+          height: "fit-conten",
           overflowY: "auto",
           display: "flex",
           alignItems: "center",

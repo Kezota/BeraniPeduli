@@ -34,18 +34,21 @@ const radioAmount = [
 ];
 
 export default function DonationPopup() {
-  const { openPopup, onTogglePopup, selectedDonation, setDonations } =
-    useDonationContext();
+  const {
+    openPopup,
+    onTogglePopup,
+    selectedDonation,
+    setSelectedDonation,
+    setDonations,
+  } = useDonationContext();
 
   const [amount, setAmount] = useState(0);
   const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    console.log(amount, name, phone, email, message);
 
     setDonations((prev) => {
       const updatedDonations = prev.map((donation) => {
@@ -62,26 +65,33 @@ export default function DonationPopup() {
 
     setAmount(0);
     setName("");
-    setPhone("");
     setEmail("");
     setMessage("");
     onTogglePopup();
+    setSelectedDonation(null);
+  }
+
+  function handleClosePopup() {
+    onTogglePopup();
+    setSelectedDonation(null);
   }
 
   useEffect(() => {
     if (!openPopup) {
       setAmount(0);
       setName("");
-      setPhone("");
       setEmail("");
       setMessage("");
     }
   }, [openPopup]);
 
+  if (!selectedDonation) return;
+
   return (
-    <Popup>
+    <Popup onTogglePopup={handleClosePopup}>
       <div className="donate-popup">
         <h3>{selectedDonation?.title}</h3>
+        <p>{selectedDonation?.description}</p>
         {/* <hr /> */}
         <form noValidate autoComplete="off" onSubmit={handleSubmit}>
           <div className="amount">
@@ -132,16 +142,6 @@ export default function DonationPopup() {
                 />
               </Grid>
               <Grid item xs={12} md={6}>
-                <label htmlFor="phone">Nomor Telepon</label>
-                <input
-                  id="phone"
-                  type="tel"
-                  // placeholder="Nomor Telepon"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                />
-              </Grid>
-              <Grid item xs={12}>
                 <label htmlFor="email">Email</label>
                 <input
                   id="email"

@@ -10,6 +10,7 @@ import headerImage from "../../assets/donate-header.png";
 import "../../styles/donatePage.css";
 import DonationPopup from "./components/DonationPopup";
 import { DonationProvider } from "../../context/DonationContext";
+import AddDonation from "./components/AddDonation";
 
 const DonatePage = () => {
   // scroll to top on page load
@@ -23,6 +24,7 @@ const DonatePage = () => {
         <NavbarFill activeNav="donation" />
         <Heading image={headerImage} title="Donation Page" />
         <div className="container">
+          <AddDonation />
           <DonationPopup />
           <Header />
           <DonationGrid />
