@@ -47,6 +47,17 @@ export default function DonationPopup() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  useEffect(() => {
+    if (!openPopup) {
+      setAmount(0);
+      setName("");
+      setEmail("");
+      setMessage("");
+    }
+  }, [openPopup]);
+
+  if (!selectedDonation) return;
+
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
@@ -75,17 +86,6 @@ export default function DonationPopup() {
     onTogglePopup();
     setSelectedDonation(null);
   }
-
-  useEffect(() => {
-    if (!openPopup) {
-      setAmount(0);
-      setName("");
-      setEmail("");
-      setMessage("");
-    }
-  }, [openPopup]);
-
-  if (!selectedDonation) return;
 
   return (
     <Popup onTogglePopup={handleClosePopup}>

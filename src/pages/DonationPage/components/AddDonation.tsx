@@ -3,17 +3,29 @@ import Popup from "../../../components/Popup";
 import { useDonationContext } from "../../../context/DonationContext";
 import "../../../styles/addDonation.css";
 import { TCategory } from "../../../types/TCategory";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { formatCurrency } from "../../../utils";
 
 export default function AddDonation() {
-  const { onTogglePopup, selectedDonation, setDonations } =
+  const { onTogglePopup, selectedDonation, setDonations, openPopup } =
     useDonationContext();
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
   const [category, setCategory] = useState<TCategory>("Kesehatan");
   const [target, setTarget] = useState(0);
+
+  useEffect(() => {
+    if (!openPopup) {
+      setTitle("");
+      setDescription("");
+      setImage("");
+      setCategory("Kesehatan");
+      setTarget(0);
+    }
+  }, [openPopup]);
+
+  if (selectedDonation) return null;
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -23,7 +35,7 @@ export default function AddDonation() {
       {
         title,
         description,
-        image: `data:image/png;base64,${image}`,
+        image,
         category,
         target,
         raised: 0,
@@ -34,28 +46,12 @@ export default function AddDonation() {
     onTogglePopup();
   }
 
-  function imageUpload(e: React.ChangeEvent<HTMLInputElement>) {
-    const file = e.target.files && e.target.files[0];
-
-    if (file) {
-      getBase64(file).then((base64) => {
-        setImage(base64);
-      });
-    }
-
-    console.log(image);
-  }
-
-  function getBase64(file: Blob): Promise<string> {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onloadend = () => resolve(reader.result as string);
-      reader.onerror = reject;
-      reader.readAsDataURL(file);
-    });
-  }
-
-  if (selectedDonation) return null;
+  const onChangeImage = (e: ChangeEvent<HTMLInputElement>) => {
+    if (!e.target.files) return;
+    const imageBlob = e.target.files[0];
+    const imageURL = URL.createObjectURL(imageBlob);
+    setImage(imageURL);
+  };
 
   return (
     <Popup onTogglePopup={onTogglePopup}>
@@ -84,25 +80,10 @@ export default function AddDonation() {
             </Grid>
             <Grid item xs={12}>
               <label htmlFor="image">Image</label>
-              <input
-                id="image"
-                type="file"
-                value={image}
-                onChange={imageUpload}
-              />
+              <input id="image" type="file" onChange={onChangeImage} />
             </Grid>
             <Grid item xs={12}>
               <label htmlFor="category">Kategori</label>
-              {/* <select
-                id="category"
-                value={category}
-                onChange={(e) => setCategory(e.target.value as TCategory)}
-              >
-                <option value="Kesehatan">Kesehatan</option>
-                <option value="Sembako">Sembako</option>
-                <option value="Pendidikan">Pendidikan</option>
-                <option value="Hunian Layak">Hunian Layak</option>
-              </select> */}
               <div className="category-radio">
                 <span>
                   <input
