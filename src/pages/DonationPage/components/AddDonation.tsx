@@ -82,52 +82,52 @@ export default function AddDonation() {
                 <option value="Pendidikan">Pendidikan</option>
                 <option value="Hunian Layak">Hunian Layak</option>
               </select> */}
-              <div className="category-radio">
-                <span>
-                  <input
-                    type="radio"
-                    name="categoryRadio"
-                    value="Kesehatan"
-                    id="kesehatan"
-                    checked={category === "Kesehatan"}
-                    onChange={(e) => setCategory(e.target.value as TCategory)}
-                  />
-                  <label htmlFor="kesehatan">Kesehatan</label>
-                </span>
-                <span>
-                  <input
-                    type="radio"
-                    name="categoryRadio"
-                    value="Sembako"
-                    id="sembako"
-                    checked={category === "Sembako"}
-                    onChange={(e) => setCategory(e.target.value as TCategory)}
-                  />
-                  <label htmlFor="sembako">Sembako</label>
-                </span>
-                <span>
-                  <input
-                    type="radio"
-                    name="categoryRadio"
-                    value="Pendidikan"
-                    id="pendidikan"
-                    checked={category === "Pendidikan"}
-                    onChange={(e) => setCategory(e.target.value as TCategory)}
-                  />
-                  <label htmlFor="pendidikan">Pendidikan</label>
-                </span>
-                <span>
-                  <input
-                    type="radio"
-                    name="categoryRadio"
-                    value="Hunian Layak"
-                    id="hunian-layak"
-                    checked={category === "Hunian Layak"}
-                    onChange={(e) => setCategory(e.target.value as TCategory)}
-                  />
-                  <label htmlFor="hunian-layak">Hunian Layak</label>
-                </span>
-              </div>
+                <div className="category-radio">
+                  <span>
+                    <input
+                      type="radio"
+                      name="categoryRadio"
+                      value="Kesehatan"
+                      id="kesehatan"
+                      checked={category === "Kesehatan"}
+                      onChange={(e) => setCategory(e.target.value as TCategory)}
+                    />
+                    <label htmlFor="kesehatan">Kesehatan</label>
+                  </span>
+                  <span>
+                    <input
+                      type="radio"
+                      name="categoryRadio"
+                      value="Sembako"
+                      id="sembako"
+                      checked={category === "Sembako"}
+                      onChange={(e) => setCategory(e.target.value as TCategory)}
+                    />
+                    <label htmlFor="sembako">Sembako</label>
+                  </span>
+                  <span>
+                    <input
+                      type="radio"
+                      name="categoryRadio"
+                      value="Pendidikan"
+                      id="pendidikan"
+                      checked={category === "Pendidikan"}
+                      onChange={(e) => setCategory(e.target.value as TCategory)}
+                    />
+                    <label htmlFor="pendidikan">Pendidikan</label>
+                  </span>
+                  <span>
+                    <input
+                      type="radio"
+                      name="categoryRadio"
+                      value="Hunian Layak"
+                      id="hunian-layak"
+                      checked={category === "Hunian Layak"}
+                      onChange={(e) => setCategory(e.target.value as TCategory)}
+                    />
+                    <label htmlFor="hunian-layak">Hunian Layak</label>
+                  </span>
+                </div>
             </Grid>
             <Grid item xs={12}>
               <label htmlFor="target">Target</label>
