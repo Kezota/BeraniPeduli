@@ -23,7 +23,7 @@ export default function AddDonation() {
       {
         title,
         description,
-        image,
+        image: `data:image/png;base64,${image}`,
         category,
         target,
         raised: 0,
@@ -32,6 +32,27 @@ export default function AddDonation() {
     ]);
 
     onTogglePopup();
+  }
+
+  function imageUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files && e.target.files[0];
+
+    if (file) {
+      getBase64(file).then((base64) => {
+        setImage(base64);
+      });
+    }
+
+    console.log(image);
+  }
+
+  function getBase64(file: Blob): Promise<string> {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onloadend = () => resolve(reader.result as string);
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
   }
 
   if (selectedDonation) return null;
@@ -67,7 +88,7 @@ export default function AddDonation() {
                 id="image"
                 type="file"
                 value={image}
-                onChange={(e) => setImage(e.target.value)}
+                onChange={imageUpload}
               />
             </Grid>
             <Grid item xs={12}>
@@ -82,52 +103,52 @@ export default function AddDonation() {
                 <option value="Pendidikan">Pendidikan</option>
                 <option value="Hunian Layak">Hunian Layak</option>
               </select> */}
-                <div className="category-radio">
-                  <span>
-                    <input
-                      type="radio"
-                      name="categoryRadio"
-                      value="Kesehatan"
-                      id="kesehatan"
-                      checked={category === "Kesehatan"}
-                      onChange={(e) => setCategory(e.target.value as TCategory)}
-                    />
-                    <label htmlFor="kesehatan">Kesehatan</label>
-                  </span>
-                  <span>
-                    <input
-                      type="radio"
-                      name="categoryRadio"
-                      value="Sembako"
-                      id="sembako"
-                      checked={category === "Sembako"}
-                      onChange={(e) => setCategory(e.target.value as TCategory)}
-                    />
-                    <label htmlFor="sembako">Sembako</label>
-                  </span>
-                  <span>
-                    <input
-                      type="radio"
-                      name="categoryRadio"
-                      value="Pendidikan"
-                      id="pendidikan"
-                      checked={category === "Pendidikan"}
-                      onChange={(e) => setCategory(e.target.value as TCategory)}
-                    />
-                    <label htmlFor="pendidikan">Pendidikan</label>
-                  </span>
-                  <span>
-                    <input
-                      type="radio"
-                      name="categoryRadio"
-                      value="Hunian Layak"
-                      id="hunian-layak"
-                      checked={category === "Hunian Layak"}
-                      onChange={(e) => setCategory(e.target.value as TCategory)}
-                    />
-                    <label htmlFor="hunian-layak">Hunian Layak</label>
-                  </span>
-                </div>
+              <div className="category-radio">
+                <span>
+                  <input
+                    type="radio"
+                    name="categoryRadio"
+                    value="Kesehatan"
+                    id="kesehatan"
+                    checked={category === "Kesehatan"}
+                    onChange={(e) => setCategory(e.target.value as TCategory)}
+                  />
+                  <label htmlFor="kesehatan">Kesehatan</label>
+                </span>
+                <span>
+                  <input
+                    type="radio"
+                    name="categoryRadio"
+                    value="Sembako"
+                    id="sembako"
+                    checked={category === "Sembako"}
+                    onChange={(e) => setCategory(e.target.value as TCategory)}
+                  />
+                  <label htmlFor="sembako">Sembako</label>
+                </span>
+                <span>
+                  <input
+                    type="radio"
+                    name="categoryRadio"
+                    value="Pendidikan"
+                    id="pendidikan"
+                    checked={category === "Pendidikan"}
+                    onChange={(e) => setCategory(e.target.value as TCategory)}
+                  />
+                  <label htmlFor="pendidikan">Pendidikan</label>
+                </span>
+                <span>
+                  <input
+                    type="radio"
+                    name="categoryRadio"
+                    value="Hunian Layak"
+                    id="hunian-layak"
+                    checked={category === "Hunian Layak"}
+                    onChange={(e) => setCategory(e.target.value as TCategory)}
+                  />
+                  <label htmlFor="hunian-layak">Hunian Layak</label>
+                </span>
+              </div>
             </Grid>
             <Grid item xs={12}>
               <label htmlFor="target">Target</label>
