@@ -46,7 +46,7 @@ export default function AddDonation() {
     onTogglePopup();
   }
 
-  const onChangeImage = (e: ChangeEvent<HTMLInputElement>) => {
+  const onChangeImage = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!e.target.files) return;
     const imageBlob = e.target.files[0];
     const imageURL = URL.createObjectURL(imageBlob);
