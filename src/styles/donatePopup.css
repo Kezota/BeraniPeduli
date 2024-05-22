@@ -54,7 +54,6 @@
 }
 .donate-popup .radio-amount {
   display: inline;
-  margin-bottom: 1rem;
 }
 .donate-popup .radio-amount span {
   display: inline-block;
@@ -87,19 +86,24 @@
   background-color: rgb(67, 141, 124);
 }
 .donate-popup .payment-method {
-  margin-bottom: 1rem;
+  margin-top: 1.2rem;
 }
-.donate-popup .payment-method span {
-  margin-right: 1rem;
+.donate-popup .payment-method h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
-.donate-popup .payment-method label {
-  font-weight: 500;
-  color: rgb(43, 39, 53);
+.donate-popup .payment-method select {
+  padding: 14px 18px;
+  font-size: 0.9rem;
+  border-radius: 0;
+  margin-bottom: 0.2rem;
+  outline: none;
+  border: 1px solid rgb(232, 232, 232);
+  background-color: white;
 }
-.donate-popup .payment-method input {
-  margin-right: 0.3rem;
+.donate-popup .payment-method select:focus, .donate-popup .payment-method select:hover {
   border: 1px solid rgb(67, 141, 124);
-  background-color: rgb(67, 141, 124);
 }
 .donate-popup .personal-info {
   margin-top: 1.2rem;

@@ -49,24 +49,6 @@ function DonationProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const storedDonations = localStorage.getItem("donations");
 
-    if (storedDonations) {
-      setDonations((donations) =>
-        donations.map((donation: TDonation) => {
-          if (donation.title === "Rumah bagi pengungsi") {
-            return {
-              image: rumah,
-              category: "Hunian Layak",
-              title: "Rumah layak untuk Rachel",
-              description:
-                "Biaya pembangunan rumah layak bagi orang yang membutuhkan",
-              raised: 634000000,
-              target: 850000000,
-            };
-          } else return donation;
-        })
-      );
-    }
-
     if (!storedDonations) {
       setDonations(() => [
         {
@@ -167,6 +149,17 @@ function DonationProvider({ children }: { children: React.ReactNode }) {
       }
     }
   }, [selectedDonation, setDonations]);
+
+  // delete donation if target is reached
+  useEffect(() => {
+    if (donations.length === 0) return;
+
+    const updatedDonations = donations.filter(
+      (donation) => donation.raised < donation.target
+    );
+
+    setDonations(() => updatedDonations);
+  }, [donations, setDonations]);
 
   function onTogglePopup() {
     setOpenPopup((prev) => !prev);

@@ -69,7 +69,6 @@ $LightGreen: rgba(67, 141, 124, 0.75);
 
   .radio-amount {
     display: inline;
-    margin-bottom: 1rem;
     span {
       display: inline-block;
       margin-right: 10px;
@@ -104,18 +103,27 @@ $LightGreen: rgba(67, 141, 124, 0.75);
   }
 
   .payment-method {
-    margin-bottom: 1rem;
-    span {
-      margin-right: 1rem;
+    margin-top: 1.2rem;
+
+    h5 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
     }
-    label {
-      font-weight: 500;
-      color: $CharlestonGreen;
-    }
-    input {
-      margin-right: 0.3rem;
-      border: 1px solid $DeepAquamarine;
-      background-color: $DeepAquamarine;
+
+    select {
+      padding: 14px 18px;
+      font-size: 0.9rem;
+      border-radius: 0;
+      margin-bottom: 0.2rem;
+      outline: none;
+      border: 1px solid $AntiFlashWhite;
+      background-color: white;
+
+      &:focus,
+      &:hover {
+        border: 1px solid $DeepAquamarine;
+      }
     }
   }
 
@@ -226,6 +234,7 @@ $LightGreen: rgba(67, 141, 124, 0.75);
         font-size: 0.8rem;
       }
     }
+
     .payment-method {
       label {
         font-size: 0.8rem;

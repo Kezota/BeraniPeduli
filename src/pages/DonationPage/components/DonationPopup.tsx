@@ -127,6 +127,16 @@ export default function DonationPopup() {
               </span>
             ))}
           </div>
+          <div className="payment-method">
+            <h5>Metode Pembayaran</h5>
+            <select>
+              <option value="dana">DANA</option>
+              <option value="gopay">GoPay</option>
+              <option value="ovo">OVO</option>
+              <option value="bank">Transfer Bank</option>
+              <option value="lainnya">Lainnya</option>
+            </select>
+          </div>
           <div className="personal-info">
             <h3>Informasi pribadi</h3>
             <hr />
@@ -155,7 +165,7 @@ export default function DonationPopup() {
                 <label htmlFor="message">Pesan</label>
                 <textarea
                   id="message"
-                  // placeholder="Tinggalkan pesan anda.."
+                  // placeholder="Berikan pesan anda.."
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                 />
