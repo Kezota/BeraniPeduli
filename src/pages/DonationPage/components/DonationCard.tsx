@@ -19,7 +19,7 @@ export default function DonationCard({
         <Grid container spacing={2}>
           <Grid item xs={12} md={6} lg={6} xl={6} className="card-image">
             <img src={donation.image} alt="Donate image" />
-            <button onClick={handleDonate}>Donate now</button>
+            <button onClick={handleDonate}>Donasi sekarang</button>
           </Grid>
           <Grid item xs={12} md={6} lg={6} xl={6} className="card-detail">
             <div>

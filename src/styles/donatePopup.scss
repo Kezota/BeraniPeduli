@@ -31,6 +31,13 @@ $LightGreen: rgba(67, 141, 124, 0.75);
     margin-bottom: 1rem;
   }
 
+  .error-message {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: block;
+  }
+
   .amount {
     margin-bottom: 0.5rem;
     input::-webkit-outer-spin-button,
@@ -41,7 +48,7 @@ $LightGreen: rgba(67, 141, 124, 0.75);
     .amount-label {
       font-size: 1rem;
       font-weight: 500;
-      margin-bottom: 1rem;
+      margin-bottom: 0.2rem;
       padding: 16px 20px;
       background-color: $DeepAquamarine;
       color: $Lotion;
@@ -50,7 +57,7 @@ $LightGreen: rgba(67, 141, 124, 0.75);
       padding: 16px 20px;
       font-size: 1rem;
       border-radius: 0;
-      margin-bottom: 1rem;
+      margin-bottom: 0.2rem;
       outline: none;
       border: none;
       background-color: white;
@@ -59,7 +66,7 @@ $LightGreen: rgba(67, 141, 124, 0.75);
     .custom-amount {
       font-size: 1rem;
       font-weight: 500;
-      margin-bottom: 1rem;
+      margin-bottom: 0.2rem;
       background-color: $DeepAquamarine;
       padding: 16px 20px;
       color: $Lotion;
@@ -73,6 +80,7 @@ $LightGreen: rgba(67, 141, 124, 0.75);
       display: inline-block;
       margin-right: 10px;
       margin-bottom: 0rem;
+      margin-top: 0.8rem;
     }
 
     input {
@@ -155,7 +163,7 @@ $LightGreen: rgba(67, 141, 124, 0.75);
       padding: 14px 18px;
       font-size: 1rem;
       border-radius: 0;
-      margin-bottom: 1rem;
+      margin-bottom: 0.2rem;
       outline: none;
       border: 1px solid $AntiFlashWhite;
       background-color: white;

@@ -20,6 +20,12 @@
   display: block;
   color: rgb(43, 39, 53);
 }
+.add-donation .error-message {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  display: block;
+}
 .add-donation #title,
 .add-donation #description,
 .add-donation #target {

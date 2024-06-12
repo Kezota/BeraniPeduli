@@ -14,6 +14,13 @@ export default function AddDonation() {
   const [image, setImage] = useState("");
   const [category, setCategory] = useState<TCategory>("Kesehatan");
   const [target, setTarget] = useState(0);
+  const [errors, setErrors] = useState({
+    title: "",
+    description: "",
+    category: "",
+    target: "",
+    image: "",
+  });
 
   useEffect(() => {
     if (!openPopup) {
@@ -27,9 +34,45 @@ export default function AddDonation() {
 
   if (selectedDonation) return null;
 
+  function validateForm() {
+    const tempErrors = {
+      title: "",
+      description: "",
+      category: "",
+      target: "",
+      image: "",
+    };
+    let isValid = true;
+
+    if (!title) {
+      tempErrors.title = "Nama tidak boleh kosong";
+      isValid = false;
+    }
+    if (!description) {
+      tempErrors.description = "Deskripsi tidak boleh kosong";
+      isValid = false;
+    }
+    if (!category) {
+      tempErrors.category = "Kategori tidak boleh kosong";
+      isValid = false;
+    }
+    if (target <= 0) {
+      tempErrors.target = "Target harus lebih dari 0";
+      isValid = false;
+    }
+    if (!image) {
+      tempErrors.image = "Gambar tidak boleh kosong";
+      isValid = false;
+    }
+
+    setErrors(tempErrors);
+    return isValid;
+  }
+
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    console.log("submitted");
+
+    if (!validateForm()) return;
 
     setDonations((prev) => [
       {
@@ -68,6 +111,9 @@ export default function AddDonation() {
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
               />
+              {errors.title && (
+                <span className="error-message">{errors.title}</span>
+              )}
             </Grid>
             <Grid item xs={12}>
               <label htmlFor="description">Deskripsi singkat</label>
@@ -77,10 +123,16 @@ export default function AddDonation() {
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
               />
+              {errors.description && (
+                <span className="error-message">{errors.description}</span>
+              )}
             </Grid>
             <Grid item xs={12}>
               <label htmlFor="image">Image</label>
               <input id="image" type="file" onChange={onChangeImage} />
+              {errors.image && (
+                <span className="error-message">{errors.image}</span>
+              )}
             </Grid>
             <Grid item xs={12}>
               <label htmlFor="category">Kategori</label>
@@ -139,6 +191,9 @@ export default function AddDonation() {
                 value={target || ""}
                 onChange={(e) => setTarget(Number(e.target.value))}
               />
+              {errors.target && (
+                <span className="error-message">{errors.target}</span>
+              )}
             </Grid>
             <Grid item xs={12}>
               <h3 className="donation-target">{formatCurrency(target)}</h3>

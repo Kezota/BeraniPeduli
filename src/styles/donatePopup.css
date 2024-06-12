@@ -17,6 +17,12 @@
   font-size: 1rem;
   margin-bottom: 1rem;
 }
+.donate-popup .error-message {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  display: block;
+}
 .donate-popup .amount {
   margin-bottom: 0.5rem;
 }
@@ -28,7 +34,7 @@
 .donate-popup .amount .amount-label {
   font-size: 1rem;
   font-weight: 500;
-  margin-bottom: 1rem;
+  margin-bottom: 0.2rem;
   padding: 16px 20px;
   background-color: rgb(67, 141, 124);
   color: rgb(252, 253, 251);
@@ -37,7 +43,7 @@
   padding: 16px 20px;
   font-size: 1rem;
   border-radius: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.2rem;
   outline: none;
   border: none;
   background-color: white;
@@ -46,7 +52,7 @@
 .donate-popup .amount .custom-amount {
   font-size: 1rem;
   font-weight: 500;
-  margin-bottom: 1rem;
+  margin-bottom: 0.2rem;
   background-color: rgb(67, 141, 124);
   padding: 16px 20px;
   color: rgb(252, 253, 251);
@@ -59,6 +65,7 @@
   display: inline-block;
   margin-right: 10px;
   margin-bottom: 0rem;
+  margin-top: 0.8rem;
 }
 .donate-popup .radio-amount input {
   -webkit-appearance: none;
@@ -132,7 +139,7 @@
   padding: 14px 18px;
   font-size: 1rem;
   border-radius: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.2rem;
   outline: none;
   border: 1px solid rgb(232, 232, 232);
   background-color: white;

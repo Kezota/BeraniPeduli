@@ -46,6 +46,11 @@ export default function DonationPopup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    amount: "",
+  });
 
   useEffect(() => {
     if (!openPopup) {
@@ -58,8 +63,35 @@ export default function DonationPopup() {
 
   if (!selectedDonation) return;
 
+  function validateForm() {
+    const tempErrors = { name: "", email: "", amount: "" };
+    const emailRegex = /\S+@\S+\.\S+/;
+    let isValid = true;
+
+    if (!name) {
+      tempErrors.name = "Nama tidak boleh kosong";
+      isValid = false;
+    }
+    if (!email || !emailRegex.test(email)) {
+      tempErrors.email = "Email tidak valid";
+      isValid = false;
+    }
+    if (amount <= 0) {
+      tempErrors.amount = "Jumlah donasi harus lebih dari 0";
+      isValid = false;
+    }
+    // if (!message) {
+    //   tempErrors.message = "Pesan tidak boleh kosong";
+    //   isValid = false;
+    // }
+
+    setErrors(tempErrors);
+    return isValid;
+  }
+
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (!validateForm()) return;
 
     setDonations((prev) => {
       const updatedDonations = prev.map((donation) => {
@@ -111,6 +143,9 @@ export default function DonationPopup() {
             >
               Custom Amount
             </label>
+            {errors.amount && (
+              <span className="error-message">{errors.amount}</span>
+            )}
           </div>
           <div className="radio-amount">
             {radioAmount.map((radio) => (
@@ -150,6 +185,9 @@ export default function DonationPopup() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
+                {errors.name && (
+                  <span className="error-message">{errors.name}</span>
+                )}
               </Grid>
               <Grid item xs={12} md={6}>
                 <label htmlFor="email">Email</label>
@@ -160,6 +198,9 @@ export default function DonationPopup() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
+                {errors.email && (
+                  <span className="error-message">{errors.email}</span>
+                )}
               </Grid>
               <Grid item xs={12}>
                 <label htmlFor="message">Pesan</label>
@@ -169,6 +210,9 @@ export default function DonationPopup() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                 />
+                {/* {errors.message && (
+                  <span className="error-message">{errors.message}</span>
+                )} */}
               </Grid>
             </Grid>
           </div>

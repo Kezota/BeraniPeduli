@@ -34,6 +34,13 @@ $LightGreen: rgba(67, 141, 124, 0.75);
     color: $CharlestonGreen;
   }
 
+  .error-message {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: block;
+  }
+
   #title,
   #description,
   #target {
