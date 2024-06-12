@@ -13,8 +13,6 @@ import donateImg5 from "../assets/donate5.png";
 import donateImg6 from "../assets/donate6.png";
 import donateImg7 from "../assets/donate7.png";
 import donateImg8 from "../assets/donate8.png";
-import bmw from "../assets/bmw.jpg";
-import rumah from "../assets/rumah.jpg";
 
 interface IDonationContext {
   category: string | null;
@@ -51,24 +49,6 @@ function DonationProvider({ children }: { children: React.ReactNode }) {
 
     if (!storedDonations) {
       setDonations(() => [
-        {
-          image: bmw,
-          category: "Sembako",
-          title: "Mobil bmw untuk Kezia",
-          description:
-            "Bantuan biaya mobil bmw untuk masyarakat yang membutuhkan",
-          raised: 1000,
-          target: 999000000,
-        },
-        {
-          image: rumah,
-          category: "Hunian Layak",
-          title: "Rumah layak untuk Rachel",
-          description:
-            "Biaya pembangunan rumah layak bagi orang yang membutuhkan",
-          raised: 634000000,
-          target: 850000000,
-        },
         {
           image: donateImg1,
           category: "Kesehatan",
