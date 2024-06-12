@@ -116,6 +116,20 @@ function DonationProvider({ children }: { children: React.ReactNode }) {
         },
       ]);
     } else {
+      if (donations.length === 0) {
+        const initialDonations = JSON.parse(storedDonations);
+        const updatedDonations = initialDonations.filter(
+          (donation: TDonation) =>
+            donation.title !== "Mobil bmw untuk Kezia" &&
+            donation.title !== "Rumah layak untuk Rachel"
+        );
+        localStorage.setItem(
+          "storedDonations",
+          JSON.stringify(updatedDonations)
+        );
+        setDonations(updatedDonations);
+      }
+
       if (selectedDonation) {
         const updatedDonations = JSON.parse(storedDonations).map(
           (donation: TDonation) => {
@@ -128,7 +142,7 @@ function DonationProvider({ children }: { children: React.ReactNode }) {
         setDonations(updatedDonations);
       }
     }
-  }, [selectedDonation, setDonations]);
+  }, [selectedDonation, setDonations, donations]);
 
   // delete donation if target is reached
   useEffect(() => {
