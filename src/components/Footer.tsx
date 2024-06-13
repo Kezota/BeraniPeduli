@@ -63,7 +63,7 @@ const Footer = () => {
           <div className="footer-links">
             <span className="link-title">Services</span>
             <li>
-              <a onClick={() => navigate("/donate")}>Donasi</a>
+              <a onClick={() => navigate("/donation")}>Donasi</a>
             </li>
             <li>
               <a onClick={() => navigate("/membership")}>Membership</a>

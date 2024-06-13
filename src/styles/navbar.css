@@ -1,27 +1,57 @@
+:root {
+  --AntiFlashWhite: rgba(232, 232, 232, 1);
+  --CharlestonGreen: rgba(43, 39, 53, 1);
+  --DeepAquamarine: rgba(67, 141, 124, 1);
+  --LightGoldenrod: rgba(255, 247, 212, 1);
+  --Lotion: rgba(252, 253, 251, 1);
+  --MellowApricot: rgba(242, 185, 132, 1);
+  --PhilippineGray: rgba(144, 144, 144, 1);
+  --YellowOrange: rgba(255, 178, 63, 1);
+  --DarkGray: rgba(100, 100, 100, 1);
+  --LightGreen: rgba(67, 141, 124, 0.75);
+  --LightGray: rgba(238, 238, 238, 1);
+}
+
 .navbar-section {
   position: absolute;
+
+  .logo {
+    font-size: 28px;
+    color: var(--DeepAquamarine) !important;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  .header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    width: 100%;
+    padding: 1rem;
+    z-index: 1000;
+  }
+
+  .toggle-navbar .icon {
+    font-size: 25px;
+    color: var(--DeepAquamarine);
+
+    &:hover {
+      color: var(--DeepAquamarine);
+    }
+  }
+
+  .active-header {
+    background-color: var(--LightGray);
+    box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);
+  }
 }
-.navbar-section .logo {
-  font-size: 28px;
-  color: rgb(67, 141, 124) !important;
-  cursor: pointer;
-  font-weight: 700;
-}
-.navbar-section .header {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: transparent;
-  width: 100%;
-  padding: 1rem;
-  z-index: 1000;
-}
+
 @media screen and (max-width: 768px) {
-  .navbar-section .header .navbar {
-    background: rgb(238, 238, 238);
+  .navbar {
+    background: var(--LightGray);
     position: absolute;
-    height: -moz-max-content;
     height: max-content;
     padding: 1rem;
     width: 100%;
@@ -30,104 +60,114 @@
     box-shadow: 0 2px 4px rgba(209, 209, 209, 0.904);
     transition: 0.5s ease;
     z-index: 1000;
+
+    ul {
+      margin-bottom: 1px !important;
+    }
+
+    .nav-lists {
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      margin: auto;
+      margin-bottom: 0 !important;
+
+      .nav-item {
+        padding: 1rem 0;
+        cursor: pointer;
+
+        .nav-link {
+          color: var(--PhilippineGray);
+          font-size: 0.9rem;
+          font-weight: 600;
+          cursor: pointer !important;
+
+          &:hover {
+            color: var(--DeepAquamarine);
+          }
+        }
+      }
+
+      .header-btns {
+        flex-direction: column;
+        font-weight: 500;
+
+        .btn {
+          margin-top: 1rem;
+
+          &:hover {
+            color: var(--Lotion);
+          }
+        }
+      }
+    }
+
+    .close-navbar {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      color: var(--DeepAquamarine);
+
+      &:hover .icon {
+        color: var(--CharlestonGreen);
+      }
+    }
   }
-  .navbar-section .header .navbar ul {
-    margin-bottom: 1px !important;
-  }
-  .navbar-section .header .navbar .nav-lists {
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    margin: auto;
-    margin-bottom: 0 !important;
-  }
-  .navbar-section .header .navbar .nav-lists .nav-item {
-    padding: 1rem 0;
-    cursor: pointer;
-  }
-  .navbar-section .header .navbar .nav-lists .nav-item .nav-link {
-    color: rgb(144, 144, 144);
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer !important;
-  }
-  .navbar-section .header .navbar .nav-lists .nav-item .nav-link:hover {
-    color: rgb(67, 141, 124);
-  }
-  .navbar-section .header .navbar .nav-lists .header-btns {
-    flex-direction: column;
-    font-weight: 500;
-  }
-  .navbar-section .header .navbar .nav-lists .header-btns .btn {
-    margin-top: 1rem;
-  }
-  .navbar-section .header .navbar .nav-lists .header-btns .btn:hover {
-    color: var(rgb(252, 253, 251));
-  }
-  .navbar-section .header .navbar .close-navbar {
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-    color: rgb(67, 141, 124);
-  }
-  .navbar-section .header .navbar .close-navbar:hover .icon {
-    color: rgb(43, 39, 53);
-  }
-  .navbar-section .header .active-navbar {
+
+  .active-navbar {
     top: 0;
   }
 }
-.navbar-section .header .toggle-navbar .icon {
-  font-size: 25px;
-  color: rgb(67, 141, 124);
-}
-.navbar-section .header .toggle-navbar .icon:hover {
-  color: rgb(67, 141, 124);
-}
-.navbar-section .active-header {
-  background-color: rgb(238, 238, 238);
-  box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);
-}
 
 @media screen and (min-width: 769px) {
-  .navbar-section .toggle-navbar,
-  .navbar-section .close-navbar {
-    display: none;
-  }
-  .navbar-section .active-header .navbar .nav-lists .nav-link {
-    color: rgb(144, 144, 144) !important;
-  }
-  .navbar-section .active-header .navbar .nav-lists .active-nav {
-    color: rgb(67, 141, 124) !important;
-  }
-  .navbar-section .header .navbar .nav-lists {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    cursor: pointer;
-  }
-  .navbar-section .header .navbar .nav-lists .nav-link {
-    color: rgb(232, 232, 232);
-    padding: 0 1.2rem;
-    cursor: pointer !important;
-    font-size: 0.9rem;
-    font-weight: 600;
-  }
-  .navbar-section .header .navbar .nav-lists .nav-link:hover {
-    color: rgb(67, 141, 124);
+  .navbar-section {
+    .toggle-navbar,
+    .close-navbar {
+      display: none;
+    }
+
+    .active-header .navbar .nav-lists .nav-link {
+      color: var(--PhilippineGray) !important;
+    }
+
+    .active-header .navbar .nav-lists .active-nav {
+      color: var(--DeepAquamarine) !important;
+    }
+
+    .header .navbar .nav-lists {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      cursor: pointer;
+
+      .nav-link {
+        color: var(--AntiFlashWhite);
+        padding: 0 1.2rem;
+        cursor: pointer !important;
+        font-size: 0.9rem;
+        font-weight: 600;
+
+        &:hover {
+          color: var(--DeepAquamarine);
+        }
+      }
+    }
   }
 }
+
 @media screen and (min-width: 960px) {
   .header .navbar {
     padding: 0.5rem 0;
-  }
-  .header .navbar .nav-list .nav-item {
-    padding: 0 0.7rem;
+
+    .nav-list .nav-item {
+      padding: 0 0.7rem;
+    }
   }
 }
+
 @media screen and (min-width: 1024px) {
   .header {
     padding: 1rem 8.5rem !important;
   }
-}/*# sourceMappingURL=navbar.css.map */
+}

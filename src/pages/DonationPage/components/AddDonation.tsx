@@ -45,7 +45,7 @@ export default function AddDonation() {
     let isValid = true;
 
     if (!title) {
-      tempErrors.title = "Nama tidak boleh kosong";
+      tempErrors.title = "Judul tidak boleh kosong";
       isValid = false;
     }
     if (!description) {
@@ -100,11 +100,11 @@ export default function AddDonation() {
     <Popup onTogglePopup={onTogglePopup}>
       <div className="add-donation">
         <form noValidate autoComplete="off" onSubmit={handleSubmit}>
-          <h3>Add Donation</h3>
+          <h3>Tambah Donasi</h3>
           <hr />
           <Grid container spacing={2}>
             <Grid item xs={12}>
-              <label htmlFor="title">Title</label>
+              <label htmlFor="title">Judul</label>
               <input
                 id="title"
                 type="text"

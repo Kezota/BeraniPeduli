@@ -1,3 +1,17 @@
+:root {
+  --AntiFlashWhite: rgba(232, 232, 232, 1);
+  --CharlestonGreen: rgba(43, 39, 53, 1);
+  --DeepAquamarine: rgba(67, 141, 124, 1);
+  --LightGoldenrod: rgba(255, 247, 212, 1);
+  --Lotion: rgba(252, 253, 251, 1);
+  --MellowApricot: rgba(242, 185, 132, 1);
+  --PhilippineGray: rgba(144, 144, 144, 1);
+  --YellowOrange: rgba(255, 178, 63, 1);
+  --DarkGray: rgba(100, 100, 100, 1);
+  --LightGreen: rgba(67, 141, 124, 0.75);
+  --LightGray: rgba(238, 238, 238, 1);
+}
+
 .contact {
   margin: 6rem auto;
   display: flex;
@@ -5,96 +19,111 @@
   align-items: center;
   flex-direction: column;
   margin-left: 0.5rem;
-}
-.contact h2 {
-  margin-bottom: 4rem;
-}
-.contact .forms {
-  border-radius: 20px;
-  background: #ededed;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  min-height: 500px;
-  margin: 0 auto;
-}
-.contact .forms .left-side {
-  background: rgb(67, 141, 124);
-  border-radius: 20px 0px 0px 20px;
-  height: 100%;
-  padding: 63px 53px;
-}
-.contact .forms .left-side h3 {
-  color: rgb(252, 253, 251);
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 140%; /* 56px */
-  letter-spacing: 0.8px;
-  margin-bottom: 1.5rem;
-}
-.contact .forms .left-side p {
-  color: rgb(232, 232, 232);
-  font-family: Raleway;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 40px; /* 200% */
-  letter-spacing: 0.4px;
-  margin-bottom: 1rem;
-}
-.contact .forms .form-group {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
-  padding: 63px 53px;
-  height: 100%;
-}
-.contact .forms .form-group .first-last,
-.contact .forms .form-group .phone-email {
-  display: flex;
-  gap: 2rem;
-}
-.contact .forms .form-group button {
-  border: none;
-  border-radius: 22px;
-  background: rgb(67, 141, 124);
-  color: rgb(252, 253, 251);
-  width: 240px;
-  height: 60px;
-  text-align: center;
-  font-family: Raleway;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 37px; /* 168.182% */
-  letter-spacing: 0.66px;
-  margin: 0 auto;
-  margin-top: 1rem;
-}
-.contact .forms .form-group button:hover {
-  background: rgba(67, 141, 124, 0.8);
+
+  h2 {
+    margin-bottom: 4rem;
+  }
+
+  .forms {
+    border-radius: 20px;
+    background: #ededed;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 500px;
+    margin: 0 auto;
+
+    .left-side {
+      background: var(--DeepAquamarine);
+      border-radius: 20px 0px 0px 20px;
+      height: 100%;
+      padding: 63px 53px;
+
+      h3 {
+        color: var(--Lotion);
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 140%; /* 56px */
+        letter-spacing: 0.8px;
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        color: var(--AntiFlashWhite);
+        font-family: Raleway;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 40px; /* 200% */
+        letter-spacing: 0.4px;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+      padding: 63px 53px;
+      height: 100%;
+
+      .first-last,
+      .phone-email {
+        display: flex;
+        gap: 2rem;
+      }
+
+      button {
+        border: none;
+        border-radius: 22px;
+        background: var(--DeepAquamarine);
+        color: var(--Lotion);
+        width: 240px;
+        height: 60px;
+        text-align: center;
+        font-family: Raleway;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 37px; /* 168.182% */
+        letter-spacing: 0.66px;
+        margin: 0 auto;
+        margin-top: 1rem;
+
+        &:hover {
+          background: rgba(67, 141, 124, 0.8);
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 769px) {
-  .contact h2 {
-    font-size: 30px;
-    letter-spacing: normal;
-    margin-bottom: 2rem;
+  .contact {
+    h2 {
+      font-size: 30px;
+      letter-spacing: normal;
+      margin-bottom: 2rem;
+    }
+
+    .forms {
+      flex-direction: column;
+
+      .left-side {
+        border-radius: 20px 20px 0px 0px;
+
+        h3 {
+          font-size: 26px;
+          letter-spacing: normal;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 30px;
+        }
+      }
+    }
   }
-  .contact .forms {
-    flex-direction: column;
-  }
-  .contact .forms .left-side {
-    border-radius: 20px 20px 0px 0px;
-  }
-  .contact .forms .left-side h3 {
-    font-size: 26px;
-    letter-spacing: normal;
-  }
-  .contact .forms .left-side p {
-    font-size: 16px;
-    line-height: 30px;
-  }
-}/*# sourceMappingURL=contact.css.map */
+}

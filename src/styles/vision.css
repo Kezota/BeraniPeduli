@@ -1,3 +1,17 @@
+:root {
+  --AntiFlashWhite: rgba(232, 232, 232, 1);
+  --CharlestonGreen: rgba(43, 39, 53, 1);
+  --DeepAquamarine: rgba(67, 141, 124, 1);
+  --LightGoldenrod: rgba(255, 247, 212, 1);
+  --Lotion: rgba(252, 253, 251, 1);
+  --MellowApricot: rgba(242, 185, 132, 1);
+  --PhilippineGray: rgba(144, 144, 144, 1);
+  --YellowOrange: rgba(255, 178, 63, 1);
+  --DarkGray: rgba(100, 100, 100, 1);
+  --LightGreen: rgba(67, 141, 124, 0.75);
+  --LightGray: rgba(238, 238, 238, 1);
+}
+
 .vision {
   display: flex;
   justify-content: center;
@@ -6,50 +20,56 @@
   gap: 2rem;
   margin: 4rem 0;
   margin-top: 6rem;
-}
-.vision .image {
-  max-width: 500px;
-}
-.vision .vision-detail {
-  width: 95%;
-}
-.vision .vision-detail h3 {
-  color: rgb(43, 39, 53);
-  font-family: Raleway;
-  font-size: 26px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 155%; /* 55.8px */
-  letter-spacing: 0.72px;
-  letter-spacing: normal;
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
-}
-.vision .vision-detail p {
-  color: #232223;
-  font-family: Raleway;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 35px; /* 185% */
-  letter-spacing: 0.4px;
+
+  .image {
+    max-width: 500px;
+  }
+
+  .vision-detail {
+    width: 95%;
+
+    h3 {
+      color: var(--CharlestonGreen);
+      font-family: Raleway;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 155%; /* 55.8px */
+      letter-spacing: 0.72px;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      color: #232223;
+      font-family: Raleway;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 35px; /* 185% */
+      letter-spacing: 0.4px;
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .vision {
     justify-content: space-around;
     flex-direction: row;
+
+    .vision-detail {
+      width: 50%;
+
+      h3 {
+        font-size: 38px;
+        letter-spacing: 0.72px;
+      }
+
+      p {
+        font-size: 20px;
+        letter-spacing: 0.4px;
+        line-height: 40px;
+      }
+    }
   }
-  .vision .vision-detail {
-    width: 50%;
-  }
-  .vision .vision-detail h3 {
-    font-size: 38px;
-    letter-spacing: 0.72px;
-  }
-  .vision .vision-detail p {
-    font-size: 20px;
-    letter-spacing: 0.4px;
-    line-height: 40px;
-  }
-}/*# sourceMappingURL=vision.css.map */
+}

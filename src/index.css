@@ -203,7 +203,7 @@ input {
 /* Page Design */
 ::selection {
   background: var(--DeepAquamarine);
-  color: var(--AntiFlashWhite);
+  color: var(--Lotion);
 }
 
 /* ::-webkit-scrollbar {

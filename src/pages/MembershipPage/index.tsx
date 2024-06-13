@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import NavbarFill from "../../components/NavbarFill";
 import Heading from "../../components/Heading";
 import MembershipForm from "./components/MembershipForm";
+import Footer from "../../components/Footer";
 
 import headerImage from "../../assets/membership-header.png";
 import "../../styles/membershipPage.css";
@@ -18,6 +19,7 @@ export default function MembershipPage() {
       <NavbarFill activeNav="membership" />
       <Heading image={headerImage} title="Membership Page" />
       <MembershipForm />
+      <Footer />
     </div>
   );
 }

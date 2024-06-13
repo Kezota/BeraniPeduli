@@ -29,7 +29,7 @@ const Hero = () => {
                 Bersama BeraniPeduli, mari kita memberikan bantuan kepada mereka
                 yang membutuhkan!
               </p>
-              <button onClick={() => navigate("/donate")}>
+              <button onClick={() => navigate("/donation")}>
                 Donasi Sekarang
               </button>
             </div>

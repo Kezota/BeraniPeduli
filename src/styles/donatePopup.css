@@ -1,179 +1,224 @@
+:root {
+  --AntiFlashWhite: rgba(232, 232, 232, 1);
+  --CharlestonGreen: rgba(43, 39, 53, 1);
+  --DeepAquamarine: rgba(67, 141, 124, 1);
+  --LightGoldenrod: rgba(255, 247, 212, 1);
+  --Lotion: rgba(252, 253, 251, 1);
+  --MellowApricot: rgba(242, 185, 132, 1);
+  --PhilippineGray: rgba(144, 144, 144, 1);
+  --YellowOrange: rgba(255, 178, 63, 1);
+  --DarkGray: rgba(100, 100, 100, 1);
+  --LightGreen: rgba(67, 141, 124, 0.75);
+}
+
 .donate-popup {
   height: 100%;
   padding: 2rem;
   display: grid;
   grid-template-rows: auto 1fr;
-}
-.donate-popup form {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.donate-popup h3 {
-  font-size: 1.4rem;
-  font-weight: 600;
-}
-.donate-popup p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-.donate-popup .error-message {
-  color: red;
-  font-size: 0.8rem;
-  margin-top: 5px;
-  display: block;
-}
-.donate-popup .amount {
-  margin-bottom: 0.5rem;
-}
-.donate-popup .amount input::-webkit-outer-spin-button,
-.donate-popup .amount input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-.donate-popup .amount .amount-label {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 0.2rem;
-  padding: 16px 20px;
-  background-color: rgb(67, 141, 124);
-  color: rgb(252, 253, 251);
-}
-.donate-popup .amount #amount {
-  padding: 16px 20px;
-  font-size: 1rem;
-  border-radius: 0;
-  margin-bottom: 0.2rem;
-  outline: none;
-  border: none;
-  background-color: white;
-  margin-right: 1rem;
-}
-.donate-popup .amount .custom-amount {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 0.2rem;
-  background-color: rgb(67, 141, 124);
-  padding: 16px 20px;
-  color: rgb(252, 253, 251);
-  cursor: pointer;
-}
-.donate-popup .radio-amount {
-  display: inline;
-}
-.donate-popup .radio-amount span {
-  display: inline-block;
-  margin-right: 10px;
-  margin-bottom: 0rem;
-  margin-top: 0.8rem;
-}
-.donate-popup .radio-amount input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-.donate-popup .radio-amount label {
-  display: inline-block;
-  padding: 10px 16px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  border: 1.2px solid rgb(67, 141, 124);
-  background-color: #fff;
-  margin-right: 10px;
-  color: rgb(67, 141, 124);
-  cursor: pointer;
-}
-.donate-popup .radio-amount label:hover {
-  color: rgb(252, 253, 251);
-  background-color: rgb(67, 141, 124);
-}
-.donate-popup .radio-amount input[type=radio]:checked + label {
-  color: rgb(252, 253, 251);
-  background-color: rgb(67, 141, 124);
-}
-.donate-popup .payment-method {
-  margin-top: 1.2rem;
-}
-.donate-popup .payment-method h5 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-.donate-popup .payment-method select {
-  padding: 14px 18px;
-  font-size: 0.9rem;
-  border-radius: 0;
-  margin-bottom: 0.2rem;
-  outline: none;
-  border: 1px solid rgb(232, 232, 232);
-  background-color: white;
-}
-.donate-popup .payment-method select:focus, .donate-popup .payment-method select:hover {
-  border: 1px solid rgb(67, 141, 124);
-}
-.donate-popup .personal-info {
-  margin-top: 1.2rem;
-}
-.donate-popup .personal-info label {
-  font-size: 0.9rem;
-  font-weight: 500;
-  margin-bottom: 0.3rem;
-  display: block;
-  color: rgb(43, 39, 53);
-}
-.donate-popup .personal-info input {
-  padding: 14px 18px;
-  font-size: 0.9rem;
-  border-radius: 0;
-  margin-bottom: 0.2rem;
-  outline: none;
-  border: 1px solid rgb(232, 232, 232);
-  background-color: white;
-  width: 100%;
-}
-.donate-popup .personal-info input:focus, .donate-popup .personal-info input:hover {
-  border: 1px solid rgb(67, 141, 124);
-}
-.donate-popup .personal-info textarea {
-  padding: 14px 18px;
-  font-size: 1rem;
-  border-radius: 0;
-  margin-bottom: 0.2rem;
-  outline: none;
-  border: 1px solid rgb(232, 232, 232);
-  background-color: white;
-  width: 100%;
-}
-.donate-popup .personal-info textarea:focus, .donate-popup .personal-info textarea:hover {
-  border: 1px solid rgb(67, 141, 124);
-}
-.donate-popup .donation-total {
-  margin: 1.2rem 0;
-  margin-bottom: 1.5rem;
-}
-.donate-popup .donate-now-container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding-bottom: 2rem;
-}
-.donate-popup .donate-now {
-  width: 100%;
-  display: block;
-  background-color: white;
-  color: rgb(67, 141, 124);
-  border: 1.4px solid rgb(67, 141, 124) !important;
-  padding: 10px 26px;
-  font-size: 1rem;
-  font-weight: 500;
-  border: none;
-  cursor: pointer;
-}
-.donate-popup .donate-now:hover {
-  background-color: rgb(67, 141, 124);
-  color: rgb(252, 253, 251);
+
+  form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .error-message {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: block;
+  }
+
+  .amount {
+    margin-bottom: 0.5rem;
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    .amount-label {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+      padding: 16px 20px;
+      background-color: var(--DeepAquamarine);
+      color: var(--Lotion);
+    }
+
+    #amount {
+      padding: 16px 20px;
+      font-size: 1rem;
+      border-radius: 0;
+      margin-bottom: 0.2rem;
+      outline: none;
+      border: none;
+      background-color: white;
+      margin-right: 1rem;
+    }
+
+    .custom-amount {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+      background-color: var(--DeepAquamarine);
+      padding: 16px 20px;
+      color: var(--Lotion);
+      cursor: pointer;
+    }
+  }
+
+  .radio-amount {
+    display: inline;
+
+    span {
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 0rem;
+      margin-top: 0.8rem;
+    }
+
+    input {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    label {
+      display: inline-block;
+      padding: 10px 16px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      border: 1.2px solid var(--DeepAquamarine);
+      background-color: #fff;
+      margin-right: 10px;
+      color: var(--DeepAquamarine);
+      cursor: pointer;
+
+      &:hover {
+        color: var(--Lotion);
+        background-color: var(--DeepAquamarine);
+      }
+    }
+
+    input[type="radio"]:checked + label {
+      color: var(--Lotion);
+      background-color: var(--DeepAquamarine);
+    }
+  }
+
+  .payment-method {
+    margin-top: 1.2rem;
+
+    h5 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    select {
+      padding: 14px 18px;
+      font-size: 0.9rem;
+      border-radius: 0;
+      margin-bottom: 0.2rem;
+      outline: none;
+      border: 1px solid var(--AntiFlashWhite);
+      background-color: white;
+
+      &:focus,
+      &:hover {
+        border: 1px solid var(--DeepAquamarine);
+      }
+    }
+  }
+
+  .personal-info {
+    margin-top: 1.2rem;
+
+    label {
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+      display: block;
+      color: var(--CharlestonGreen);
+    }
+
+    input {
+      padding: 14px 18px;
+      font-size: 0.9rem;
+      border-radius: 0;
+      margin-bottom: 0.2rem;
+      outline: none;
+      border: 1px solid var(--AntiFlashWhite);
+      background-color: white;
+      width: 100%;
+
+      &:focus,
+      &:hover {
+        border: 1px solid var(--DeepAquamarine);
+      }
+    }
+
+    textarea {
+      padding: 14px 18px;
+      font-size: 1rem;
+      border-radius: 0;
+      margin-bottom: 0.2rem;
+      outline: none;
+      border: 1px solid var(--AntiFlashWhite);
+      background-color: white;
+      width: 100%;
+
+      &:focus,
+      &:hover {
+        border: 1px solid var(--DeepAquamarine);
+      }
+    }
+  }
+
+  .donation-total {
+    margin: 1.2rem 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .donate-now-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 2rem;
+  }
+
+  .donate-now {
+    width: 100%;
+    display: block;
+    background-color: white;
+    color: var(--DeepAquamarine);
+    border: 1.4px solid var(--DeepAquamarine) !important;
+    padding: 10px 26px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--DeepAquamarine);
+      color: var(--Lotion);
+    }
+  }
 }
 
 .MuiBox-root:has(> .donate-popup) {
@@ -187,58 +232,81 @@
 @media screen and (max-width: 768px) {
   .donate-popup {
     padding: 1.5rem 1rem;
+
+    h3 {
+      font-size: 1.4rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+
+    .amount {
+      .amount-label {
+        padding: 10px 14px;
+      }
+
+      #amount {
+        padding: 10px 14px;
+      }
+
+      .custom-amount {
+        padding: 10px 14px;
+        font-size: 0.9rem;
+      }
+    }
+
+    .radio-amount {
+      label {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+      }
+    }
+
+    .payment-method {
+      label {
+        font-size: 0.8rem;
+      }
+
+      input {
+        margin-right: 0.2rem;
+      }
+    }
+
+    .personal-info {
+      label {
+        font-size: 0.8rem;
+      }
+
+      input {
+        padding: 10px 12px;
+        font-size: 0.8rem;
+      }
+
+      textarea {
+        padding: 10px 12px;
+        font-size: 0.8rem;
+      }
+    }
+
+    .donation-total {
+      margin: 1rem 0;
+    }
+
+    .donate-now {
+      padding: 8px 22px;
+      font-size: 0.9rem;
+    }
   }
-  .donate-popup h3 {
-    font-size: 1.4rem;
-  }
-  .donate-popup p {
-    font-size: 0.9rem;
-  }
-  .donate-popup .amount .amount-label {
-    padding: 10px 14px;
-  }
-  .donate-popup .amount #amount {
-    padding: 10px 14px;
-  }
-  .donate-popup .amount .custom-amount {
-    padding: 10px 14px;
-    font-size: 0.9rem;
-  }
-  .donate-popup .radio-amount label {
-    padding: 8px 12px;
-    font-size: 0.8rem;
-  }
-  .donate-popup .payment-method label {
-    font-size: 0.8rem;
-  }
-  .donate-popup .payment-method input {
-    margin-right: 0.2rem;
-  }
-  .donate-popup .personal-info label {
-    font-size: 0.8rem;
-  }
-  .donate-popup .personal-info input {
-    padding: 10px 12px;
-    font-size: 0.8rem;
-  }
-  .donate-popup .personal-info textarea {
-    padding: 10px 12px;
-    font-size: 0.8rem;
-  }
-  .donate-popup .donation-total {
-    margin: 1rem 0;
-  }
-  .donate-popup .donate-now {
-    padding: 8px 22px;
-    font-size: 0.9rem;
-  }
+
   .MuiBox-root:has(> .donate-popup) {
     height: 100%;
     overflow-y: auto;
     padding: 0;
   }
+
   .MuiModal-root:has(.donate-popup) {
     padding-block: 2rem;
     height: 100vh;
   }
-}/*# sourceMappingURL=donatePopup.css.map */
+}
