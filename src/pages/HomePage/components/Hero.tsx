@@ -2,6 +2,7 @@ import { Grid } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import heroImage from "../../../assets/hero.png";
 import "../../../styles/hero.css";
+import "aos/dist/aos.css";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -22,14 +23,22 @@ const Hero = () => {
         >
           <div className="sec-container container">
             <div className="hero-text">
-              <h1 className="title">
+              <h1 className="title" data-aos="fade-right">
                 Masa Depan yang Lebih Cerah untuk Semua!
               </h1>
-              <p className="sub-title">
+              <p
+                className="sub-title"
+                data-aos="fade-right"
+                data-aos-delay="100"
+              >
                 Bersama BeraniPeduli, mari kita memberikan bantuan kepada mereka
                 yang membutuhkan!
               </p>
-              <button onClick={() => navigate("/donation")}>
+              <button
+                onClick={() => navigate("/donation")}
+                data-aos="fade-right"
+                data-aos-delay="200"
+              >
                 Donasi Sekarang
               </button>
             </div>
@@ -46,10 +55,14 @@ const Hero = () => {
             alignItems: "end",
           }}
         >
-          <div style={{ height: "100%", display: "flex", alignItems: "end" }}>
+          <div
+            style={{ height: "100%", display: "flex", alignItems: "end" }}
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-center"
+          >
             <img src={heroImage} />
           </div>
-          <div className="blobs">
+          <div className="blobs" data-aos="fade-down-left">
             <svg
               width="795"
               height="657"

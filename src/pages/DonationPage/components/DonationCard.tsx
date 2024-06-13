@@ -1,6 +1,7 @@
 import { Grid } from "@mui/material";
 import { TDonationCard } from "../../../types/TDonationCard";
 import { formatCurrency } from "../../../utils";
+import "aos/dist/aos.css";
 
 export default function DonationCard({
   donation,
@@ -15,7 +16,7 @@ export default function DonationCard({
 
   return (
     <Grid item xs={12} lg={6} sx={{ my: "10px" }}>
-      <div className="donate-card">
+      <div className="donate-card" data-aos="fade-up">
         <Grid container spacing={2}>
           <Grid item xs={12} md={6} lg={6} xl={6} className="card-image">
             <img src={donation.image} alt="Donate image" />

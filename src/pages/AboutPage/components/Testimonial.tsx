@@ -3,13 +3,14 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "../../../styles/testimonial.css";
+import "aos/dist/aos.css";
 
 // import required modules
 import { Pagination } from "swiper/modules";
 
 export default function App() {
   return (
-    <div className="testimonial">
+    <div className="testimonial" data-aos="fade-up">
       <h2>Apa yang orang katakan?</h2>
       <Swiper
         slidesPerView={"auto"}

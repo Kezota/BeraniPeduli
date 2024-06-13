@@ -2,6 +2,7 @@ import event1 from "../../../assets/event1.png";
 import event2 from "../../../assets/event2.png";
 import event3 from "../../../assets/event3.png";
 import "../../../styles/ourEvents.css";
+import "aos/dist/aos.css";
 
 const OurEvents = () => {
   return (
@@ -19,6 +20,7 @@ const OurEvents = () => {
           month="Maret"
           location="Tanjung Duren Utara, Jakarta"
           title="Berbagi Sembako Gratis"
+          delay="0"
         />
         <EventCard
           image={event2}
@@ -26,6 +28,7 @@ const OurEvents = () => {
           month="April"
           location="Pantai Kutai, Bali"
           title="Membersihkan Pantai"
+          delay="100"
         />
         <EventCard
           image={event3}
@@ -33,6 +36,7 @@ const OurEvents = () => {
           month="April"
           location="Kepulauan Yapen, Papua"
           title="Mengajar ke Sekolah"
+          delay="200"
         />
       </div>
     </div>
@@ -45,15 +49,17 @@ function EventCard({
   month,
   location,
   title,
+  delay,
 }: {
   image: string;
   day: number;
   month: string;
   location: string;
   title: string;
+  delay: string;
 }) {
   return (
-    <div className="event-card">
+    <div className="event-card" data-aos="fade-up" data-aos-delay={delay}>
       <img src={image} alt="event image" />
       <div className="date">
         <span className="day">{day}</span>

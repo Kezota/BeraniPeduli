@@ -56,6 +56,7 @@
       padding: 16px 20px;
       background-color: var(--DeepAquamarine);
       color: var(--Lotion);
+      border: 1px solid var(--DeepAquamarine);
     }
 
     #amount {
@@ -67,6 +68,12 @@
       border: none;
       background-color: white;
       margin-right: 1rem;
+      border: 1px solid var(--AntiFlashWhite);
+
+      &:focus,
+      &:hover {
+        border: 1px solid var(--DeepAquamarine);
+      }
     }
 
     .custom-amount {

@@ -1,13 +1,14 @@
 import "../../../styles/goal.css";
 import goalImage from "../../../assets/goal.png";
+import "aos/dist/aos.css";
 
 const Goal = () => {
   return (
     <div className="goal">
-      <div className="image">
+      <div className="image" data-aos="fade-up">
         <img src={goalImage} alt="goal image" />
       </div>
-      <div className="goal-detail">
+      <div className="goal-detail" data-aos="fade-right" data-aos-delay="200">
         <h4>Tujuan Kami</h4>
         <h3>Membantu individu-individu yang membutuhkan bantuan</h3>
         <p>

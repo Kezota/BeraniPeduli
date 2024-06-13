@@ -1,13 +1,14 @@
 import "../../../styles/vision.css";
 import visionImage from "../../../assets/visi.png";
+import "aos/dist/aos.css";
 
 const Vision = () => {
   return (
     <div className="vision">
-      <div className="image">
+      <div className="image" data-aos="fade-right">
         <img src={visionImage} alt="" />
       </div>
-      <div className="vision-detail">
+      <div className="vision-detail" data-aos="fade-right" data-aos-delay="200">
         <h4>Visi Kami</h4>
         <h3>Membawa Harapan, Menciptakan Perubahan</h3>
         <p>

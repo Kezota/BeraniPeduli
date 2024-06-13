@@ -1,6 +1,7 @@
 import { Grid, TextField } from "@mui/material";
 import "../../../styles/contact.css";
 import { useState } from "react";
+import "aos/dist/aos.css";
 
 const Contact = () => {
   const [fistName, setFirstName] = useState("");
@@ -19,7 +20,7 @@ const Contact = () => {
     <div className="contact">
       <h2>Kontak Kami</h2>
       <Grid container spacing={1}>
-        <div className="forms">
+        <div className="forms" data-aos="fade-up">
           <Grid item xs={12} md={5}>
             <div className="left-side">
               <h3>Informasi Kontak</h3>

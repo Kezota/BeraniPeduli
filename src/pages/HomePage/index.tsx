@@ -10,12 +10,15 @@ import Choose from "./components/Choose";
 import Contact from "./components/Contact";
 import Footer from "../../components/Footer";
 
+import Aos from "aos";
+import "aos/dist/aos.css";
 import "../../styles/homePage.css";
 
 const HomePage = () => {
   // scroll to top on page load
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    Aos.init({ duration: 1500 });
   }, []);
 
   return (

@@ -1,9 +1,10 @@
 import "../styles/achivements.css";
+import "aos/dist/aos.css";
 
 const Achivements = () => {
   return (
     <div className="achivements">
-      <div className="achievement">
+      <div className="achievement" data-aos="zoom-in">
         <h1>100</h1>
         <h5>Program</h5>
         <svg
@@ -32,7 +33,7 @@ const Achivements = () => {
           </g>
         </svg>
       </div>
-      <div className="achievement">
+      <div className="achievement" data-aos="zoom-in" data-aos-delay="200">
         <h1>4,328</h1>
         <h5>Orang terbantu</h5>
         <svg
@@ -61,7 +62,7 @@ const Achivements = () => {
           </g>
         </svg>
       </div>
-      <div className="achievement">
+      <div className="achievement" data-aos="zoom-in" data-aos-delay="300">
         <h1>1,542</h1>
         <h5>Donatur</h5>
         <svg

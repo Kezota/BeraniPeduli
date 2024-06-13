@@ -1,4 +1,5 @@
 import "../../../styles/features.css";
+import "aos/dist/aos.css";
 
 const Features = () => {
   return (
@@ -11,7 +12,7 @@ const Features = () => {
         </p>
       </div>
       <div className="cards">
-        <div className="card card-1">
+        <div className="card card-1" data-aos="fade-up">
           <svg
             width="120"
             height="120"
@@ -45,7 +46,7 @@ const Features = () => {
             yang tepat dengan cara yang paling efisien
           </p>
         </div>
-        <div className="card card-2">
+        <div className="card card-2" data-aos="fade-up" data-aos-delay="200">
           <svg
             width="120"
             height="120"
