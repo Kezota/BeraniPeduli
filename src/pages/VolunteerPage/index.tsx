@@ -8,6 +8,8 @@ import UpcomingEvents from "./components/UpcomingEvents";
 import headerImage from "../../assets/volunteer-header.png";
 import "../../styles/volunteerPage.css";
 import NewestEvent from "./components/NewestEvent";
+import Footer from "../../components/Footer";
+import Sponsors from "./components/Sponsors";
 
 export default function VolunteerPage() {
   // scroll to top on page load
@@ -22,6 +24,8 @@ export default function VolunteerPage() {
       <VolunteerIntroduction />
       <UpcomingEvents />
       <NewestEvent />
+      <Sponsors />
+      <Footer />
     </div>
   );
 }

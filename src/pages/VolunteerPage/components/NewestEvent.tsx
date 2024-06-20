@@ -46,7 +46,7 @@ const NewestEvent = () => {
             <span>Tanjung Duren Utara, Jakarta</span>
           </div>
           <p>
-            Kami dari Beranipeduli dengan bangga mengumumkan kegiatan "Berbagi
+            Kami dari BeraniPeduli dengan bangga mengumumkan kegiatan "Berbagi
             Sembako Gratis" & kami mengundang Anda semua untuk turut serta dalam
             acara ini sebagai volunteer untuk membantu dalam proses distribusi.
             Kegiatan ini akan dimulai dari pukul 09.00 hingga selesai. Kami akan
