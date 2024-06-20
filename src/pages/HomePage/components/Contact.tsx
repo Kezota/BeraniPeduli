@@ -13,6 +13,8 @@ const Contact = () => {
   function handleSubmit() {
     alert("Pesan berhasil terkirim");
 
+    console.log(fistName, lastName, phone, email, message);
+
     setFirstName("");
     setLastName("");
     setPhone("");
