@@ -20,7 +20,11 @@ export default function VolunteerPage() {
   return (
     <div className="volunteer-page">
       <NavbarFill activeNav="volunteer" />
-      <Heading image={headerImage} title="Volunteer Page" />
+      <Heading
+        image={headerImage}
+        title="Volunteer Page"
+        description="Bergabunglah sebagai Volunteer dan Sebarkan Kebaikan Bersama Beranipeduli!"
+      />
       <VolunteerIntroduction />
       <UpcomingEvents />
       <NewestEvent />

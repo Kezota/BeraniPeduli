@@ -25,7 +25,11 @@ const DonatePage = () => {
     <DonationProvider>
       <div className="donate-page">
         <NavbarFill activeNav="donation" />
-        <Heading image={headerImage} title="Donation Page" />
+        <Heading
+          image={headerImage}
+          title="Donation Page"
+          description="Donasikan Sekarang dan Jadilah Bagian dari Perubahan!"
+        />
         <div className="container">
           <AddDonation />
           <DonationPopup />

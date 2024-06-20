@@ -3,9 +3,11 @@ import "../styles/heading.css";
 export default function Heading({
   image,
   title,
+  description,
 }: {
   image: string;
   title: string;
+  description: string;
 }) {
   return (
     <div
@@ -17,10 +19,7 @@ export default function Heading({
       <div className="sec-title">
         <div>
           <h1 className="title">{title}</h1>
-          <p>
-            Bersama BeraniPeduli, mari kita memberikan bantuan kepada mereka
-            yang membutuhkan!
-          </p>
+          <p>{description}</p>
         </div>
       </div>
     </div>

@@ -24,7 +24,11 @@ export default function AboutPage() {
   return (
     <div className="about-page">
       <NavbarFill activeNav="about" />
-      <Heading image={headerImage} title="About Page" />
+      <Heading
+        image={headerImage}
+        title="About Page"
+        description="Bersama BeraniPeduli, mari kita memberikan bantuan kepada mereka yang membutuhkan!"
+      />
       <div className="container">
         <Vision />
         <Mission />

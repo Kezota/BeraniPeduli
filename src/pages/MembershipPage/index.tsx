@@ -17,7 +17,11 @@ export default function MembershipPage() {
   return (
     <div className="membership-page">
       <NavbarFill activeNav="membership" />
-      <Heading image={headerImage} title="Membership Page" />
+      <Heading
+        image={headerImage}
+        title="Membership Page"
+        description="Bergabunglah dengan membership Beranipeduli dan jadilah bagian dari komunitas peduli yang lebih besar!"
+      />
       <MembershipForm />
       <Footer />
     </div>
