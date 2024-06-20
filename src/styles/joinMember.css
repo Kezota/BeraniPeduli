@@ -1,0 +1,103 @@
+:root {
+  --AntiFlashWhite: rgba(232, 232, 232, 1);
+  --CharlestonGreen: rgba(43, 39, 53, 1);
+  --DeepAquamarine: rgba(67, 141, 124, 1);
+  --LightGoldenrod: rgba(255, 247, 212, 1);
+  --Lotion: rgba(252, 253, 251, 1);
+  --MellowApricot: rgba(242, 185, 132, 1);
+  --PhilippineGray: rgba(144, 144, 144, 1);
+  --YellowOrange: rgba(255, 178, 63, 1);
+  --DarkGray: rgba(100, 100, 100, 1);
+  --LightGreen: rgba(67, 141, 124, 0.75);
+  --LightGray: rgba(238, 238, 238, 1);
+}
+
+.join-member {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 1rem;
+  margin-top: 4rem;
+  gap: 1rem;
+
+  .join-member-detail {
+    order: 2;
+    width: 100%;
+
+    h3 {
+      color: var(--CharlestonGreen);
+      font-family: Raleway;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 155%; /* 55.8px */
+      letter-spacing: normal;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      color: #232223;
+      font-family: Raleway;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 37px; /* 185% */
+      letter-spacing: 0.4px;
+    }
+
+    button {
+      border-radius: 29px;
+      background: #fcc600;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      color: rgba(0, 0, 0, 0.82);
+      border: none;
+      text-align: center;
+      font-family: "Kaushan Script";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 37px; /* 185% */
+      letter-spacing: 0.6px;
+      padding: 0.5rem 2rem;
+      transition: all 0.3s ease;
+      margin-top: 1rem;
+
+      &:hover {
+        background: #f7b500;
+      }
+    }
+  }
+
+  .image {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .join-member {
+    justify-content: center;
+    flex-direction: row;
+    gap: 50px;
+    margin: 4rem 8rem;
+
+    .join-member-detail {
+      width: 50% !important;
+      order: 1;
+
+      h3 {
+        font-size: 38px;
+        letter-spacing: 0.72px;
+      }
+    }
+
+    .image {
+      max-width: 450px !important;
+      order: 2;
+    }
+  }
+}

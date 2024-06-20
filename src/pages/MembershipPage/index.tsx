@@ -7,6 +7,8 @@ import Footer from "../../components/Footer";
 
 import headerImage from "../../assets/membership-header.png";
 import "../../styles/membershipPage.css";
+import WhyMember from "./components/WhyMember";
+import JoinMember from "./components/JoinMember";
 
 export default function MembershipPage() {
   // scroll to top on page load
@@ -22,6 +24,8 @@ export default function MembershipPage() {
         title="Membership Page"
         description="Bergabunglah dengan membership Beranipeduli dan jadilah bagian dari komunitas peduli yang lebih besar!"
       />
+      <WhyMember />
+      <JoinMember />
       <MembershipForm />
       <Footer />
     </div>
