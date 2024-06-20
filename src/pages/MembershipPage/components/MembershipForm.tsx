@@ -2,6 +2,7 @@ import { Grid } from "@mui/material";
 import { useState } from "react";
 import "../../../styles/membershipForm.css";
 import { formatCurrency } from "../../../utils";
+import "aos/dist/aos.css";
 
 export default function MembershipForm() {
   const [name, setName] = useState("");
@@ -65,7 +66,11 @@ export default function MembershipForm() {
   }
 
   return (
-    <section className="membership-form container" id="joinMember">
+    <section
+      className="membership-form container"
+      id="joinMember"
+      data-aos="fade-up"
+    >
       <h2>Daftar Membership</h2>
       <p>
         Dengan menjadi member, Anda turut berperan aktif dalam gerakan

@@ -1,12 +1,13 @@
 import newestEvent from "../../../assets/newest-event.png";
 import "../../../styles/newestEvent.css";
+import "aos/dist/aos.css";
 
 const NewestEvent = () => {
   return (
     <section className="newest-event container">
       <h2>Acara terbaru</h2>
       <div className="event">
-        <div className="left">
+        <div className="left" data-aos="fade-right">
           <div className="event-card">
             <img src={newestEvent} alt="event image" />
             <div className="date">
@@ -15,7 +16,7 @@ const NewestEvent = () => {
             </div>
           </div>
         </div>
-        <div className="right">
+        <div className="right" data-aos="fade-right" data-aos-delay="200">
           <h3>Berbagi Sembako Gratis</h3>
           <div className="location">
             <svg

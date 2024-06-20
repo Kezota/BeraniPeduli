@@ -7,10 +7,11 @@ import sponsor6 from "../../../assets/sponsor6.png";
 import sponsor7 from "../../../assets/sponsor7.png";
 import sponsor8 from "../../../assets/sponsor8.png";
 import "../../../styles/sponsors.css";
+import "aos/dist/aos.css";
 
 export default function Sponsors() {
   return (
-    <section className="sponsors container">
+    <section className="sponsors container" data-aos="fade-up">
       <h2>Sponsor Kami</h2>
       <div className="sponsor">
         <img src={sponsor1} alt="Sponsor Image" />

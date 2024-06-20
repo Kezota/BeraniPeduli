@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 import NavbarFill from "../../components/NavbarFill";
 import Heading from "../../components/Heading";
@@ -15,6 +17,7 @@ export default function VolunteerPage() {
   // scroll to top on page load
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    Aos.init({ duration: 1500 });
   }, []);
 
   return (

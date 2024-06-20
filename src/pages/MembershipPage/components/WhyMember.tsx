@@ -1,13 +1,18 @@
 import "../../../styles/whyMember.css";
 import whyMember from "../../../assets/whyMember.png";
+import "aos/dist/aos.css";
 
 export default function WhyMember() {
   return (
     <section className="why-member">
-      <div className="image">
+      <div className="image" data-aos="fade-right">
         <img src={whyMember} alt="" />
       </div>
-      <div className="why-member-detail">
+      <div
+        className="why-member-detail"
+        data-aos="fade-right"
+        data-aos-delay="200"
+      >
         <h3>Mengapa menjadi Member BeraniPeduli?</h3>
         <p>
           Sebagai member BeraniPeduli, kontribusi Anda, baik per minggu, per

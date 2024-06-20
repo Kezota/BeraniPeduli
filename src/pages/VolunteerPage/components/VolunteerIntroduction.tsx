@@ -1,11 +1,12 @@
 import introductionImage from "../../../assets/volunteer-introduction.png";
 import "../../../styles/volunteerIntroduction.css";
+import "aos/dist/aos.css";
 
 export default function VolunteerIntroduction() {
   return (
     <section className="container volunteer-introduction">
       <div className="introduction">
-        <div className="left">
+        <div className="left" data-aos="fade-left" data-aos-delay="200">
           <h4>Volunteer</h4>
           <h3>Siapkan dirimu untuk menjadi relawan</h3>
           <p>
@@ -22,7 +23,7 @@ export default function VolunteerIntroduction() {
             Ikuti Sekarang
           </a>
         </div>
-        <div className="right">
+        <div className="right" data-aos="fade-left">
           <img src={introductionImage} alt="" />
         </div>
       </div>

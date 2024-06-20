@@ -5,6 +5,7 @@ import event3 from "../../../assets/event3.png";
 import event4 from "../../../assets/event4.png";
 import event5 from "../../../assets/event5.png";
 import event6 from "../../../assets/event6.png";
+import "aos/dist/aos.css";
 
 const UpcomingEvents = () => {
   return (
@@ -78,8 +79,12 @@ function EventCard({
   location: string;
   title: string;
 }) {
+  function handleClick() {
+    alert("Relawan acara ini sudah penuh!");
+  }
+
   return (
-    <div className="event-card" id="join-now">
+    <div className="event-card" id="join-now" data-aos="fade-up">
       <img src={image} alt="event image" />
       <div className="date">
         <span className="day">{day}</span>
@@ -115,6 +120,7 @@ function EventCard({
           <span>{location}</span>
         </div>
         <h5 className="title">{title}</h5>
+        <h4 onClick={handleClick}>Daftar Sekarang →</h4>
       </div>
     </div>
   );

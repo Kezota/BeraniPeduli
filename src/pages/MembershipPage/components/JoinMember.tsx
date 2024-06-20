@@ -1,10 +1,15 @@
 import "../../../styles/joinMember.css";
 import joinMember from "../../../assets/joinMember.png";
+import "aos/dist/aos.css";
 
 export default function JoinMember() {
   return (
-    <section className="join-member">
-      <div className="join-member-detail">
+    <section className="join-member" data-aos="fade-left">
+      <div
+        className="join-member-detail"
+        data-aos="fade-left"
+        data-aos-delay="200"
+      >
         <h3>Bersatu dalam Keberanian dan Mewujudkan Kebaikan</h3>
         <p>
           Dengan mendaftar sebagai member BeraniPeduli, Anda akan menjadi bagian
