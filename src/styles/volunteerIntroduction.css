@@ -44,7 +44,7 @@
       letter-spacing: 0.4px;
     }
 
-    button {
+    a {
       background-color: var(--YellowOrange, #ffb23f);
       color: var(--Lotion, #fcfdfb);
       font-family: Raleway;
@@ -68,9 +68,11 @@
       line-height: 37px; /* 185% */
       letter-spacing: 0.6px;
       transition: all 0.3s ease;
+      cursor: pointer;
 
       &:hover {
-        background: rgba(255, 178, 63, 0.9);
+        background: #f7b500;
+        box-shadow: none;
       }
     }
   }
@@ -108,7 +110,7 @@
         font-size: 18px;
       }
 
-      button {
+      a {
         font-size: 18px;
       }
     }
@@ -141,7 +143,7 @@
         letter-spacing: normal;
       }
 
-      button {
+      a {
         font-size: 16px;
         padding: 8px 30px;
       }
@@ -167,7 +169,7 @@
         font-size: 14px;
       }
 
-      button {
+      a {
         font-size: 14px;
       }
     }

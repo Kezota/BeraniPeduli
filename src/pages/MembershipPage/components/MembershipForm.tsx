@@ -1,6 +1,7 @@
 import { Grid } from "@mui/material";
 import { useState } from "react";
 import "../../../styles/membershipForm.css";
+import { formatCurrency } from "../../../utils";
 
 const radioAmount = [
   {
@@ -49,13 +50,19 @@ export default function MembershipForm() {
 
   return (
     <section className="membership-form container">
+      <h2>Daftar Membership</h2>
+      <p>
+        Dengan menjadi member, Anda turut berperan aktif dalam gerakan
+        kemanusiaan yang nyata dan berkelanjutan, memastikan bahwa bantuan dapat
+        terus diberikan kepada mereka yang membutuhkan.{" "}
+      </p>
       <form noValidate autoComplete="off" onSubmit={handleSubmit}>
         <div className="personal-data">
-          <h3>Data personal</h3>
+          <h3>Data pribadi</h3>
           <hr />
           <Grid container spacing={2}>
             <Grid item xs={12} md={4}>
-              <label htmlFor="name">Nama</label>
+              <label htmlFor="name">Nama Lengkap</label>
               <input
                 id="name"
                 type="text"
@@ -84,19 +91,23 @@ export default function MembershipForm() {
           </Grid>
         </div>
         <div className="subscription-plan">
-          <h3>Paket langganan</h3>
+          <h3>Pilih Paket Berlangganan Anda</h3>
           <hr />
-          <Grid container spacing={2}>
-            <Grid item xs={12} md={4}>
+          <div className="plan-duration">
+            <div className="duration">
+              <input type="radio" name="subscription" id="weekly" />
+              <label htmlFor="weekly">Mingguan</label>
+            </div>
+            <div className="duration">
               <input type="radio" name="subscription" id="monthly" />
               <label htmlFor="monthly">Bulanan</label>
-            </Grid>
-            <Grid item xs={12} md={4}>
+            </div>
+            <div className="duration">
               <input type="radio" name="subscription" id="yearly" />
               <label htmlFor="yearly">Tahunan</label>
-            </Grid>
-          </Grid>
-          <div className="radio-amount">
+            </div>
+          </div>
+          {/* <div className="radio-amount">
             {radioAmount.map((radio) => (
               <span key={radio.id}>
                 <input
@@ -110,7 +121,7 @@ export default function MembershipForm() {
                 <label htmlFor={radio.id}>{radio.label}</label>
               </span>
             ))}
-          </div>
+          </div> */}
           <div className="amount">
             <label htmlFor="amount" className="amount-label">
               Rp
@@ -129,6 +140,22 @@ export default function MembershipForm() {
               Custom Amount
             </label>
           </div>
+          <div className="payment-method">
+            <h3>Metode Pembayaran</h3>
+            <select>
+              <option value="dana">DANA</option>
+              <option value="gopay">GoPay</option>
+              <option value="ovo">OVO</option>
+              <option value="bank">Transfer Bank</option>
+              <option value="lainnya">Lainnya</option>
+            </select>
+          </div>
+        </div>
+        <h3 className="donation-total">
+          Total Pembayaran: <span>{formatCurrency(amount)}</span>
+        </h3>
+        <div className="join-member-container">
+          <button>Join Member</button>
         </div>
       </form>
     </section>

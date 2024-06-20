@@ -42,11 +42,10 @@
     p {
       color: #232223;
       font-family: Raleway;
-      font-size: 20px;
+      font-size: 16px;
       font-style: normal;
+      line-height: 30px;
       font-weight: 500;
-      line-height: 37px; /* 185% */
-      letter-spacing: 0.4px;
     }
 
     .points {
@@ -63,11 +62,10 @@
         p {
           color: #232223;
           font-family: Raleway;
-          font-size: 20px;
+          font-size: 16px;
           font-style: normal;
           font-weight: 500;
           line-height: 37px; /* 185% */
-          letter-spacing: 0.4px;
         }
       }
     }
@@ -87,12 +85,41 @@
       h3 {
         font-size: 38px;
         letter-spacing: 0.72px;
+        max-width: 90%;
       }
 
       p {
+        color: #232223;
+        font-family: Raleway;
         font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 37px; /* 185% */
         letter-spacing: 0.4px;
-        line-height: 40px;
+        max-width: 90%;
+      }
+
+      .points {
+        .point {
+          display: flex;
+          gap: 1rem;
+          margin-bottom: 0.5rem;
+
+          img {
+            width: 30px;
+            height: 30px;
+          }
+
+          p {
+            color: #232223;
+            font-family: Raleway;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 37px; /* 185% */
+            letter-spacing: 0.4px;
+          }
+        }
       }
     }
   }

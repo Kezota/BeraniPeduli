@@ -15,7 +15,7 @@ export default function JoinMember() {
           Mari bergabung dengan membership Berani Peduli dan bersama-sama kita
           bisa membuat perbedaan yang berarti!
         </p>
-        <button>Join Member</button>
+        <a href="#joinMember">Join Member</a>
       </div>
       <div className="image">
         <img src={joinMember} alt="Join Member Image" />

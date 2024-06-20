@@ -79,7 +79,7 @@ function EventCard({
   title: string;
 }) {
   return (
-    <div className="event-card">
+    <div className="event-card" id="join-now">
       <img src={image} alt="event image" />
       <div className="date">
         <span className="day">{day}</span>

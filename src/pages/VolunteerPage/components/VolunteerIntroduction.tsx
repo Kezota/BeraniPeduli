@@ -18,7 +18,9 @@ export default function VolunteerIntroduction() {
             volunteer di bawah ini dan mari berbuat baik bersama. Bersama kita
             peduli, bersama kita berani!
           </p>
-          <button>Join Now</button>
+          <a id="link" href="#join-now">
+            Ikuti Sekarang
+          </a>
         </div>
         <div className="right">
           <img src={introductionImage} alt="" />
