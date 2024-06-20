@@ -1,12 +1,14 @@
+import "../../../styles/upcomingEvents.css";
 import event1 from "../../../assets/event1.png";
 import event2 from "../../../assets/event2.png";
 import event3 from "../../../assets/event3.png";
-import "../../../styles/ourEvents.css";
-import "aos/dist/aos.css";
+import event4 from "../../../assets/event4.png";
+import event5 from "../../../assets/event5.png";
+import event6 from "../../../assets/event6.png";
 
-const OurEvents = () => {
+const UpcomingEvents = () => {
   return (
-    <div className="our-events">
+    <div className="upcoming-events">
       <h4>Acara Kami</h4>
       <h2>Acara Mendatang Kami</h2>
       <p>
@@ -16,27 +18,47 @@ const OurEvents = () => {
       <div className="event-list">
         <EventCard
           image={event1}
-          day={18}
-          month="Maret"
+          day={28}
+          month="Juni"
           location="Tanjung Duren Utara, Jakarta"
-          title="Berbagi Sembako Gratis"
-          delay="0"
+          title="Berbagi Makanan Gratis"
         />
         <EventCard
           image={event2}
-          day={3}
-          month="April"
+          day={14}
+          month="Juli"
           location="Pantai Kutai, Bali"
           title="Membersihkan Pantai"
-          delay="100"
         />
         <EventCard
           image={event3}
-          day={25}
-          month="April"
+          day={22}
+          month="Juli"
           location="Kepulauan Yapen, Papua"
           title="Mengajar ke Sekolah"
-          delay="200"
+        />
+      </div>
+      <div className="event-list">
+        <EventCard
+          image={event4}
+          day={8}
+          month="Juli"
+          location="Bintaro, Tangerang"
+          title="Makanan untuk Anak Panti"
+        />
+        <EventCard
+          image={event5}
+          day={15}
+          month="Juli"
+          location="Pekalongan, Jawa Tengah"
+          title="Berbagi Sembako"
+        />
+        <EventCard
+          image={event6}
+          day={26}
+          month="Juli"
+          location="Srengseng, Jakarta Barat"
+          title="Membersihkan Hutan"
         />
       </div>
     </div>
@@ -49,17 +71,15 @@ function EventCard({
   month,
   location,
   title,
-  delay,
 }: {
   image: string;
   day: number;
   month: string;
   location: string;
   title: string;
-  delay: string;
 }) {
   return (
-    <div className="event-card" data-aos="fade-up" data-aos-delay={delay}>
+    <div className="event-card">
       <img src={image} alt="event image" />
       <div className="date">
         <span className="day">{day}</span>
@@ -95,10 +115,9 @@ function EventCard({
           <span>{location}</span>
         </div>
         <h5 className="title">{title}</h5>
-        <h4>Lihat Acara →</h4>
       </div>
     </div>
   );
 }
 
-export default OurEvents;
+export default UpcomingEvents;

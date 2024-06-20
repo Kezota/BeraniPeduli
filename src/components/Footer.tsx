@@ -93,7 +93,7 @@ const Footer = () => {
           <div className="footer-links">
             <span className="link-title">Contact Us</span>
             <span className="phone">+62 823 1151 1720</span>
-            <span className="email">beranipeduli.contact@gmail.com</span>
+            <span className="email">beranipeduli@gmail.com</span>
           </div>
         </div>
       </div>

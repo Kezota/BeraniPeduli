@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 const Mission = () => {
   return (
     <div className="mission">
-      <div className="mission-detail" data-aos="fade-right">
+      <div className="mission-detail" data-aos="fade-left">
         <h4>Misi Kami</h4>
         <h3>Bersatu dalam Keberanian dan Mewujudkan Kebaikan</h3>
         <div className="points">
@@ -119,7 +119,7 @@ const Mission = () => {
           </div>
         </div>
       </div>
-      <div className="image" data-aos="fade-right" data-aos-delay="200">
+      <div className="image" data-aos="fade-left" data-aos-delay="200">
         <img src={missionImage} alt="Mission Image" />
       </div>
     </div>
