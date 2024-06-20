@@ -13,6 +13,10 @@ body {
   background-color: var(--Lotion);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Colors */
 :root {
   --AntiFlashWhite: rgba(232, 232, 232, 1);

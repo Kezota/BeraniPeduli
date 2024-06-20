@@ -10,10 +10,14 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
+  function handleSubmit() {
+    alert("Pesan berhasil terkirim");
 
-    console.log(fistName, lastName, phone, email, message);
+    setFirstName("");
+    setLastName("");
+    setPhone("");
+    setEmail("");
+    setMessage("");
   }
 
   return (
@@ -77,7 +81,7 @@ const Contact = () => {
                     onChange={(e) => setMessage(e.target.value)}
                   />
                 </div>
-                <button>Kirim Sekarang</button>
+                <button onClick={handleSubmit}>Kirim Sekarang</button>
               </div>
             </form>
           </Grid>

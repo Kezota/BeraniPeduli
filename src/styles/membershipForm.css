@@ -21,6 +21,14 @@
   h2 {
   }
 
+  .error-message {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
   p {
     color: #232223;
     text-align: center;
@@ -186,7 +194,7 @@
       .amount-label {
         font-size: 1rem;
         font-weight: 500;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
         padding: 16px 20px;
         background-color: var(--DeepAquamarine);
         color: var(--Lotion);
@@ -196,7 +204,7 @@
         padding: 16px 20px;
         font-size: 1rem;
         border-radius: 0;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
         outline: none;
         border: none;
         background-color: white;
@@ -207,7 +215,7 @@
       .custom-amount {
         font-size: 1rem;
         font-weight: 500;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
         background-color: var(--DeepAquamarine);
         padding: 16px 20px;
         color: var(--Lotion);

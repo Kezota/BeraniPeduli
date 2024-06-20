@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import event1 from "../../../assets/event1.png";
 import event2 from "../../../assets/event2.png";
 import event3 from "../../../assets/event3.png";
@@ -58,6 +59,8 @@ function EventCard({
   title: string;
   delay: string;
 }) {
+  const navigate = useNavigate();
+
   return (
     <div className="event-card" data-aos="fade-up" data-aos-delay={delay}>
       <img src={image} alt="event image" />
@@ -95,7 +98,7 @@ function EventCard({
           <span>{location}</span>
         </div>
         <h5 className="title">{title}</h5>
-        <h4>Lihat Acara →</h4>
+        <h4 onClick={() => navigate("/volunteer")}>Lihat Acara →</h4>
       </div>
     </div>
   );

@@ -3,53 +3,69 @@ import { useState } from "react";
 import "../../../styles/membershipForm.css";
 import { formatCurrency } from "../../../utils";
 
-const radioAmount = [
-  {
-    id: "radioAmount1",
-    value: 100000,
-    label: "Rp 100rb",
-  },
-  {
-    id: "radioAmount2",
-    value: 200000,
-    label: "Rp 200rb",
-  },
-  {
-    id: "radioAmount3",
-    value: 500000,
-    label: "Rp 500rb",
-  },
-  {
-    id: "radioAmount4",
-    value: 1000000,
-    label: "Rp 1jt",
-  },
-  {
-    id: "radioAmount5",
-    value: 2000000,
-    label: "Rp 2jt",
-  },
-  {
-    id: "radioAmount6",
-    value: 5000000,
-    label: "Rp 5jt",
-  },
-];
-
 export default function MembershipForm() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [amount, setAmount] = useState(0);
+  const [duration, setDuration] = useState("weekly");
+  const [paymentMethod, setPaymentMethod] = useState("dana");
+
+  const [errors, setErrors] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    amount: "",
+  });
+
+  function validate() {
+    let tempErrors = { name: "", phone: "", email: "", amount: "" };
+    let formIsValid = true;
+
+    if (!name) {
+      formIsValid = false;
+      tempErrors.name = "Name is required";
+    }
+
+    if (!phone) {
+      formIsValid = false;
+      tempErrors.phone = "Phone number is required";
+    }
+
+    if (!email) {
+      formIsValid = false;
+      tempErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      formIsValid = false;
+      tempErrors.email = "Email is not valid";
+    }
+
+    if (!amount) {
+      formIsValid = false;
+      tempErrors.amount = "Amount is required";
+    }
+
+    setErrors(tempErrors);
+    return formIsValid;
+  }
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
-    console.log(name, phone, email);
+    if (validate()) {
+      alert("Terima kasih telah mendaftar sebagai member kami!");
+
+      setName("");
+      setPhone("");
+      setEmail("");
+      setAmount(0);
+      setDuration("weekly");
+      setPaymentMethod("dana");
+    }
   }
 
   return (
-    <section className="membership-form container">
+    <section className="membership-form container" id="joinMember">
       <h2>Daftar Membership</h2>
       <p>
         Dengan menjadi member, Anda turut berperan aktif dalam gerakan
@@ -69,6 +85,9 @@ export default function MembershipForm() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
+              {errors.name && (
+                <div className="error-message">{errors.name}</div>
+              )}
             </Grid>
             <Grid item xs={12} md={4}>
               <label htmlFor="phone">Nomor Telepon</label>
@@ -78,6 +97,9 @@ export default function MembershipForm() {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
               />
+              {errors.phone && (
+                <div className="error-message">{errors.phone}</div>
+              )}
             </Grid>
             <Grid item xs={12} md={4}>
               <label htmlFor="email">Email</label>
@@ -87,6 +109,9 @@ export default function MembershipForm() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
+              {errors.email && (
+                <div className="error-message">{errors.email}</div>
+              )}
             </Grid>
           </Grid>
         </div>
@@ -95,33 +120,39 @@ export default function MembershipForm() {
           <hr />
           <div className="plan-duration">
             <div className="duration">
-              <input type="radio" name="subscription" id="weekly" />
+              <input
+                type="radio"
+                name="subscription"
+                id="weekly"
+                value="weekly"
+                checked={duration === "weekly"}
+                onChange={(e) => setDuration(e.target.value)}
+              />
               <label htmlFor="weekly">Mingguan</label>
             </div>
             <div className="duration">
-              <input type="radio" name="subscription" id="monthly" />
+              <input
+                type="radio"
+                name="subscription"
+                id="monthly"
+                value="monthly"
+                checked={duration === "monthly"}
+                onChange={(e) => setDuration(e.target.value)}
+              />
               <label htmlFor="monthly">Bulanan</label>
             </div>
             <div className="duration">
-              <input type="radio" name="subscription" id="yearly" />
+              <input
+                type="radio"
+                name="subscription"
+                id="yearly"
+                value="yearly"
+                checked={duration === "yearly"}
+                onChange={(e) => setDuration(e.target.value)}
+              />
               <label htmlFor="yearly">Tahunan</label>
             </div>
           </div>
-          {/* <div className="radio-amount">
-            {radioAmount.map((radio) => (
-              <span key={radio.id}>
-                <input
-                  type="radio"
-                  name="radioAmount"
-                  value={radio.value}
-                  id={radio.id}
-                  checked={amount === radio.value}
-                  onChange={(e) => setAmount(Number(e.target.value))}
-                />
-                <label htmlFor={radio.id}>{radio.label}</label>
-              </span>
-            ))}
-          </div> */}
           <div className="amount">
             <label htmlFor="amount" className="amount-label">
               Rp
@@ -139,10 +170,16 @@ export default function MembershipForm() {
             >
               Custom Amount
             </label>
+            {errors.amount && (
+              <div className="error-message">{errors.amount}</div>
+            )}
           </div>
           <div className="payment-method">
             <h3>Metode Pembayaran</h3>
-            <select>
+            <select
+              value={paymentMethod}
+              onChange={(e) => setPaymentMethod(e.target.value)}
+            >
               <option value="dana">DANA</option>
               <option value="gopay">GoPay</option>
               <option value="ovo">OVO</option>

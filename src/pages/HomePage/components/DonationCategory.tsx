@@ -27,7 +27,7 @@ const DonationCategory = () => {
           <img src={category4} alt="donation" />
         </div>
       </div>
-      <button className="btn" onClick={() => navigate("/donate")}>
+      <button className="btn" onClick={() => navigate("/donation")}>
         Lihat Donasi
       </button>
     </div>
