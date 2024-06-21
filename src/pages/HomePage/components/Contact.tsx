@@ -42,14 +42,14 @@ const Contact = () => {
               <div className="form-group">
                 <div className="first-last">
                   <TextField
-                    label="First Name"
+                    label="Nama Depan"
                     placeholder="Enter first name"
                     variant="standard"
                     fullWidth
                     onChange={(e) => setFirstName(e.target.value)}
                   ></TextField>
                   <TextField
-                    label="Last Name"
+                    label="Nama Belakang"
                     placeholder="Enter last name"
                     variant="standard"
                     fullWidth
@@ -58,7 +58,7 @@ const Contact = () => {
                 </div>
                 <div className="phone-email">
                   <TextField
-                    label="Phone"
+                    label="Nomor Telepon"
                     placeholder="Enter phone number"
                     variant="standard"
                     fullWidth
@@ -75,7 +75,7 @@ const Contact = () => {
                 <div className="message">
                   <TextField
                     id="outlined-multiline-flexible"
-                    label="Message"
+                    label="Pesan"
                     multiline
                     maxRows={4}
                     fullWidth
