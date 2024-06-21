@@ -17,24 +17,24 @@ const OurEvents = () => {
       <div className="event-list">
         <EventCard
           image={event1}
-          day={18}
-          month="Maret"
+          day={23}
+          month="Juni"
           location="Tanjung Duren Utara, Jakarta"
           title="Berbagi Sembako Gratis"
           delay="0"
         />
         <EventCard
           image={event2}
-          day={3}
-          month="April"
+          day={29}
+          month="Juni"
           location="Pantai Kutai, Bali"
           title="Membersihkan Pantai"
           delay="100"
         />
         <EventCard
           image={event3}
-          day={25}
-          month="April"
+          day={4}
+          month="Juli"
           location="Kepulauan Yapen, Papua"
           title="Mengajar ke Sekolah"
           delay="200"

@@ -19,21 +19,21 @@ const UpcomingEvents = () => {
       <div className="event-list">
         <EventCard
           image={event1}
-          day={28}
+          day={23}
           month="Juni"
           location="Tanjung Duren Utara, Jakarta"
           title="Berbagi Makanan Gratis"
         />
         <EventCard
           image={event2}
-          day={14}
-          month="Juli"
+          day={29}
+          month="Juni"
           location="Pantai Kutai, Bali"
           title="Membersihkan Pantai"
         />
         <EventCard
           image={event3}
-          day={22}
+          day={4}
           month="Juli"
           location="Kepulauan Yapen, Papua"
           title="Mengajar ke Sekolah"
